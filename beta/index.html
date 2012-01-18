@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <META http-equiv="Expires" content="-1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <title>Grundini</title>
+
+    <script src="./js/libs/jquery-1.7.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://raw.github.com/kriskowal/es5-shim/master/es5-shim.js"></script>
+    <![endif]-->
+    <script src="./js/libs/css/prefixfree.min1.0.4.js"></script>
+    <script>
+        var require = {};
+        require.urlArgs = "bust=" + (new Date()).getTime();
+    </script>
+    <script src="./js/libs/require.js"></script>
+    <script src="./js/libs/mustache.js"></script>
+    <script src="./js/libs/inflection.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/fonts/fonts.css?i=1" rel="stylesheet" type="text/css"/>
+    <link href="./css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/module.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/themes.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body class="theme-standard">
+<div id="app">
+    <header>
+        <nav class="main-navigation">
+            <ul>
+                <li class="home"><a href="#!/home">Grundini</a></li>
+                <li class="work"><a href="#!/projects">Work</a></li>
+                <li class="about"><a href="#!/about">About</a></li>
+                <li class="downloads"><a href="#!/downloads">Downloads</a></li>
+                <li class="contact"><a href="#!/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="illustration-nav" style="display:none">
+            <ul>
+                <li><a href="#!/projects">Projects</a></li>
+                <li><a href="#!/grouped-by/year">Years</a></li>
+                <li><a href="#!/client">Clients</a></li>
+                <li><a href="#!/grouped-by/discipline">Disciplines</a></li>
+                <li><a href="#!/grouped-by/subject">Subjects</a></li>
+                <li><a href="#!/grouped-by/format">Formats</a></li>
+                <li><a href="#!/grouped-by/theme">Themes</a></li>
+            </ul>
+        </nav>
+        <ul class="sorting-controls" style="display:none">
+            <li><a href="#!/most-recent" class="chronological active">Most Recent</a></li>
+            <li><a href="#!/a-to-z" class="alphabetical">A-Z</a></li>
+        </ul>
+        <ul class="context-bar" style="display:none">
+        </ul>
+        <h1 class="title-bar" style="display:none"><span class="title-text"></span>&nbsp;&nbsp;</span></h1>
+    </header>
+    <article class="site-description">
+        <h1>
+            Peter Grundy explains life imaginatively and individually for clients who seek invention and imagination.
+        </h1>
+
+        <p>Peter Grundy and Tilly Northedge met at the Royal College of Art in the late 70s where they became
+            interested in
+            a visual communication that explained rather than sold things. In 1980 they started a studio to do
+            information
+            design in a new and creative way which they called Grundy & Northedge</p>
+
+        <p>Hugh Aldersey-Williams writing in Graphis in 1995 said of them;</p>
+        <blockquote>The humble basic communication of information has never had the glamour of other areas of
+            design. The creation
+            of a poster casts the designer as an artist. Bringing into being corporate identity for some giant
+            multinational
+            company showcase the designer as a business strategist. But the design of a map for a housing project or
+            a set
+            of instructions for how to tie a bow tie - what sort of designer does jobs like these?
+        </blockquote>
+
+
+        <p>
+            Peter Grundy and Tilly Northedge worked together for twenty-five years.<br/>
+
+            In 2006 Peter Grundy started Grundini, taking the Grundy & Northedge experience into new territory. A
+            year later
+            his book Grundini set out the terms, a series of five themes explored with uncompromised individuality
+            thus
+            defining the new era, venturing beyond information and into brand and advertising. Anywhere in fact
+            where the
+            complex and perplex needed explaining by simple, elegant, visual messages and ideas.
+        </p>
+
+    </article>
+    <section class="stage">
+        <!-- -->
+
+        <section class="home grid editorial-content">
+
+            <div class="top-strip">
+                <a href="#!/project/eyeball1" class="square large-text" style="background: url('./img/eyeball-home.jpg');">
+                    <span class="text-container"><span class="title">Eyeball: Peter Grundy&#39;s bi-monthly look at life</span></span>
+                </a>
+
+                <div class="square">
+                    <a href="#!/thumbs/tagged/theme-characters" class="square large-text people-square">
+                        <span class="text-container">Characters</span>
+                    </a>
+                    <a href="#!/thumbs/tagged/year-2011" class="square large-text"
+                       style="background: url('http://farm8.staticflickr.com/7163/6430666505_669ffbc248.jpg')"><span
+                            class="text-container">Recent Work</span></a>
+                    <a href="#!/about" class="square no-square homepage-quote large-text">
+                        <span class="text-container">
+                            <span class="title">Peter Grundy explains life imaginatively and individually for clients who seek invention and imagination.</span><span
+                                class="subtitle">Want to know more?</span>
+                        </span>
+                    </a>
+
+                    <div class="square container" style="background: transparent;">
+                        <a href="#!/thumbs/tagged/theme-buildings" class="square top-left"><span class="text-container">Buildings</span></a>
+                        <a href="#!/thumbs/tagged/format-letterforms" class="square top-right"><span
+                                class="text-container">Letterforms</span></a>
+                        <a href="#!/thumbs/tagged/theme-epiphanies" class="square bottom-left"><span
+                                class="text-container">Epiphanies</span></a>
+                        <a href="#!/thumbs/tagged/theme-wacko" class="square bottom-right"><span class="text-container">Wacko</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-strip">
+                <a href="#!/client/shell-international" class="square large-text"
+                   style="background: url('http://farm8.staticflickr.com/7144/6399153171_4fd9a43173_o.jpg')"><span
+                        class="text-container">The shell decade</span></a>
+                <a href="#!/client" class="square no-image large-text grundini-blue"><span class="text-container">Clients</span></a>
+                <a href="#!/downloads" class="square large-text downloads-square" title="Download Peter's work">
+                    <span class="text-container">Downloads</span>
+                </a>
+                <a class="square negative large-text all-work-square" href="#!/projects"><span class="text-container">All Work</span></a>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <div class="footer-bar">
+            <ul class="tags">
+            </ul>
+        </div>
+    </footer>
+
+    <div class="controls">
+        <div class="nextPrevious">
+            <a href="#!/next" class="button next"><span>next</span></a>
+            <a href="#!/previous" class="button previous"><span>previous</span></a>
+        </div>
+        <div class="share">
+            <div class="sharethis-buttons-container">
+                <div class="sharethis" id="shareThis">
+                </div>
+            </div>
+            <a href="#shareThis" class="sharethis-menu-toggle button" title="open or close the share this menu">
+                <span>open / close share this menu</span>
+            </a>
+        </div>
+    </div>
+    <div class="click-plate">
+    </div>
+
+    <div class="fullsize-image">
+        <div class="loading-container">
+            <a href="#" class="close"><img src="css/img/loading-eee.gif"/>
+            <span class="zoom-out-link"><span class="off">Click to hide</span></span>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/x-mustache-template" id="filter-control-item">
+    {{#categories}}
+    <li><a href="#!/{{slug}}">{{title}}</a></li>
+    {{/categories}}
+</script>
+
+<script type="text/x-mustache-template" id="projects">
+    <ul class="sub-categories projects">
+        {{#projects}}
+        <li {{#imageUrl}} style="background:url({{small}}) no-repeat 50% 50%;" class="thumbnail"{{/imageUrl}}>
+        <a href="{{projectlink}}">{{title}}</a></li>
+        {{/projects}}
+    </ul>
+</script>
+
+<script type="text/x-mustache-template" id="clients">
+    <ul class="sub-categories clients">
+        {{#clients}}
+        <li><a href="#!/client/{{slug}}">{{title}}</a></li>
+        {{/clients}}
+    </ul>
+</script>
+
+<script type="text/x-mustache-template" id="tags-for-group">
+    <ul class="sub-categories clients">
+        {{#tagsForGroup}}
+        <li><a href="#!/thumbs/tagged/{{slug}}">{{value}}</a></li>
+        {{/tagsForGroup}}
+    </ul>
+</script>
+
+<script type="text/x-mustache-template" id="thumbnails">
+    <ul class="illustration-thumbnails off">
+        {{#illustrations}}
+        <li><a href="{{link}}"><img src="{{thumbnail}}" alt="{{title}}"/>
+        <span>{{title}}</span></a></li>
+        {{/illustrations}}
+    </ul>
+</script>
+
+<script type="text/x-mustache-template" id="tags">
+    {{#tag}}
+    {{#link}}
+    <li><a href="{{link}}" alt="{{content}}">{{content}}</a></li>
+    {{/link}}
+    {{/tag}}
+</script>
+
+<script type="text/x-mustache-template" id="illustration-browser">
+    <aside class="illustrationBrowser off">
+        <ul class="illustrations">
+            {{#illustrations}}
+            <li><a href="{{imageurl.original}}" class="fullsize-link"><img alt="{{title}}"/></a>
+                <a href="{{imageurl.original}}" class="zoomimage fullsize-link"><span>Click to enlarge</span></a>
+            </li>
+            {{/illustrations}}
+        </ul>
+    </aside>
+</script>
+
+<script type="text/x-mustache-template" id="context-items">
+    {{#contextItem}}
+    <li><a href="{{value}}" title="{{title}}">{{title}}</a><span class="seperator">{{seperator}}</span></li>
+    {{/contextItem}}
+    <li><span class="position">(<span class="current">--</span>/<span class="total">--</span>)</span></li>
+</script>
+
+<script type="text/javascript">var switchTo5x = true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+    stLight.options({
+        publisher:'bb6edd11-b5ca-40d2-9119-0f3646bc2c79',
+        onhover: false,
+        headerTitle : 'Share Grundini',
+        popup : true
+    });
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28336117-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

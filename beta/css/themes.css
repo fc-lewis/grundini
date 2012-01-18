@@ -1,0 +1,140 @@
+body{
+    transition: background-color 0.1s ease-in-out;
+}
+
+/* --- THEME STANDARD --- */
+
+.theme-standard{
+    background-color: #eee;
+}
+
+/* header */
+.theme-standard header{
+    background: #fff;
+}
+.theme-standard header .main-navigation {
+    background: #000;
+}
+
+    .theme-standard header .main-navigation a{
+        color: #fff;
+        color:rgba(255, 255, 255, 0.5);
+        transition: color 0.2s ease-in-out;
+    }
+
+    .theme-standard header .main-navigation li.active a
+    {
+        color:#fff;
+    }
+
+        .theme-standard header .context-bar li a{
+            color:#000;
+        }
+
+        .theme-standard header .context-bar li a:hover{
+            color:#ef4135;
+        }
+
+    .theme-standard header .main-navigation li a:hover{
+        color:#ef4135;
+    }
+
+    .theme-standard header .title-bar{
+        background: #cbcbcb;
+        color:#000;
+    }
+
+    .theme-standard stage{
+        background: #fff;
+        color: #000;
+    }
+
+
+/* --- THEME DARK --- */
+
+    .theme-dark{
+        background-color: #000;
+        color:#fff;
+    }
+
+    .theme-dark header .app-navigation{
+        background: #fff;
+    }
+    .theme-dark header .main-navigation {
+        background: #000;
+    }
+
+        .theme-dark header .main-navigation a{
+            color: #fff;
+            color:rgba(255, 255, 255, 0.5);
+            transition: color 0.2s ease-in-out;
+        }
+
+        .theme-dark header .main-navigation li.active a
+        {
+            color:#fff;
+        }
+
+        .theme-dark header .main-navigation li a:hover{
+            color:#ef4135;
+        }
+
+            .theme-dark header .context-bar{
+                background-color: #CBCBCB;
+            }
+
+            .theme-dark header .context-bar li a{
+                color:#000;
+            }
+
+            .theme-dark header .context-bar li a:hover{
+                color:#ef4135;
+            }
+
+
+        .theme-dark header .title-bar{
+            background: #cbcbcb;
+            color:#000;
+        }
+
+
+/* --- THEME LIGHT --- */
+
+    .theme-light{
+        background-color: #eee;
+    }
+
+    .theme-light header .app-navigation{
+        background: #fff;
+    }
+    .theme-light header .main-navigation {
+        background: #000;
+    }
+
+        .theme-light header .main-navigation a{
+            color: #fff;
+            color:rgba(255, 255, 255, 0.5);
+            transition: color 0.2s ease-in-out;
+        }
+
+        .theme-light header .main-navigation li.active a
+        {
+            color:#fff;
+        }
+
+        .theme-light header .main-navigation li a:hover{
+            color:#ef4135;
+        }
+
+            .theme-light header .context-bar li a{
+                color:#000;
+            }
+
+            .theme-light header .context-bar li a:hover{
+                color:#ef4135;
+            }
+
+        .theme-light header .title-bar{
+            background: #cbcbcb;
+            color:#000;
+        }

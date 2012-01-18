@@ -1,0 +1,32 @@
+
+body, p, a, h1, h2, h3{
+    font:bold 13px/16px FuturaBold, "Arial Black", Helvetica, serif;
+    text-decoration: none;
+}
+
+.large-text{
+    /*font:bold 24px/30px FuturaBold, "Arial Black", Helvetica, serif;*/
+    font:bold 13px/16px FuturaBold, "Arial Black", Helvetica, serif;
+}
+
+.file-info,
+.about .editorial-comment blockquote{
+    font:normal 13px/16px FuturaBook, Arial, Helvetica, serif;
+    text-decoration: none;
+}
+
+.home .homepage-quote{
+    font:bold 22px/28px FuturaBold, "Arial Black", Helvetica, serif;
+}
+
+/*
+
+grundini-blue: #1c91ff
+
+small:
+font:bold 13px/16px FuturaBold, Helvetica, Arial, serif;
+
+large:
+    font:bold 24px/28px FuturaBold, Helvetica, Arial, serif;
+
+*/
