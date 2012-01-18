@@ -4,7 +4,7 @@ var grunFlickr = require('grundini-flickr');
 var memCache = require('simpleMemCache.js');
 
 var parsedUrl, urlKey, cachedResult;
-var doCache = false;
+var doCache = true;
 
 require('http').createServer(
         function (request, response) {
@@ -66,7 +66,7 @@ function writeSuccess(result, response, callback) {
     'Content-Type'    : 'application/json'
   });
 
-  //response.write(resultStr);
+  response.write(resultStr);
   response.end(resultStr);
 }
 
