@@ -110,7 +110,7 @@ header{
         }
 
             a.zoomimage{
-                background: transparent url('./img/zoomin.png') no-repeat 0 0;
+                background: transparent url('img/zoomin.png') no-repeat 0 0;
                 z-index: 16;
                 opacity: 0.145;
             }
@@ -461,18 +461,22 @@ header .illustration-nav{
     float: left;
 }
 
-.fullsize-image .loading-container .zoom-out-link{
+.fullsize-image .loading-container .zoomoutlink{
     display: inline-block;
     width:60px;
     height:60px;
     margin-top: 10px;
     vertical-align: top;
-    background-image: url('./img/zoom-out.png');
+    background-image: url('./img/zoomout.png');
     z-index: 10000000;
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
 }
 
-.fullsize-image .loading-container .zoom-out-link:hover{
+.fullsize-image .loading-container .zoomoutlink:hover{
     opacity: 1;
+}
+
+#shareThis span{
+    cursor: pointer;
 }

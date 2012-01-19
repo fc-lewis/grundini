@@ -1,6 +1,6 @@
 var static = require('node-static');
 
-var file = new (static.Server)('./v1.0');
+var file = new (static.Server)('./v1.1');
 
 require('http').createServer(
         function (request, response) {

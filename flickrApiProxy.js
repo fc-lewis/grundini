@@ -66,7 +66,6 @@ function writeSuccess(result, response, callback) {
     'Content-Type'    : 'application/json'
   });
 
-  //response.write(resultStr);
   response.end(resultStr);
 }
 

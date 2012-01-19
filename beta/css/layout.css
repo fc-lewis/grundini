@@ -471,6 +471,10 @@ footer .footer-bar{
         height:115px;
     }
 
+    .grid .homepage-quote .text-container{
+        padding: 0;
+    }
+
     .grid .bottom-strip{
         height:33%;
     }
@@ -685,4 +689,17 @@ and (orientation : portrait){
     .illustrationBrowser li img{
         max-height: 800px;
     }
+}
+
+.page-loading{
+    position: absolute;
+    z-index: 1000;
+    width:60px;
+    height:60px;
+    left:50%;
+    top:50%;
+}
+
+.page-loading span{
+    display:none;
 }

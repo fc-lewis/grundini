@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
     <title>Grundini</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="./js/libs/jquery-1.7.min.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <script src="https://raw.github.com/kriskowal/es5-shim/master/es5-shim.js"></script>
@@ -23,7 +23,7 @@
     <script src="./js/libs/require.js"></script>
     <script src="./js/libs/mustache.js"></script>
     <script src="./js/libs/inflection.min.js"></script>
-    <script src="./js/mainV01.js"></script>
+    <script src="./js/main.js"></script>
 
     <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="./css/fonts/fonts.css?i=1" rel="stylesheet" type="text/css"/>
@@ -174,10 +174,13 @@
     <div class="fullsize-image">
         <div class="loading-container">
             <a href="#" class="close"><img src="css/img/loading-eee.gif"/>
-            <span class="zoom-out-link"><span class="off">Click to hide</span></span>
+            <span class="zoomoutlink"><span class="off">Click to hide</span></span>
             </a>
-
         </div>
+    </div>
+
+    <div class="page-loading">
+        <span>Please wait whilst we load some data!</span>
     </div>
 
 </div>

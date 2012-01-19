@@ -90,7 +90,7 @@ define([],
             });
           };
 
-          var fp = new FlickrProxy('api.grundini.com');
+          var fp = new FlickrProxy(window.location.host+':8111');
 
           return fp;
 

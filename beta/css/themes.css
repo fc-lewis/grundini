@@ -49,6 +49,9 @@ body{
         color: #000;
     }
 
+        .theme-standard .page-loading{
+            background: transparent url('img/loading-000-80.gif') no-repeat;
+        }
 
 /* --- THEME DARK --- */
 
@@ -80,11 +83,11 @@ body{
         }
 
             .theme-dark header .context-bar{
-                background-color: #CBCBCB;
+                background-color: #333;
             }
 
             .theme-dark header .context-bar li a{
-                color:#000;
+                color:#fff;
             }
 
             .theme-dark header .context-bar li a:hover{
@@ -95,6 +98,10 @@ body{
         .theme-dark header .title-bar{
             background: #cbcbcb;
             color:#000;
+        }
+
+        .theme-dark .page-loading{
+            background: transparent url('img/loading-eee.gif') no-repeat;
         }
 
 
@@ -137,4 +144,8 @@ body{
         .theme-light header .title-bar{
             background: #cbcbcb;
             color:#000;
+        }
+
+        .theme-standard .page-loading{
+            background: transparent url('img/loading-eee.gif') no-repeat;
         }
