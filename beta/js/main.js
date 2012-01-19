@@ -15,10 +15,12 @@ require([
             catch(e){
               //do nothing
             }
-              
             
           };
 
-          initRoutesFn(grundiniApp);
+          $(document).ready(function(){
+            initRoutesFn(grundiniApp);        
+          });
+          
         });
 
