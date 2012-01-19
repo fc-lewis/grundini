@@ -19,6 +19,8 @@ require([
             
           };
 
-          initRoutesFn(grundiniApp);
+          $(document).ready(function(){
+            initRoutesFn(grundiniApp);        
+          });
         });
 

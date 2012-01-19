@@ -100,6 +100,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1.1/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="13" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -114,8 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/flickrApiProxy.js" />
-        <option value="$PROJECT_DIR$/node_modules/grundini-flickr/lib/flickrProxy.js" />
         <option value="$PROJECT_DIR$/beta/js/mvc/views/ProjectsView.js" />
         <option value="$PROJECT_DIR$/beta/about.html" />
         <option value="$PROJECT_DIR$/beta/css/themes.css" />
@@ -130,6 +137,8 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/beta/js/main.js" />
         <option value="$PROJECT_DIR$/v1.1/index.html" />
+        <option value="$PROJECT_DIR$/v1.1/js/mainv1_1.js" />
+        <option value="$PROJECT_DIR$/v1.1/js/main.js" />
       </list>
     </option>
   </component>
@@ -196,7 +205,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="v1.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -210,11 +223,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grundini-flickr" />
+              <option name="myItemId" value="beta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -228,15 +237,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="beta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="grundini-flickr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,16 +410,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/beta/js/mvc/views/IllustrationBrowserView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="342" column="17" selection-start="9881" selection-end="9886" vertical-scroll-proportion="-12.653846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beta/js/mvc/views/ClientsView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beta/js/mvc/views/ContentView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="0" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0" />
@@ -451,13 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/grundini-flickr/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="12" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.58064514">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beta/js/mvc/partialViews/NavigationMenuView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="38" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.33616298">
@@ -486,13 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beta/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="357" selection-end="357" vertical-scroll-proportion="0.4074703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beta/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="176" column="32" selection-start="8711" selection-end="8711" vertical-scroll-proportion="-1.4166666">
@@ -500,6 +481,34 @@
             <element signature="tag#head#0;tag#html#0" expanded="true" />
             <element signature="tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/grundini-flickr/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="12" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.8404075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beta/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="384" selection-end="485" vertical-scroll-proportion="0.48387095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1.1/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1.1/js/mainv1_1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="23094" selection-start="23084" selection-end="23094" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
