@@ -3,12 +3,12 @@ var urlParser = require('url');
 var grunFlickr = require('grundini-flickr');
 var memCache = require('simpleMemCache.js');
 
-var parsedUrl, urlKey, cachedResult;
 var doCache = true;
 
 require('http').createServer(
         function (request, response) {
-          var bytesLen, resultStr, url;
+          var parsedUrl, urlKey, cachedResult,
+            bytesLen, url;
 
           request.addListener('end', function () {
             //request.socket.setTimeout(1000);
