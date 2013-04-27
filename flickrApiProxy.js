@@ -1,9 +1,14 @@
-var urlParser = require('url');
+var urlParser = require('url'),
+    grunFlickr = require('grundini-flickr'),
+    memCache = require('simpleMemCache.js'),
+    doCache = true,
+    static = require('node-static'),
+    file = new (static.Server)('./v1.1'),
+    ports = {
+      flickrApi : 8111,
+      web : 8081
+    };
 
-var grunFlickr = require('grundini-flickr');
-var memCache = require('simpleMemCache.js');
-
-var doCache = true;
 
 require('http').createServer(
         function (request, response) {
@@ -45,7 +50,7 @@ require('http').createServer(
 
             });
           });
-        }).listen(8111);
+        }).listen(ports.flickrApi);
 
 function writeSuccess(result, response, callback) {
   var bytesLen, resultStr;
@@ -70,3 +75,26 @@ function writeSuccess(result, response, callback) {
 }
 
 console.log('api.grundini.com listening on port 8111');
+
+//---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+//  Static server
+//---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+
+require('http').createServer(
+  function (request, response) {
+    request.addListener('end', function () {
+      // Serve static files!
+      file.serve(request, response, function(err, result) {
+        request.socket.setTimeout(500);
+
+        if (err) {
+          response.writeHead(err.status, err.headers);
+          response.end();
+        }
+      });
+    });
+  }).listen(ports.web);
+
+
+console.log('dev.grundini.com listening on port 8081');
