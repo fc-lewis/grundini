@@ -1,0 +1,98 @@
+
+body, p, a, h1, h2, h3{
+    font:bold 13px/16px FuturaBold, "Arial Black", Helvetica, serif;
+    text-decoration: none;
+}
+
+.large-text{
+    /*font:bold 24px/30px FuturaBold, "Arial Black", Helvetica, serif;*/
+    font:bold 13px/16px FuturaBold, "Arial Black", Helvetica, serif;
+}
+
+.file-info,
+.about .editorial-comment blockquote{
+    font:normal 13px/16px FuturaBook, Arial, Helvetica, serif;
+    text-decoration: none;
+}
+
+.home .homepage-quote{
+    font:bold 22px/28px FuturaBold, "Arial Black", Helvetica, serif;
+}
+
+.displaynone{
+  display:none;
+}
+
+
+a{
+  cursor: pointer;
+}
+
+a{
+  transition: color 0.3s ease-in-out;
+}
+
+.controls{
+  transition: all 0.4s ease-in-out;
+}
+
+.controls  a.button.previous{
+  background: url('./img/previous.png');
+  opacity: 0.145;
+}
+.controls a.button.previous:hover{
+  opacity: 1;
+}
+.controls a.button.next{
+  background: url('./img/next.png');
+  opacity: 0.145;
+}
+
+.controls a.button.next:hover{
+  opacity: 1;
+}
+
+.grid a.square{
+  transition: all 0.3s ease-in-out;
+}
+
+.grid a:hover,
+.illustration-thumbnails li:hover{
+  opacity: 0.4;
+  transition: opacity 0.4s ease-in-out;
+}
+
+
+.off{
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button
+, .zoomimage{
+  transition: opacity 0.4s ease-in-out;
+}
+
+.fullsize-image .loading-container .img{
+  float: left;
+}
+
+.fullsize-image .loading-container .zoomoutlink{
+  display: inline-block;
+  width:60px;
+  height:60px;
+  margin-top: 10px;
+  vertical-align: top;
+  background-image: url('./img/zoomout.png');
+  z-index: 10000000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fullsize-image .loading-container .zoomoutlink:hover{
+  opacity: 1;
+}
+
+#shareThis span{
+  cursor: pointer;
+}

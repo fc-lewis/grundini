@@ -1,9 +1,7 @@
 var urlParser = require('url'),
-    grunFlickr = require('grundini-flickr'),
-    memCache = require('simpleMemCache.js'),
     doCache = true,
     static = require('node-static'),
-    file = new (static.Server)('./v1.1'),
+    file = new (static.Server)('./build'),
     ports = {
       flickrApi : 8111,
       web : 8081

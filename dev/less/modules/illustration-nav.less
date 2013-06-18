@@ -1,0 +1,76 @@
+header .illustration-nav {
+  background: #eee;
+  /*border-bottom: solid 1px rgba(100, 100, 100, 0.3);*/
+}
+
+header .illustration-nav li {
+  background: #eee;
+}
+
+header .illustration-nav li a:active,
+header .illustration-nav li a {
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+header .illustration-nav li.active a,
+header .sorting-controls li a.active {
+  color: #000;
+}
+
+header .sorting-controls li a {
+  color: #666;
+}
+
+header .illustration-nav li a:hover,
+header .sorting-controls li a:hover {
+  color: #ee4035;
+}
+
+header .illustration-nav{
+  height:32px;
+}
+
+#workSubMenuMobile > .illustration-nav > ul {
+  height: auto;
+}
+
+@media @media-phone
+{
+.illustration-nav {
+  height: auto !important;
+}
+
+.main-nav .illustration-nav {
+  background-color: #575656;
+}
+
+.main-nav .illustration-nav li {
+  background-color: #575656;
+  .box-sizing(border-box);
+  float: left;
+  margin: 0 10px;
+  padding: 0;
+  text-align: left;
+  width: 140px !important;
+}
+
+.main-nav .illustration-nav li:first-child{
+  padding-left: 0;
+}
+
+.main-nav .illustration-nav li:last-child {
+  border-bottom: none 0px transparent;
+}
+
+.main-nav > ul > li > a,
+.main-nav .illustration-nav li a {
+  color: white !important;
+  font-weight: normal;
+}
+
+.main-nav .illustration-nav .pull-right {
+  //width:45%;
+}
+
+}

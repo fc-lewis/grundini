@@ -1,0 +1,233 @@
+.stage .illustration-thumbnails li{
+  display:inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.stage .illustration-thumbnails li a{
+  position:relative;
+  display: block;
+  text-align: center;
+}
+
+.stage .illustration-thumbnails li a img{
+  vertical-align: top;
+  max-width: 240px;
+  max-height: 240px;
+}
+
+.stage .illustration-thumbnails li a span{
+  position: absolute;
+  top:10px;
+  left:10px;
+  letter-spacing: 0;
+  display:none;
+}
+.stage .sub-categories li {
+  text-align: left;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.stage .illustrations li img {
+  min-width: 66px;
+  min-height: 66px;
+  /*background: transparent url('./img/loading-000-80.gif') no-repeat 50% 50%;*/
+  background: transparent url('./img/loading-eee.gif') no-repeat 50% 50%;
+}
+
+.stage .illustration-thumbnails li img {
+  min-width: 66px;
+  min-height: 66px;
+  max-width: 250px;
+  max-height: 250px;
+  /*background: transparent url('./img/loading-000-80.gif') no-repeat 50% 50%;*/
+  background: transparent url('./img/loading-eee.gif') no-repeat 50% 50%;
+}
+
+.stage .sub-categories li.thumbnail a {
+  width: 220px;
+  height: 220px;
+  background-color: transparent;
+  color: transparent;
+  padding: 10px;
+}
+
+.stage .sub-categories li.thumbnail:hover a {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  position: relative;
+}
+
+.stage .sub-categories li a {
+  display: block;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+
+.stage .clients li:hover {
+  opacity: 0.4;
+}
+
+.stage .illustration {
+  transition: all 0.3s ease-in-out;
+}
+
+.stage .illustration.off {
+  opacity: 0;
+}
+
+.stage .illustration img {
+  max-height: 55%;
+  max-width: 90%;
+}
+
+.stage .illustration-thumbnails.off {
+  opacity: 0;
+}
+
+.stage .illustration-thumbnails {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+.stage {
+  position: absolute;
+  margin: 0;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  top:33px;
+  width:100%;
+  opacity: 0;
+}
+
+.stage .sub-categories {
+  margin:0 auto;
+  text-align: left;
+  margin-bottom:40px;
+  padding-bottom: 40px;
+  letter-spacing: -4px;
+}
+
+.stage .sub-categories li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin : 10px 0 0 10px;
+  letter-spacing: 0px;
+
+}
+
+.stage .clients li {
+  width: 220px;
+  height: 220px;
+  padding: 10px;
+}
+
+
+.stage .projects li {
+  width: 240px;
+  height: 240px;
+}
+
+.stage .illustration {
+  position: relative;
+  left: 0;
+}
+
+.loading-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8) url('img/loading-000-80.gif') no-repeat 50% 50%;
+}
+
+.loading-container.loaded {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width:481px){
+  .stage.stage-taggroupsview,
+  .stage.stage-thumbsview,
+  .stage.stage-projectview,
+  .stage.stage-browserview,
+  .stage.stage-clientview,
+  .stage.stage-contentview
+    .stage.stage-defaultview{
+    //top:32px;
+  }
+
+  .stage.stage-taggroupsview,
+  .stage.stage-thumbsview,
+  .stage.stage-projectview{
+    top:64px;
+  }
+
+  .stage.stage-browserview,
+  .stage.stage-clientview
+  {
+    top:98px;
+  }
+
+  .stage.stage-contentview{
+    top:73px;
+  }
+
+  .stage.stage-defaultview{
+    top:34px;
+  }
+}
+
+@media @media-phone{
+
+  .stage{
+    position:relative;
+    top:-6px;
+  }
+
+  .stage-clientview{
+    top:0px;
+  }
+
+  .stage-projectview,
+  .stage-taggroupsview,
+  .stage-thumbsview{
+    top:0;
+  }
+
+  .stage .clients li {
+    width: 125px;
+    height: 125px;
+  }
+
+  .stage.stage-contentview{
+    max-width: 100%;
+    top: 0px;
+  }
+
+  .stage.stage-browserview{
+    top:-38px;
+  }
+
+  .stage .sub-categories {
+    overflow-x: hidden;
+  }
+
+  .stage .projects li{
+    width: 240px;
+    height: 240px;
+    margin-left: 50%;
+    position: relative;
+    left: -120px;
+  }
+}
+

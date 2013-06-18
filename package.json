@@ -23,9 +23,22 @@
     "grunt-concurrent": "~0.1.0",
     "matchdep": "~0.1.1",
     "grunt-contrib-watch": "~0.3.1",
-    "grunt-watch": "*"
+    "grunt-contrib-copy": "*",
+    "grunt-text-replace": "*",
+    "grunt-contrib-clean": "*"
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "gitHead": "e3afd36767021f411b7aeb43d3dbb4751bfc3ed0",
+  "description": "",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/fc-lewis/grundini.git"
+  },
+  "author": "Lewis Barclay @errumm"
 }

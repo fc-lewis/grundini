@@ -2,9 +2,13 @@
 .idea/
 .idea/*
 
+notes.txt
+
 node_modules
 node_modules/
 node_modules/*
 
 projectFilesBackup/
 projectFilesBackup/*
+
+build/**

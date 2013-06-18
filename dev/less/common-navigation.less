@@ -1,0 +1,104 @@
+#mainNavSwitch{
+  display:none;
+}
+
+  /* common-nav */
+.common-nav li{
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+}
+
+header .common-nav li:first-child{
+  padding-left: 10px;
+}
+
+/* common-info */
+.common-info
+{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none inside none;
+}
+
+header .common-nav li:first-child{
+  padding-left: 10px;
+}
+
+.common-info li{
+  display: inline-block;
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.common-info li a{
+  text-transform: capitalize;
+}
+
+//large desktop
+//@media screen and (min-width: 1025px) {
+//}
+
+//not phone!
+//@media (min-width:481px){
+//}
+
+
+//@media only screen and (orientation : landscape){
+//}
+
+//phone
+@media @media-phone{
+  #app header{
+    top:0;
+    z-index: 15;
+  }
+  header .common-nav li:first-child{
+    padding-left: 0;
+  }
+
+  #mainNavSwitch{
+    display:block;
+    position: absolute;
+    right:10px;
+    top:10px;
+  }
+
+  #workSubMenuMobile{
+    max-height:440px;
+    overflow: hidden;
+    transition:max-height ease-in-out 0.3s, opacity ease-out 0.2s;
+  }
+
+  #workSubMenuMobile.closed{
+    max-height:0;
+  }
+
+  .mobile-submenu{
+    display: block;
+    margin: 0 -10px;
+  }
+
+  .mobile-submenu > ul{
+    .box-sizing(border-box);
+    display: block;
+    width:100%;
+  }
+
+  .mobile-submenu > ul > li{
+    .box-sizing(border-box);
+    background-color: #000000;
+    display: block;
+    float: left;
+    width:50%;
+    text-align: left;
+  }
+
+
+}
+
+//phone landscape
+//@media (min-width:321px) and (max-width:480px){
+//
+//}

@@ -1,0 +1,151 @@
+.main-nav {
+  text-align: right;
+  width: 100%;
+  position: relative;
+  min-height: 36px;
+}
+
+.main-nav ul {
+  display: inline-block;
+  text-align: right;
+}
+
+.main-nav .home {
+  display: inline-block;
+  float: left;
+  padding: 10px;
+  text-align: left;
+}
+
+  /* themes */
+.theme-standard header .main-nav {
+  background: #000;
+}
+
+.theme-standard header .main-nav a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease-in-out;
+}
+
+.theme-standard header .main-nav li.active a {
+  color: #fff;
+}
+
+.theme-standard header .main-nav li a:hover {
+  color: #ef4135;
+}
+
+.theme-dark header .main-nav {
+  background: #000;
+}
+
+.theme-dark header .main-nav a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease-in-out;
+}
+
+.theme-dark header .main-nav li.active a {
+  color: #fff;
+}
+
+.theme-dark header .main-nav li a:hover {
+  color: #ef4135;
+}
+
+.theme-light header .main-nav {
+  background: #000;
+}
+
+.theme-light header .main-nav a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease-in-out;
+}
+
+.theme-light header .main-nav li.active a {
+  color: #fff;
+}
+
+.theme-light header .main-nav li a:hover {
+  color: #ef4135;
+}
+
+@media (min-width:481px){
+  .main-nav .left-arrow{
+    display:none;
+  }
+}
+
+@media @media-phone{
+  .main-nav,
+  .main-nav > .home,
+  .main-nav > ul,
+  .main-nav > ul > li,
+  .main-nav > ul > li > a {
+    .box-sizing(border-box);
+    text-align: left;
+  }
+
+  .main-nav > .home {
+    float: none;
+  }
+
+  .main-nav {
+    line-height: 0;
+  }
+
+  .home .main-nav > ul,
+  .main-nav > ul {
+    height: auto;
+    max-height: 440px;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    transition: max-height ease-in-out 0.3s, opacity ease-out 0.2s;
+
+    z-index: 1032;
+  }
+
+  .main-nav ul.closed {
+    max-height: 0px;
+    //opacity: 0;
+    padding: 0 10px;
+    transition: max-height ease-in-out 0.3s, opacity ease-in 0s;
+
+  }
+
+  .main-nav > ul {
+    background-color: #434446;
+    padding: 0 10px;
+  }
+
+  .main-nav ul > li {
+    border-bottom: solid 1px #5d5e5f;
+    display: block;
+    height: auto;
+    padding: 0;
+    position: relative;
+  }
+
+  .main-nav > ul > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 32px;
+    position: relative;
+  }
+
+  .main-nav .left-arrow{
+    bottom: 6px;
+    position: absolute;
+    right: 3px;
+  }
+
+  .main-nav .left-arrow.open{
+    background-position: -24px 0;
+  }
+
+}

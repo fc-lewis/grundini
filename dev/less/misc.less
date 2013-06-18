@@ -1,0 +1,146 @@
+.zoomimage{
+  display: inline-block;
+  width:60px;
+  height:60px;
+  margin: 10px 0;
+  vertical-align: top;
+}
+
+.illustration-thumbnails {
+  margin-top: 0px;
+  margin-right: 10px;
+  letter-spacing: -4px;/* HACK: webkit adds a 4px gap all on it's own for some reason*/
+  margin-bottom: 40px;
+}
+
+
+
+.click-plate{
+  position: fixed;
+  top:0;
+  left:0;
+  opacity: 0.9;
+  width:100%;
+  height:100%;
+  display:none;
+}
+
+
+
+.fullsize-image {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  z-index: 16;
+}
+
+.fullsize-image img {
+  max-height: 92%;
+  max-width: 92%;
+  margin:10px;
+}
+
+footer {
+  position: fixed;
+  display: block;
+  width: 100%;
+  bottom: 0px;
+}
+
+footer .footer-bar{
+  margin: 0 10px 10px 10px;
+  vertical-align: middle;
+}
+footer .tags{
+  padding: 0 10px 0 10px;
+  margin: 5px 0 10px 0;
+}
+
+footer .tags li{
+  display: inline-block;
+  vertical-align: middle;
+  height:16px;
+  margin: 5px 0 5px 5px;
+  padding-left: 15px;
+}
+
+footer .tags li a{
+  vertical-align: middle;
+}
+
+
+
+section.about,
+section.downloads-page,
+.contact-page{
+  width:1000px;
+  text-align: left;
+  margin-left:10px;
+  margin-bottom:40px;
+}
+
+#notSupported{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  z-index: 100000000;
+  padding-top:20px;
+}
+
+.site-description{
+  display: none;
+  position:absolute;
+  z-index: -999999;
+  left:-999999px;
+  height:0;
+  width:0;
+}
+
+.page-loading{
+  position: absolute;
+  z-index: 1000;
+  width:60px;
+  height:60px;
+  left:50%;
+  top:50%;
+}
+
+.page-loading span{
+  display:none;
+}
+
+
+
+
+
+@media @media-phone{
+
+  header{
+    position:relative;
+  }
+
+  .page-loading{
+    left:140px;
+    top:210px;
+  }
+
+}
+
+@media (min-width:321px) and (max-width:480px){
+
+  .page-loading{
+    left:210px;
+    top:140px;
+  }
+}

@@ -1,0 +1,78 @@
+.illustrationBrowser {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.illustrationBrowser ul.illustrations {
+  width: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.illustrationBrowser ul.illustrations li {
+  display: inline-block;
+  text-align: left;
+  margin:0;
+  padding: 0;
+  list-style: none;
+  list-style-position: inside;
+  list-style-type: none;
+  position: relative;
+  vertical-align: top;
+  letter-spacing: -4px
+}
+.illustrationBrowser ul.illustrations li *{
+  letter-spacing: 0;
+}
+
+
+.illustrationBrowser ul.illustrations li img {
+  margin: 10px;
+  vertical-align: top;
+}
+
+@media only screen
+and (orientation : landscape){
+  .illustrationBrowser {
+    height: 75%;
+    width: 900px;
+  }
+
+  .illustrationBrowser li img{
+    max-height: 480px;
+  }
+}
+
+
+@media only screen
+and (orientation : portrait){
+  .illustrationBrowser {
+    height: 90%;
+    width: 900px;
+  }
+
+  .illustrationBrowser li img{
+    max-height: 480px;
+  }
+}
+
+
+@media screen and (min-width: 1025px) {
+  .illustrationBrowser {
+    height: 100%;
+    width: 100%;
+  }
+
+  .illustrationBrowser li img{
+    max-height: 800px;
+  }
+}
+
+@media @media-phone{
+  .illustrationBrowser {
+    margin-top:40px;
+  }
+}
+
