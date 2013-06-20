@@ -1,0 +1,165 @@
+body {
+  transition: background-color 0.1s ease-in-out;
+}
+
+  /* --- THEME STANDARD --- */
+
+.theme-standard {
+  background-color: #eee;
+}
+
+  /* header */
+.theme-standard header {
+  background: #fff;
+}
+
+.theme-standard header .context-bar li a {
+  color: #000;
+}
+
+.theme-standard header .context-bar li a:hover {
+  color: #ef4135;
+}
+
+.theme-standard header .title-bar {
+  background: #cbcbcb;
+  color: #000;
+}
+
+.theme-standard stage {
+  background: #fff;
+  color: #000;
+}
+
+.theme-standard .page-loading {
+  background: transparent url('img/loading-000-80.gif') no-repeat;
+}
+
+  /* --- THEME DARK --- */
+
+.theme-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.theme-dark header .app-navigation {
+  background: #fff;
+}
+
+.theme-dark header .context-bar {
+  background-color: #333;
+}
+
+.theme-dark header .context-bar li a {
+  color: #fff;
+}
+
+.theme-dark header .context-bar li a:hover {
+  color: #ef4135;
+}
+
+.theme-dark header .title-bar {
+  background: #cbcbcb;
+  color: #000;
+}
+
+.theme-dark .page-loading {
+  background: transparent url('img/loading-eee.gif') no-repeat;
+}
+
+  /* --- THEME LIGHT --- */
+
+.theme-light {
+  background-color: #eee;
+}
+
+.theme-light header .app-navigation {
+  background: #fff;
+}
+
+.theme-light header .context-bar li a {
+  color: #000;
+}
+
+.theme-light header .context-bar li a:hover {
+  color: #ef4135;
+}
+
+.theme-light header .title-bar {
+  background: #cbcbcb;
+  color: #000;
+}
+
+.theme-standard .page-loading {
+  background: transparent url('img/loading-eee.gif') no-repeat;
+}
+
+@media @media-phone{
+  body, app {
+    max-width: 100%;
+  }
+
+  section.editorial-content{
+  }
+
+  section.editorial-content.about,
+  section.editorial-content.downloads-page,
+  .contact-page
+  {
+    .box-sizing(border-box);
+    width: 100% !important;
+    margin:0;
+    padding:0;
+    //padding-top: 30px;
+
+    & > div{
+      padding:10px;
+    }
+
+    img{
+      max-height: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+
+
+    & > div,
+    & > div.icons{
+      .box-sizing(border-box);
+
+      p{
+        .box-sizing(border-box);
+        width: 100%;
+      }
+    }
+
+    & > div.icons{
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  section.about .editorial-comment{
+    margin:0;
+    padding:10px;
+    padding-top: 0;
+    .box-sizing(border-box);
+    width: 100%;
+
+    & > div{
+      margin:0;
+//      padding:10px;
+      .box-sizing(border-box);
+      width: 100%;
+    }
+  }
+
+  section.about .icons a{
+    display:none !important;
+  }
+
+  .contact-page .column.x3{
+    width: auto !important;
+  }
+}
