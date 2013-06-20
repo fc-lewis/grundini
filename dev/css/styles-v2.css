@@ -1,4 +1,39 @@
-@import '../css/fonts/fonts.css';
+@font-face {
+  font-family: 'FuturaBold';
+  src: url('./futura-std/futura-std-bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaBold';
+  src: url('./futura-std/futura-std-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaBold';
+  src: url('./futura-std/futura-std-bold-oblique.otf') format('opentype');
+  font-weight: normal;
+  font-style: oblique;
+}
+@font-face {
+  font-family: 'FuturaBook';
+  src: url('./futura-std/futura-std-book.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaBook';
+  src: url('./futura-std/futura-std-book.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaBook';
+  src: url('./futura-std/futura-std-book-oblique.otf') format('opentype');
+  font-weight: normal;
+  font-style: oblique;
+}
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */

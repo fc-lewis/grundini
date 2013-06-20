@@ -15,13 +15,13 @@ module.exports = function (grunt) {
           "dev/css/styles-v2.css": "dev/less/styles.less"
         }
       }
-//      ,
-//      build: {
-//        options: {},
-//        files: {
-//          "build/css/styles-v2.css": "build/less/styles.less"
-//        }
-//      }
+      ,
+      build: {
+        options: {},
+        files: {
+          "build/css/styles-v2.css": "build/less/styles.less"
+        }
+      }
     },
     requirejs: {
       compile: {
