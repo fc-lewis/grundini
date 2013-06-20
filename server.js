@@ -1,7 +1,7 @@
 var urlParser = require('url'),
     doCache = true,
     static = require('node-static'),
-    file = new (static.Server)('./build'),
+    file = new (static.Server)('./dev'),
     ports = {
       flickrApi : 8111,
       web : 8081

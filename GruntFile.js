@@ -14,13 +14,14 @@ module.exports = function (grunt) {
         files: {
           "dev/css/styles-v2.css": "dev/less/styles.less"
         }
-      },
-      build: {
-        options: {},
-        files: {
-          "build/css/styles-v2.css": "build/less/styles.less"
-        }
       }
+//      ,
+//      build: {
+//        options: {},
+//        files: {
+//          "build/css/styles-v2.css": "build/less/styles.less"
+//        }
+//      }
     },
     requirejs: {
       compile: {
@@ -53,7 +54,7 @@ module.exports = function (grunt) {
     },
     clean : {
       build : [
-        'build/less',
+        'build/less'
       ]
     }
   });
