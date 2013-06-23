@@ -154,8 +154,7 @@ define(['core/core',
   };
 
   NavigationMenuView.prototype.openShareThisMenu = function () {
-//    $('.share .sharethis-buttons-container .sharethis-item').css('display', 'block');
-    $('.share .sharethis-buttons-container').animate({left: '0'});
+    $('.share .sharethis-buttons-container').animate({left: '0px'});
     this.shareThisMenuState = 'OPEN';
   };
 
@@ -327,8 +326,15 @@ define(['core/core',
 
 
 //-------- VIEW SETTINGS
+  NavigationMenuView.prototype.clearViewClasses = function(){
+    $('#app').removeClass('contentView projectsView clientsView browserView thumbsView tagsGroupView');
+  }
+
   NavigationMenuView.prototype.setContentView = function (selectedMenuItem, context) {
     var that = this;
+
+    this.clearViewClasses();
+    $('#app').addClass('contentView');
 
     this.reloadOnResize = false;
     this.hideTitleBar();
@@ -368,8 +374,10 @@ define(['core/core',
   NavigationMenuView.prototype.setProjectView = function (hashbang, context, showContext) {
     var that = this;
 
+    this.clearViewClasses();
+    $('#app').addClass('projectsView');
+
     this.reloadOnResize = false;
-    //this.setStageTopPos('64px');
     this.setViewClass('stage-projectview');
     this.hideTitleBar();
     this.hideSortBar();
@@ -404,12 +412,17 @@ define(['core/core',
   NavigationMenuView.prototype.setClientView = function (hashbang, title, alphaSortFn, dateSortFn) {
     var that = this;
 
+    this.clearViewClasses();
+    $('#app').addClass('clientsView');
+
     this.reloadOnResize = false;
     //this.setStageTopPos('96px');
     this.setViewClass('stage-clientview');
     this.hideTitleBar();
     this.hideNextPreviousButtons();
     this.hideShareControls();
+    //this.showShareControls();
+
     this.hideFooter();
     this.clearMainSelection();
     this.hidePosition();
@@ -431,6 +444,9 @@ define(['core/core',
 
   NavigationMenuView.prototype.setBrowserView = function (hashbang, context, pos, total) {
     var that = this;
+
+    this.clearViewClasses();
+    $('#app').addClass('browserView');
 
     if(window.grundini.isMobile){
       this.reloadOnResize = false;
@@ -470,6 +486,10 @@ define(['core/core',
 
   NavigationMenuView.prototype.setThumbnailsView = function (hashbang, context) {
     var that = this;
+
+    this.clearViewClasses();
+    $('#app').addClass('thumbsView');
+
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');
     this.setViewClass('stage-thumbsview');
@@ -504,6 +524,9 @@ define(['core/core',
 
   NavigationMenuView.prototype.setTagGroupsView = function (hashbang) {
     var that = this;
+
+    this.clearViewClasses();
+    $('#app').addClass('tagsGroupView');
 
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');

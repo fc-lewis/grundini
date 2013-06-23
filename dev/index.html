@@ -110,7 +110,7 @@
                 </span>
             </a>
 
-            <a href="#!/thumbs/tagged/year-2011" class="square large-text">
+            <a href="#!/thumbs/tagged/year-2013" class="square large-text">
                 <img src="./img/recent-work-5.jpg">
                 <span class="text-container">Recent Work</span></a>
 
@@ -118,39 +118,65 @@
                 <img src="./img/client-icon.jpg">
                 <span class="text-container inverted">Clients</span></a>
 
-            <a href="#!/downloads" class="square large-text downloads-square" title="Download Peter's work">
+            <a href="#!/downloads" class="square large-text" title="Download Peter's work">
+                <img src="./img/download3.png">
                 <span class="text-container">Downloads</span>
             </a>
 
-            <a class="square negative large-text all-work-square" href="#!/projects"><span class="text-container">All Work</span></a>
+            <a class="square negative large-text" href="#!/projects">
+                <img src="./img/all-work-square.png">
+                <span class="text-container">All Work</span>
+            </a>
 
             <a href="#!/client/shell-international" class="square large-text">
                 <img src="http://farm8.staticflickr.com/7144/6399153171_4fd9a43173_o.jpg">
                 <span class="text-container">The shell decade</span></a>
 
-            <a class="square negative large-text oc-years-square" href="#!/thumbs/project/osborne-clarke-covers"><span class="text-container">The OC years</span></a>
+            <a class="square negative large-text" href="#!/client/osborne-clarke">
+                <img src="./img/oc-years-icon.png">
+                <span class="text-container">The OC years</span>
+            </a>
 
-            <a class="square negative large-text in-progress-square" href="#!/thumbs/tagged/inprogress">&nbsp;</a>
+            <a class="square negative large-text" href="#!/thumbs/tagged/inprogress">
+                <img src="./img/in-progress-icon.png">
+            </a>
 
-            <a class="square negative large-text grundini-favourites-square" href="#!/thumbs/tagged/favourites"><span class="text-container">Grundini Favourites</span></a>
+            <a class="square negative" href="#!/thumbs/tagged/favourites">
+                <img src="./img/favourites-icon.jpg">
+                <span class="text-container">Favourites</span>
+            </a>
 
             <a href="#!/thumbs/tagged/theme-characters" class="square large-text">
                 <img src="./img/people-square.png">
                 <span class="text-container">Characters</span>
             </a>
 
-            <a class="square negative large-text diagrams-square" href="#!/thumbs/tagged/format-diagrams"><span class="text-container">Diagrams</span></a>
+            <a class="square negative large-text" href="#!/thumbs/tagged/format-diagrams">
+                <img src="./img/diagrams-icon.jpg">
+                <span class="text-container">Diagrams</span></a>
 
-            <a href="#!/thumbs/tagged/theme-epiphanies" class="square epiphanes-square"><span class="text-container">Epiphanies</span></a>
+            <a href="#!/thumbs/tagged/theme-epiphanies" class="square">
+                <img src="./img/epiphany-icon.jpg">
+                <span class="text-container">Epiphanies</span></a>
 
 
-            <a class="square negative large-text buildings-square" href="#!/thumbs/tagged/theme-buildings"><span class="text-container">Buildings</span></a>
+            <a class="square negative large-text" href="#!/thumbs/tagged/theme-buildings">
+                <img src="./img/buildings-icon.jpg">
+                <span class="text-container">Buildings</span></a>
 
-            <a href="#!/thumbs/tagged/theme-wacko" class="square wacko-square"><span class="text-container">Wacko</span></a>
+            <a href="#!/thumbs/tagged/theme-wacko" class="square">
+                <img src="./img/wacky-icon.jpg">
+                <span class="text-container">Wacko</span></a>
 
-            <a href="#!/thumbs/tagged/format-letterforms" class="square letterforms-square"><span class="text-container">Letterforms</span></a>
+            <a href="#!/thumbs/tagged/format-letterforms" class="square">
+                <img src="./img/letterforms-icon.jpg">
+                <span class="text-container">Letterforms</span>
+            </a>
 
-            <a href="#!/thumbs/tagged/subject-technology" class="square tech-square"><span class="text-container">Tech</span></a>
+            <a href="#!/thumbs/tagged/subject-technology" class="square">
+                <img src="./img/tech-icon.jpg">
+                <span class="text-container">Tech</span>
+            </a>
 
         </section>
     </section>
@@ -205,8 +231,8 @@
 <script type="text/x-mustache-template" id="projects">
     <ul class="sub-categories projects">
         {{#projects}}
-        <li {{#imageUrl}} style="background:url({{small}}) no-repeat 50% 50%;" class="thumbnail"{{/imageUrl}}>
-        <a href="{{projectlink}}">{{title}}</a></li>
+        <li>
+        <a href="{{projectlink}}"><img src="{{imageUrl.small}}"/><span>{{title}}</span></a></li>
         {{/projects}}
     </ul>
 </script>

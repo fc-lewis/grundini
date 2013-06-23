@@ -144,12 +144,12 @@ define([
 
       //close the nav if it's open
       $('.main-nav> ul').addClass('closed');
-
-      setTimeout(function () {
-        //if (!pageYOffset)
-        window.scrollTo(0, 1);
-      }, 1000);
     }
+
+    setTimeout(function () {
+      //if (!pageYOffset)
+      window.scrollTo(0, 1);
+    }, 1000);
 
     if (modelCtx.isReady()) {
       cb();

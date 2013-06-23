@@ -1,6 +1,6 @@
 section.about {
   text-align: left;
-  max-width: 1000px;
+  padding:10px;
 }
 
 section.about .editorial-comment p,
@@ -61,4 +61,23 @@ section.about .editorial-comment div{
 
 section.about .editorial-comment div:first-child{
   margin-right:10px;
+}
+
+@media @media-tablet-p{
+
+  section.about{
+    & .icons{
+      width:33%;
+
+      a, img{
+        box-sizing: border-box;
+        max-width: 240px;
+      }
+
+      a {
+        margin-right:7px;
+      }
+    }
+  }
+
 }

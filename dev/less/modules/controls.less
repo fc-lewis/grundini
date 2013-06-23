@@ -63,7 +63,7 @@ a.zoomimage {
   z-index: 16;
   opacity: 0.145;
   position: relative;
-  left: 60px;
+  left: 280px;
   top: 10px;
 }
 
@@ -100,6 +100,7 @@ a.zoomimage:hover {
   margin-right:0px;
   position: relative;
   left:500px;
+  width:340px;
 }
 
 .controls .share .sharethis-item{
@@ -166,6 +167,14 @@ a.zoomimage:hover {
   opacity:1;
 }
 
+@media @media-not-phone{
+  .sharethis-buttons-container{
+    top:80px !important;
+  }
+}
+
+
+
 @media @media-phone{
 
   .controls{
@@ -200,8 +209,6 @@ a.zoomimage:hover {
 
   }
 
-
-
   .controls a.button.previous{
     position: absolute;
     left:0px;
@@ -218,6 +225,16 @@ a.zoomimage:hover {
     margin-top: 0;
     position: absolute;
   }
+
+  .controls .share .sharethis-item{
+    display: block;
+    width: 55px;
+    height:55px;
+    margin: 5px 5px 0 0;
+    float:left;
+    background-size: 100% 100% !important;
+  }
+
 
   .controls .sprite.overview{
     background-position: -112px -2px;
@@ -244,7 +261,7 @@ a.zoomimage:hover {
   }
 
   .controls .sharethis-buttons-container{
-    top:-80px;
+    top:-65px;
   }
 
   .controls .share{

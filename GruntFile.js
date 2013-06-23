@@ -19,7 +19,7 @@ module.exports = function (grunt) {
       build: {
         options: {},
         files: {
-          "build/css/styles-v2.css": "build/less/styles.less"
+          "build/css/styles-v2.css": "dev/less/styles.less"
         }
       }
     },

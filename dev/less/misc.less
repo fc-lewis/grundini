@@ -77,9 +77,8 @@ footer .tags li a{
 section.about,
 section.downloads-page,
 .contact-page{
-  width:1000px;
+//  max-width:1000px;
   text-align: left;
-  margin-left:10px;
   margin-bottom:40px;
 }
 
@@ -122,6 +121,22 @@ section.downloads-page,
 
 
 
+@media @media-not-phone{
+  .contact-page{
+    padding: 10px 0 0 10px;
+  }
+}
+
+@media @media-tablet-p{
+  .contact-page{
+    .column.x1{
+      img{
+        margin:0;
+        padding: 10px 10px 0 0;
+      }
+    }
+  }
+}
 
 
 @media @media-phone{
@@ -144,3 +159,4 @@ section.downloads-page,
     top:140px;
   }
 }
+

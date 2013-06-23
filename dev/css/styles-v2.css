@@ -1,36 +1,36 @@
 @font-face {
   font-family: 'FuturaBold';
-  src: url('./futura-std/futura-std-bold.otf') format('opentype');
+  src: url('./fonts/futura-std/futura-std-bold.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FuturaBold';
-  src: url('./futura-std/futura-std-bold.otf') format('opentype');
+  src: url('./fonts/futura-std/futura-std-bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'FuturaBold';
-  src: url('./futura-std/futura-std-bold-oblique.otf') format('opentype');
+  src: url('./fonts/futura-std/futura-std-bold-oblique.otf') format('opentype');
   font-weight: normal;
   font-style: oblique;
 }
 @font-face {
   font-family: 'FuturaBook';
-  src: url('./futura-std/futura-std-book.otf') format('opentype');
+  src: url('./fonts/futura-std/futura-std-book.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FuturaBook';
-  src: url('./futura-std/futura-std-book.otf') format('opentype');
+  src: url('./fonts/futura-std/futura-std-book.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'FuturaBook';
-  src: url('./futura-std/futura-std-book-oblique.otf') format('opentype');
+  src: url('./fonts/futura-std/futura-std-book-oblique.otf') format('opentype');
   font-weight: normal;
   font-style: oblique;
 }
@@ -208,21 +208,21 @@ a,
 h1,
 h2,
 h3 {
-  font: bold 13px/16px FuturaBold, "Arial Black", Helvetica, serif;
+  font: bold 13px / 16px FuturaBold, "Arial Black", Helvetica, serif;
   text-decoration: none;
 }
 .large-text {
-  /*font:bold 24px/30px FuturaBold, "Arial Black", Helvetica, serif;*/
+  /*font:bold 24px~"/"30px FuturaBold, "Arial Black", Helvetica, serif;*/
 
-  font: bold 13px/16px FuturaBold, "Arial Black", Helvetica, serif;
+  font: bold 13px / 16px FuturaBold, "Arial Black", Helvetica, serif;
 }
 .file-info,
 .about .editorial-comment blockquote {
-  font: normal 13px/16px FuturaBook, Arial, Helvetica, serif;
+  font: normal 13px / 16px FuturaBook, Arial, Helvetica, serif;
   text-decoration: none;
 }
 .home .homepage-quote {
-  font: bold 22px/28px FuturaBold, "Arial Black", Helvetica, serif;
+  font: bold 22px / 28px FuturaBold, "Arial Black", Helvetica, serif;
 }
 .displaynone {
   display: none;
@@ -279,6 +279,9 @@ a {
   z-index: 10000000;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0px;
+  right: 10px;
 }
 .fullsize-image .loading-container .zoomoutlink:hover {
   opacity: 1;
@@ -352,7 +355,7 @@ header li a {
 .common-nav li {
   display: inline-block;
   text-align: right;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 header .common-nav li:first-child {
   padding-left: 10px;
@@ -424,7 +427,7 @@ header .common-nav li:first-child {
 /* layouts */
 section.about {
   text-align: left;
-  max-width: 1000px;
+  padding: 10px;
 }
 section.about .editorial-comment p,
 section.about .editorial-comment blockquote {
@@ -477,6 +480,19 @@ section.about .editorial-comment div {
 }
 section.about .editorial-comment div:first-child {
   margin-right: 10px;
+}
+@media (min-width:481px) and (max-width: 768px) {
+  section.about .icons {
+    width: 33%;
+  }
+  section.about .icons a,
+  section.about .icons img {
+    box-sizing: border-box;
+    max-width: 240px;
+  }
+  section.about .icons a {
+    margin-right: 7px;
+  }
 }
 /* page specific */
 /* home page */
@@ -707,6 +723,28 @@ section.about .editorial-comment div:first-child {
 .contact-page .hcard span {
   display: block;
 }
+/* downloads-page*/
+.downloads-page div {
+  float: left;
+  width: 240px;
+  padding: 10px 0px 10px 10px;
+}
+.downloads-page div a:hover {
+  opacity: 0.8;
+}
+.downloads-page div p {
+  padding: 5px;
+  line-height: 1.75em;
+}
+.downloads-page div .file-info {
+  display: block;
+}
+@media (max-width: 480px) {
+  .downloads-page div {
+    float: left;
+    width: 240px;
+  }
+}
 /* modules */
 .stage .illustration-thumbnails li {
   display: inline-block;
@@ -853,7 +891,7 @@ section.about .editorial-comment div:first-child {
     top: 98px;
   }
   .stage.stage-contentview {
-    top: 73px;
+    top: 68px;
   }
   .stage.stage-defaultview {
     top: 34px;
@@ -886,12 +924,48 @@ section.about .editorial-comment div:first-child {
   .stage .sub-categories {
     overflow-x: hidden;
   }
-  .stage .projects li {
-    width: 240px;
-    height: 240px;
-    margin-left: 50%;
+  .stage .projects,
+  .stage .illustration-thumbnails {
     position: relative;
-    left: -120px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+  }
+  .stage .illustration-thumbnails {
+    margin-top: -40px;
+  }
+  .stage .projects li,
+  .stage .illustration-thumbnails li {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    max-height: none;
+    max-width: none;
+    width: 50%;
+    float: left;
+  }
+  .stage .illustration-thumbnails li,
+  .stage .projects li {
+    padding: 10px 10px 0px 0px;
+  }
+  .stage .projects li img,
+  .stage .illustration-thumbnails li a img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    max-width: 100%;
+  }
+  .stage .projects li img + span {
+    display: none;
+  }
+  .stage .projects.sub-categories li {
+    background-color: transparent;
   }
 }
 footer {
@@ -976,7 +1050,7 @@ a.zoomimage {
   z-index: 16;
   opacity: 0.145;
   position: relative;
-  left: 60px;
+  left: 280px;
   top: 10px;
 }
 a.zoomimage:hover {
@@ -1005,6 +1079,7 @@ a.zoomimage:hover {
   margin-right: 0px;
   position: relative;
   left: 500px;
+  width: 340px;
 }
 .controls .share .sharethis-item {
   display: block;
@@ -1060,6 +1135,11 @@ a.zoomimage:hover {
 .controls .overview:hover {
   opacity: 1;
 }
+@media (min-width: 480px) {
+  .sharethis-buttons-container {
+    top: 80px !important;
+  }
+}
 @media (max-width: 480px) {
   .controls {
     bottom: 5px;
@@ -1103,6 +1183,14 @@ a.zoomimage:hover {
     margin-top: 0;
     position: absolute;
   }
+  .controls .share .sharethis-item {
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: 5px 5px 0 0;
+    float: left;
+    background-size: 100% 100% !important;
+  }
   .controls .sprite.overview {
     background-position: -112px -2px;
     float: none;
@@ -1123,7 +1211,7 @@ a.zoomimage:hover {
     background-size: 55px 55px !important;
   }
   .controls .sharethis-buttons-container {
-    top: -80px;
+    top: -65px;
   }
   .controls .share {
     overflow: visible;
@@ -1133,6 +1221,8 @@ a.zoomimage:hover {
   background-color: #fff;
   /*border-bottom: solid 1px rgba(100, 100, 100, 0.3);*/
 
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .context-bar .seperator {
   color: #666;
@@ -1185,7 +1275,7 @@ header .sorting-controls {
   background: #eee;
 }
 .title-bar {
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 0px 20px;
   vertical-align: middle;
   margin-top: 0;
   position: relative;
@@ -1196,6 +1286,11 @@ header .sorting-controls {
   vertical-align: middle;
   line-height: 32px;
 }
+@media (max-width: 480px) {
+  .title-bar {
+    padding-left: 10px;
+  }
+}
 .main-nav {
   text-align: right;
   width: 100%;
@@ -1205,11 +1300,12 @@ header .sorting-controls {
 .main-nav ul {
   display: inline-block;
   text-align: right;
+  padding-right: 20px;
 }
 .main-nav .home {
   display: inline-block;
   float: left;
-  padding: 10px;
+  padding: 10px 20px;
   text-align: left;
 }
 /* themes */
@@ -1274,9 +1370,11 @@ header .sorting-controls {
   }
   .main-nav > .home {
     float: none;
+    padding-left: 10px;
   }
   .main-nav {
     line-height: 0;
+    padding-left: 0;
   }
   .home .main-nav > ul,
   .main-nav > ul {
@@ -1299,7 +1397,7 @@ header .sorting-controls {
     padding: 0 10px;
   }
   .main-nav ul > li {
-    border-bottom: solid 1px #5d5e5f;
+    border-bottom: solid 2px #5d5e5f;
     display: block;
     height: auto;
     padding: 0;
@@ -1323,6 +1421,7 @@ header .sorting-controls {
 }
 header .illustration-nav {
   background: #eee;
+  padding-left: 10px;
   /*border-bottom: solid 1px rgba(100, 100, 100, 0.3);*/
 
 }
@@ -1354,6 +1453,10 @@ header .illustration-nav {
 @media (max-width: 480px) {
   .illustration-nav {
     height: auto !important;
+    padding: 0 !important;
+  }
+  .illustration-nav > ul {
+    padding: 0;
   }
   .main-nav .illustration-nav {
     background-color: #575656;
@@ -1510,9 +1613,7 @@ footer .tags li a {
 section.about,
 section.downloads-page,
 .contact-page {
-  width: 1000px;
   text-align: left;
-  margin-left: 10px;
   margin-bottom: 40px;
 }
 #notSupported {
@@ -1547,6 +1648,17 @@ section.downloads-page,
 }
 .page-loading span {
   display: none;
+}
+@media (min-width: 480px) {
+  .contact-page {
+    padding: 10px 0 0 10px;
+  }
+}
+@media (min-width:481px) and (max-width: 768px) {
+  .contact-page .column.x1 img {
+    margin: 0;
+    padding: 10px 10px 0 0;
+  }
 }
 @media (max-width: 480px) {
   header {
@@ -1715,5 +1827,27 @@ body {
   }
   .contact-page .column.x3 {
     width: auto !important;
+  }
+}
+#app.contentView .zoomimage,
+#app.projectsView .zoomimage,
+#app.clientsView .zoomimage,
+#app.thumbsView .zoomimage,
+#app.tagsGroupView .zoomimage {
+  display: none;
+}
+#app.browserView .zoomimage {
+  display: block;
+}
+@media (min-width: 480px) {
+  
+}
+@media (max-width: 480px) {
+  #app.contentView .zoomimage,
+  #app.projectsView .zoomimage,
+  #app.clientsView .zoomimage,
+  #app.thumbsView .zoomimage,
+  #app.tagsGroupView .zoomimage {
+    display: none;
   }
 }
