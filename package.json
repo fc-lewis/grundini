@@ -1,7 +1,9 @@
 {
   "name": "grundini",
   "version": "0.1.2",
-  "dependencies": {},
+  "dependencies": {
+    "node-static": "*"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
@@ -28,7 +30,7 @@
     "grunt-contrib-clean": "*"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": "0.10.12"
   },
   "scripts": {
     "start": "node server.js"
