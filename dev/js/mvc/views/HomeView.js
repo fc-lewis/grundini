@@ -11,7 +11,7 @@ define(['core/core',
       lastScrollPos = 0,
       reachedEnd = false,
       tags,
-      devicePageSize = utils.isMobile ? 2 : 10;
+      devicePageSize = utils.isMobile ? 6 : 10;
 
 
 function HomeView(viewModel, navView) {
