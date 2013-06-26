@@ -25,7 +25,7 @@ function HomeView(viewModel, navView) {
 
     tags = new TagsLoader({
       tags : viewModel.getModel().getTags(),
-      pageSize: 2
+      pageSize: 20
     });
 
   }
@@ -37,7 +37,7 @@ function HomeView(viewModel, navView) {
   homeViewProto.getTagsHtml = function (tags) {
     var i = 0, html = '';
     for (i; i < tags.length; i++) {
-      html += '<a href="#!/thumbs/tagged/' + tags[i].slug + '" class="square no-img">' +
+      html += '<a href="#!/thumbs/tagged/' + tags[i].slug + '" class="square no-img fade noopacity">' +
         '<span class="text-container">' + tags[i].content + '</span>' +
         '</a>';
     }
@@ -49,22 +49,38 @@ function HomeView(viewModel, navView) {
     return thisScrollPos > lastScrollPos ? 'down' : 'up';
   };
 
+  homeViewProto.getScrollDistance = function (thisScrollPos, lastScrollPos) {
+    var distance = lastScrollPos - thisScrollPos;
+
+    return distance < 0 ? distance * -1 : distance;
+  };
+
+
   homeViewProto.onScrollDown = function () {
-    //console.log('document.height = %s', document.height);
     var thisScrollPos = $(window).scrollTop(),
-      currentPage = [];
+      currentPage = [],
+      $newTags;
 
     if (this.getScrollDirection(thisScrollPos, lastScrollPos) === 'down') {
-      if ((contentHeight - pageHeight - thisScrollPos) < 235) {
+
+
+      if ((contentHeight - pageHeight - thisScrollPos) < 10) {
         currentPage = tags.getPage(index);
 
         if (!currentPage.length || currentPage.length === 0) {
           reachedEnd = true;
-          $('.grid').append('<span>END</span>');
+          $('.grid').append('<span class="square no-img grundini-blue">END!</span>');
 
           $(document).off('scroll.addtags');
         } else {
-          $('.grid').append(this.getTagsHtml(currentPage));
+          $newTags = $(this.getTagsHtml(currentPage));
+
+          $('.grid').append($newTags);
+
+          setTimeout(function(){
+            $newTags.removeClass('noopacity');
+          }, 1);
+
           index += 1;
         }
       }

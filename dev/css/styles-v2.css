@@ -43,6 +43,12 @@
   height: 0;
   clear: both;
 }
+.grid a.square.fade {
+  transition: opacity 2.4s ease-in-out;
+}
+.noopacity {
+  opacity: 0;
+}
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
