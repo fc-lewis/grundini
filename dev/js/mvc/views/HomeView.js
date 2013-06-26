@@ -7,13 +7,13 @@ define(['core/core',
       pageHeight,
       index = 0,
       lastScrollPos = 0,
-      reachedEnd = false;
-
-  var tags;
+      reachedEnd = false,
+      tags,
+      devicePageSize = window.grundini.isMobile ? 2 : 10;
 
 
 function HomeView(viewModel, navView) {
-    contentHeight = 800;
+    contentHeight = $(document).outerHeight();
     pageHeight = document.documentElement.clientHeight;
     index = 1,
     lastScrollPos = 0,
@@ -25,7 +25,7 @@ function HomeView(viewModel, navView) {
 
     tags = new TagsLoader({
       tags : viewModel.getModel().getTags(),
-      pageSize: 20
+      pageSize: devicePageSize
     });
 
   }
@@ -59,12 +59,12 @@ function HomeView(viewModel, navView) {
   homeViewProto.onScrollDown = function () {
     var thisScrollPos = $(window).scrollTop(),
       currentPage = [],
+      contentHeight = $(document).outerHeight(),
       $newTags;
 
     if (this.getScrollDirection(thisScrollPos, lastScrollPos) === 'down') {
+      if ((contentHeight - pageHeight - thisScrollPos) < 200) {
 
-
-      if ((contentHeight - pageHeight - thisScrollPos) < 10) {
         currentPage = tags.getPage(index);
 
         if (!currentPage.length || currentPage.length === 0) {
@@ -85,6 +85,8 @@ function HomeView(viewModel, navView) {
         }
       }
     }
+
+    lastScrollPos = thisScrollPos;
   };
 
   homeViewProto.addEventHandlers = function () {
