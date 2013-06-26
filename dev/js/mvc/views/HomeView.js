@@ -1,8 +1,7 @@
 define(['core/core',
   'mvc/views/ContentView',
-  'libs/grundini-homepage-tags',
-  'libs/grundini-utils'],
-  function (core, ContentView, TagsLoader, utils) {
+  'libs/grundini-homepage-tags'],
+  function (core, ContentView, TagsLoader) {
 
 
   var contentHeight,
@@ -11,7 +10,7 @@ define(['core/core',
       lastScrollPos = 0,
       reachedEnd = false,
       tags,
-      devicePageSize = utils.isMobile ? 6 : 10;
+      devicePageSize;
 
 
 function HomeView(viewModel, navView) {
@@ -20,6 +19,8 @@ function HomeView(viewModel, navView) {
     index = 1,
     lastScrollPos = 0,
     reachedEnd = false;
+
+    devicePageSize = window.grundini.isMobile ? 6 : 10;
 
     ContentView.call(this, viewModel, navView);
 

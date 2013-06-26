@@ -4,7 +4,7 @@ define([
   'mvc/partialViews/NavigationMenuView',
   'mvc/controllers/ContentController',
   'mvc/views/ContentView',
-  'libs/grundini-utils'
+  'libs/grundini-utils.js'
 ], function (GrundiniModel, BrowseIllsCtrlr, NavMenuView, ContentCtrlr, ContentVw, utils) {
   var controllerCtx,
     modelCtx = new GrundiniModel();
@@ -138,7 +138,7 @@ define([
     }
 
     //setup the site for devices < 481px wide
-    if(window.grundiniUtils.isMobile){
+    if(window.grundini.isMobile){
       $('#workSubMenuMobile').append($('.illustration-nav').removeClass('displaynone'));
       $('#workSubMenuMobile').addClass('closed');
 
