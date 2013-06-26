@@ -138,7 +138,7 @@ define([
     }
 
     //setup the site for devices < 481px wide
-    if(window.grundini.isMobile){
+    if(window.grundiniUtils.isMobile){
       $('#workSubMenuMobile').append($('.illustration-nav').removeClass('displaynone'));
       $('#workSubMenuMobile').addClass('closed');
 
