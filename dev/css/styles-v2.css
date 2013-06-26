@@ -752,6 +752,9 @@ section.about .editorial-comment div:first-child {
   }
 }
 /* modules */
+.stage {
+  padding-bottom: 100px;
+}
 .stage .illustration-thumbnails li {
   display: inline-block;
   margin-left: 10px;
@@ -907,6 +910,7 @@ section.about .editorial-comment div:first-child {
   .stage {
     position: relative;
     top: -6px;
+    padding-bottom: 50px;
   }
   .stage-clientview {
     top: 0px;
