@@ -106,16 +106,17 @@ section.downloads-page,
   width:0;
 }
 
-.page-loading{
-  position: absolute;
-  z-index: 1000;
+.pageLoading{
+  position: fixed;
+  z-index: 9999;
   width:60px;
   height:60px;
   left:50%;
   top:50%;
+  display:none;
 }
 
-.page-loading span{
+.pageLoading span{
   display:none;
 }
 
@@ -145,7 +146,7 @@ section.downloads-page,
     position:relative;
   }
 
-  .page-loading{
+  .pageLoading{
     left:140px;
     top:210px;
   }
@@ -154,7 +155,7 @@ section.downloads-page,
 
 @media (min-width:321px) and (max-width:480px){
 
-  .page-loading{
+  .pageLoading{
     left:210px;
     top:140px;
   }

@@ -54,3 +54,48 @@
   .contact-page .hcard span{
     display: block;
   }
+
+  @media @media-phone{
+    
+    .contact-page .column.x1,
+    .contact-page .column.x2,
+    .contact-page .column.x3,
+    .contact-page .hcard
+    {
+      box-sizing:border-box; 
+      margin:0;
+      padding:10px;
+      width: 50%;
+    }
+
+
+    .contact-page .hcard
+    {
+      font-size: 12px;
+      padding-top:0;
+      width: 100%;
+    }    
+    
+    .contact-page .column.x1{
+        position:absolute;
+        right:0;
+        top:0px;
+
+      & > a:nth-child(2){
+        position:relative;
+        top:10px;
+      }
+
+    }
+    
+    .contact-page .column.x2{
+      & > a {
+        display:none;
+      }
+    }
+    
+    .contact-page .column.x3{
+    }
+
+
+  }

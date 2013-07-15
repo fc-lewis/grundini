@@ -31,9 +31,9 @@ body {
   color: #000;
 }
 
-.theme-standard .page-loading {
-  background: transparent url('img/loading-000-80.gif') no-repeat;
-}
+//.theme-standard .pageLoading {
+//  background: transparent url('img/loading-000-80.gif') no-repeat;
+//}
 
   /* --- THEME DARK --- */
 
@@ -63,8 +63,9 @@ body {
   color: #000;
 }
 
-.theme-dark .page-loading {
+.pageLoading {
   background: transparent url('img/loading-eee.gif') no-repeat;
+  opacity:0.5;
 }
 
   /* --- THEME LIGHT --- */
@@ -155,11 +156,4 @@ body {
     }
   }
 
-  section.about .icons a{
-    display:none !important;
-  }
-
-  .contact-page .column.x3{
-    width: auto !important;
-  }
 }

@@ -60,11 +60,12 @@
 
 a.zoomimage {
   background: transparent url('img/zoomin.png') no-repeat 0 0;
-  z-index: 16;
+  display:none;
   opacity: 0.145;
-  position: relative;
-  left: 280px;
-  top: 10px;
+  position: absolute;
+  right: 20px;
+  top: 97px;
+  z-index: 16;
 }
 
 a.zoomimage:hover {
@@ -127,7 +128,7 @@ a.zoomimage:hover {
 }
 
 .controls .nextPrevious {
-  top: 106px;
+  top: 176px;
   right: 20px;
   width: 60px;
   height: 200px;
@@ -148,7 +149,7 @@ a.zoomimage:hover {
 }
 
 .controls a.previous {
-  bottom: 0;
+  top:68px;
 }
 
 .controls a.next {
@@ -159,7 +160,7 @@ a.zoomimage:hover {
   left:-2px;
   opacity:0.145;
   position: relative;
-  top:68px;
+  top:138px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -249,6 +250,11 @@ a.zoomimage:hover {
     left:60px;
     top:0;
     margin:0;
+  }
+
+  .zoomoutlink
+  {
+    display:none !important;
   }
 
 

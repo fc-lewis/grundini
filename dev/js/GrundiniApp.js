@@ -4,7 +4,7 @@ define([
   'mvc/partialViews/NavigationMenuView',
   'mvc/controllers/ContentController',
   'mvc/views/ContentView',
-  'libs/grundini-utils.js'
+  'libs/grundini-utils'
 ], function (GrundiniModel, BrowseIllsCtrlr, NavMenuView, ContentCtrlr, ContentVw, utils) {
   var controllerCtx,
     modelCtx = new GrundiniModel();
@@ -22,6 +22,11 @@ define([
       ]})
   };
 
+  GrundiniApp.setLoadingState = function(){
+    $('#app').addClass('loading');
+    $('.stage').removeClass('stage-taggroupsview stage-thumbsview stage-projectview stage-browserview stage-clientview stage-defaultview stage-loading');
+  }
+
   GrundiniApp.routeHandler = {
 
     /*  editorial - probably replaced with static pages  */
@@ -30,7 +35,7 @@ define([
       function doDisplayHome() {
         controllerCtx.displayHome(partialViews.navView);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(ContentCtrlr, doDisplayHome);
 
     },
@@ -40,7 +45,7 @@ define([
       function doDisplayAbout() {
         controllerCtx.displayAbout(partialViews.navView);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(ContentCtrlr, doDisplayAbout);
 
     },
@@ -59,7 +64,7 @@ define([
       function doDisplayDownloads() {
         controllerCtx.displayDownloads(partialViews.navView);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(ContentCtrlr, doDisplayDownloads);
     },
 
@@ -68,7 +73,7 @@ define([
       function doDisplayProjects() {
         controllerCtx.displayProjects(partialViews.navView, args.client);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(BrowseIllsCtrlr, doDisplayProjects);
     },
 
@@ -77,7 +82,7 @@ define([
       function doDisplayClients() {
         controllerCtx.displayClients(partialViews.navView);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(BrowseIllsCtrlr, doDisplayClients);
     },
 
@@ -85,7 +90,7 @@ define([
       function doDisplayTagsForGroup() {
         controllerCtx.displayTagsForGroup(partialViews.navView, args.group);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(BrowseIllsCtrlr, doDisplayTagsForGroup);
 
     },
@@ -95,7 +100,7 @@ define([
       function doDisplayThumbs() {
         controllerCtx.displayThumbnailsForProject(partialViews.navView, args.project, args.client);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(BrowseIllsCtrlr, doDisplayThumbs);
 
     },
@@ -104,7 +109,7 @@ define([
       function doDisplayThumbs() {
         controllerCtx.displayThumbnailsForTag(partialViews.navView, args.tag);
       }
-
+      GrundiniApp.setLoadingState();
       actionRequest(BrowseIllsCtrlr, doDisplayThumbs);
     },
 
@@ -114,6 +119,7 @@ define([
         controllerCtx.displayProjectIllustrationBrowser(partialViews.navView, args.project, args.illustration, args.client);
       }
 
+      //GrundiniApp.setLoadingState();
       actionRequest(BrowseIllsCtrlr, doDisplayBrowser);
 
     },
@@ -123,6 +129,7 @@ define([
         controllerCtx.displayTagggedIllustrationsBrowser(partialViews.navView, args.tag, args.illustration);
       }
 
+      //GrundiniApp.setLoadingState();
       actionRequest(BrowseIllsCtrlr, doDisplayBrowser);
     }
   };

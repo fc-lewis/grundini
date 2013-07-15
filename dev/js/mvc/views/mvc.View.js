@@ -21,6 +21,10 @@ define(['core/core'], function(core) {
     }
   };
 
+  View.prototype.setViewClas = function(cls){
+    this.navView.setViewClass(cls);
+  };
+
   View.prototype.setRenderFn = function(fn) {
     this.renderFn = fn;
   };

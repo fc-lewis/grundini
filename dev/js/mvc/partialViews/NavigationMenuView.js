@@ -72,7 +72,7 @@ define(['core/core',
 
       $('#mainNavSwitch').on('click', function (e) {
         e.preventDefault();
-        $('.main-nav> ul').toggleClass('closed');
+        $('.main-nav > ul').toggleClass('closed');
       });
 
       $('#workNavSwitch').on('click', function (e) {
@@ -93,37 +93,43 @@ define(['core/core',
 
   core.inherit(NavigationMenuView, mvcView);
 
+  //--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+  NavigationMenuView.prototype.hidePageLoading = function () {
+    $('.page-loading').hide();
+  };
+
+  NavigationMenuView.prototype.showTitleBar = function () {
+    $('.title-bar').slideDown(250);
+  };
+
+  NavigationMenuView.prototype.hideTitleBar = function () {
+    $('.title-bar').slideUp(250);
+  };
+
+  NavigationMenuView.prototype.showContext = function () {
+    $('.context-bar').slideDown(250);
+  };
+
+  NavigationMenuView.prototype.hideContext = function () {
+    $('.context-bar').slideUp(300);
+  };
+
+  NavigationMenuView.prototype.hidePosition = function () {
+    $('.context-bar .position').hide();
+  }
+
+  NavigationMenuView.prototype.showPosition = function () {
+    $('.context-bar .position').show();
+  }
 
   NavigationMenuView.prototype.hideIllustrationNav = function (fn) {
     $('.illustration-nav').slideUp(250, fn);
-    //$('.illustration-nav').addClass('up').one($.support.transition.end, fn);
-  };
+ };
 
   NavigationMenuView.prototype.showIllustrationNav = function (fn) {
     $('.illustration-nav').slideDown(100, fn);
     //$('.illustration-nav').removeClass('up').one($.support.transition.end, fn);
-  };
-
-  NavigationMenuView.prototype.setActiveItem = function (elm) {
-    this.clearIllstrItem();
-    $(elm).addClass('active');
-  };
-
-  NavigationMenuView.prototype.clearIllstrItem = function (elm) {
-    this.root.find('li').removeClass('active');
-  };
-
-  NavigationMenuView.prototype.setActiveItemByHash = function (hash) {
-    this.clearIllstrItem();
-    if (window.location.hash) {
-      var els = this.findByHref(hash, this.root);
-      if (els && els[0]) {
-        this.setActiveItem($(els[0]).parent());
-        return;
-      }
-
-      this.setActiveItem($(els).parent());
-    }
   };
 
   NavigationMenuView.prototype.hideSortBar = function () {
@@ -135,12 +141,12 @@ define(['core/core',
   };
 
   NavigationMenuView.prototype.hideNextPreviousButtons = function () {
-    $('.controls .nextPrevious').fadeOut(250);
+    //$('.controls .nextPrevious').fadeOut(250);
     $('.controls .position').fadeOut(250);
   };
 
   NavigationMenuView.prototype.showNextPreviousButtons = function () {
-    $('.controls .nextPrevious').fadeIn(250);
+    //$('.controls .nextPrevious').fadeIn(250);
     $('.controls .position').fadeIn(250);
 
   };
@@ -179,8 +185,32 @@ define(['core/core',
     $('footer').fadeIn(250);
   };
 
-  NavigationMenuView.prototype.hidePageLoading = function () {
-    $('.page-loading').hide()
+  //--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+
+
+
+
+  NavigationMenuView.prototype.setActiveItem = function (elm) {
+    this.clearIllstrItem();
+    $(elm).addClass('active');
+  };
+
+  NavigationMenuView.prototype.clearIllstrItem = function (elm) {
+    this.root.find('li').removeClass('active');
+  };
+
+  NavigationMenuView.prototype.setActiveItemByHash = function (hash) {
+    this.clearIllstrItem();
+    if (window.location.hash) {
+      var els = this.findByHref(hash, this.root);
+      if (els && els[0]) {
+        this.setActiveItem($(els[0]).parent());
+        return;
+      }
+
+      this.setActiveItem($(els).parent());
+    }
   };
 
   //TODO: the following methods are messy -- could do with tidying :(
@@ -276,38 +306,23 @@ define(['core/core',
     $('.context-bar').html(contextHtml);
   };
 
-  NavigationMenuView.prototype.showContext = function () {
-    $('.context-bar').slideDown(250);
-  };
-
-  NavigationMenuView.prototype.hideContext = function () {
-    $('.context-bar').slideUp(300);
-  };
-
-  NavigationMenuView.prototype.hidePosition = function () {
-    $('.context-bar .position').hide();
-  }
-
-  NavigationMenuView.prototype.showPosition = function () {
-    $('.context-bar .position').show();
-  }
-
   NavigationMenuView.prototype.setStageTopPos = function (val) {
     //$('.stage').css('top', val);
   };
 
   NavigationMenuView.prototype.setViewClass = function (stageClass) {
-    //$('.stage').removeClass('stage-*');
-    $('.stage').removeClass('stage-taggroupsview stage-thumbsview stage-projectview stage-browserview stage-clientview stage-contentview stage-defaultview');
+    $('#app').removeClass('loading');
+    $('.stage').removeClass('stage-taggroupsview stage-thumbsview stage-projectview stage-browserview stage-clientview stage-defaultview');
     $('.stage').addClass(stageClass);
   };
 
+
   NavigationMenuView.prototype.showStage = function () {
-    if ($('.stage').css('opacity') == 0) {
+    //if (parseInt($('.stage').css('opacity')) !== 0) {
       this.hidePageLoading();
       $('.stage').animate({opacity: 1}, 500)
       $('.stage').css('min-height', '100%');
-    }
+    //}
   };
 
   NavigationMenuView.prototype.addTouchEventHandler = function (fn) {
@@ -329,47 +344,6 @@ define(['core/core',
   NavigationMenuView.prototype.clearViewClasses = function(){
     $('#app').removeClass('contentView projectsView clientsView browserView thumbsView tagsGroupView');
   }
-
-  NavigationMenuView.prototype.setContentView = function (selectedMenuItem, context) {
-    var that = this;
-
-    this.clearViewClasses();
-    $('#app').addClass('contentView');
-
-    this.reloadOnResize = false;
-    this.hideTitleBar();
-    this.hideSortBar();
-    this.hideNextPreviousButtons();
-    this.hideShareControls();
-    this.hideFooter();
-
-    var fn = function () {
-      if (context) {
-        that.setContext(context);
-        that.hidePosition();
-        that.showContext();
-        //that.setStageTopPos('73px');
-        that.setViewClass('stage-contentview');
-      }
-      else {
-        //that.setStageTopPos('32px');
-        that.setViewClass('stage-defaultview');
-        that.hideContext();
-      }
-    };
-
-    if (window.grundini.isMobile) {
-      fn();
-    } else {
-      this.hideIllustrationNav(fn);
-    }
-
-
-    this.clearMainSelection();
-    this.setMainSelection(selectedMenuItem);
-    this.setDisableYScroll(false);
-    this.clearTouchEventHandlers();
-  };
 
   NavigationMenuView.prototype.setProjectView = function (hashbang, context, showContext) {
     var that = this;

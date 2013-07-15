@@ -29,3 +29,23 @@
 @import 'themes';
 @import 'views';
 
+#app.contentView{
+  .title-bar{ display:none; }
+  .sorting-controls{ display:none; }
+  .context-bar{ display:block}
+  .share{ display:none; }
+  .nextPrevious{ display:none; }
+  footer{ display:none;}
+}
+
+#app.loading .stage {
+  opacity:0 !important;
+}
+
+.stage{
+  transition:opacity 0.3s ease-in-out;
+}
+
+#app.loading .pageLoading{
+  display:block !important;
+}

@@ -68,7 +68,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-requirejs');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('start', ['less:dev', 'connect', 'watch']);
+  //grunt.registerTask('start', ['less:dev', 'connect', 'watch']);
   grunt.registerTask('watch:dev', ['less:dev', 'watch']);
 
   grunt.registerTask('build', ['copy', 'replace', 'requirejs', 'less:build', 'clean:build']);

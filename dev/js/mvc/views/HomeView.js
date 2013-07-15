@@ -27,7 +27,8 @@ function HomeView(viewModel, navView) {
     this.addEventHandlers();
 
     tags = new TagsLoader({
-      tags : viewModel.getModel().getTags(),
+      //tags : viewModel.getModel().getTags(),
+      url : "js/data/homepage-tags.json",
       pageSize: devicePageSize
     });
 
@@ -72,7 +73,7 @@ function HomeView(viewModel, navView) {
 
         if (!currentPage.length || currentPage.length === 0) {
           reachedEnd = true;
-          $('.grid').append('<span class="square no-img grundini-blue">END!</span>');
+          $('.grid').append('<span class="square no-img grundini-red" style="padding:10px">STOP!</span>');
 
           $(document).off('scroll.addtags');
         } else {
