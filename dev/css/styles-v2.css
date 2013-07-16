@@ -242,20 +242,6 @@ a {
 .controls {
   transition: all 0.4s ease-in-out;
 }
-.controls a.button.previous {
-  background: url('./img/previous.png');
-  opacity: 0.145;
-}
-.controls a.button.previous:hover {
-  opacity: 1;
-}
-.controls a.button.next {
-  background: url('./img/next.png');
-  opacity: 0.145;
-}
-.controls a.button.next:hover {
-  opacity: 1;
-}
 .grid a.square {
   transition: all 0.3s ease-in-out;
 }
@@ -274,20 +260,6 @@ a {
 }
 .fullsize-image .loading-container .img {
   float: left;
-}
-.fullsize-image .loading-container .zoomoutlink {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  margin-top: 10px;
-  vertical-align: top;
-  background-image: url('./img/zoomout.png');
-  z-index: 10000000;
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out;
-  position: absolute;
-  top: 0px;
-  right: 20px;
 }
 .fullsize-image .loading-container .zoomoutlink:hover {
   opacity: 1;
@@ -348,11 +320,6 @@ header li a {
   background-position: 0 0;
   height: 20px;
   width: 20px;
-}
-.sprite.overview {
-  background-position: -110px 0;
-  width: 64px;
-  height: 64px;
 }
 #mainNavSwitch {
   display: none;
@@ -1107,227 +1074,116 @@ footer .tags li a:hover {
     display: none !important;
   }
 }
-.controls a.button {
-  width: 60px;
-  height: 60px;
+#illustrationControls {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 110px;
+  width: 58px;
+}
+#illustrationControls .zoomout,
+#illustrationControls .zoomin,
+#illustrationControls .next,
+#illustrationControls .overview,
+#illustrationControls .previous {
   display: block;
+  height: 58px;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  padding: 0;
+  width: 58px;
 }
-.controls a.button.off {
+#illustrationControls .zoomout > span,
+#illustrationControls .zoomin > span,
+#illustrationControls .next > span,
+#illustrationControls .overview > span,
+#illustrationControls .previous > span {
   display: none;
 }
-.controls a.button span {
+#illustrationControls .zoomout.off,
+#illustrationControls .zoomin.off,
+#illustrationControls .next.off,
+#illustrationControls .overview.off,
+#illustrationControls .previous.off {
   display: none;
 }
-.controls .sharethis-buttons-container {
-  /*background: transparent url('img/arrow.png') no-repeat 500px 26px;*/
-
-}
-.controls .share .sharethis {
-  background: rgba(0, 0, 0, 0.145);
-}
-.controls .share .sharethis span {
-  transition: all 0.3s ease-in-out;
-}
-.controls .share .sharethis-menu-toggle {
-  background: transparent url('img/share.png');
-  opacity: 0.145;
-}
-.controls .share .sharethis-menu-toggle:hover {
-  opacity: 0.145;
-}
-.controls .share .sharethis-item {
+#illustrationControls .zoomout {
+  background-image: url('img/zoomout.png');
   opacity: 0.8;
 }
-.controls .share .sharethis-item.facebook {
-  background: transparent url('img/share-fb.png') 0 0;
-}
-.controls .share .sharethis-item.twitter {
-  background: transparent url('img/share-twitter.png') 0 0;
-}
-.controls .share .sharethis-item.email {
-  background: transparent url('img/share-email.png') 0 0;
-}
-.controls .share .sharethis-item.sharethis {
-  background: transparent url('img/share-more.png') 0 0;
-}
-.controls .share .sharethis-menu-toggle:hover,
-.controls .share .sharethis-item:hover {
-  opacity: 1;
-}
-a.zoomimage {
+#illustrationControls .zoomin {
   background: transparent url('img/zoomin.png') no-repeat 0 0;
-  display: none;
   opacity: 0.145;
-  position: absolute;
-  right: 20px;
-  top: 97px;
-  z-index: 16;
 }
-a.zoomimage:hover {
-  opacity: 1;
-}
-.zoomimage span {
-  display: none;
-}
-.controls .share {
-  bottom: 50px;
-  right: 20px;
-  overflow: hidden;
-  display: none;
-}
-.controls .share,
-.controls .nextPrevious,
-.controls .position {
-  position: fixed;
-  vertical-align: middle;
-}
-.controls .sharethis-buttons-container {
-  max-height: 80px;
-  overflow-x: hidden;
-  float: left;
-  padding-right: 0px;
-  margin-right: 0px;
-  position: relative;
-  left: 500px;
-  width: 340px;
-}
-.controls .share .sharethis-item {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin: 10px 10px 0 0;
-  float: left;
-}
-.controls .sharethis-menu-toggle {
-  display: block;
-  width: 60px;
-  height: 60px;
-  float: right;
-  vertical-align: middle;
-  margin-top: 10px;
-  position: relative;
-  z-index: 8;
-}
-.controls .sharethis-menu-toggle span {
-  display: none;
-}
-.controls .nextPrevious {
-  top: 176px;
-  right: 20px;
-  width: 60px;
-  height: 200px;
-  display: none;
-}
-.controls .position {
-  top: 260px;
-  right: 25px;
-  display: none;
-}
-.controls a.previous,
-.controls a.next {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-}
-.controls a.previous {
-  top: 68px;
-}
-.controls a.next {
-  top: 0;
-}
-.controls .overview {
-  left: -2px;
+#illustrationControls .next {
+  background: url('img/next.png');
   opacity: 0.145;
-  position: relative;
-  top: 138px;
-  transition: all 0.3s ease-in-out;
 }
-.controls .overview:hover {
-  opacity: 1;
+#illustrationControls.at-end .next {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
-@media (min-width: 480px) {
-  .sharethis-buttons-container {
-    top: 80px !important;
+#illustrationControls .overview {
+  background-position: -114px 0;
+  opacity: 0.145;
+}
+#illustrationControls .previous {
+  background: url('img/previous.png');
+  opacity: 0.145;
+}
+#illustrationControls.at-start .previous {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#app.browserView #illustrationControls {
+  display: block;
+}
+@media (min-width: 1200px) {
+  #illustrationControls .zoomout:hover,
+  #illustrationControls .zoomin:hover,
+  #illustrationControls .next:hover,
+  #illustrationControls .overview:hover,
+  #illustrationControls .previous:hover {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #illustrationControls .zoomout:hover,
+  #illustrationControls .zoomin:hover,
+  #illustrationControls .next:hover,
+  #illustrationControls .overview:hover,
+  #illustrationControls .previous:hover {
+    opacity: 1;
   }
 }
 @media (max-width: 480px) {
-  .controls {
-    bottom: 5px;
-    height: 60px;
-    left: 12px;
-    position: fixed;
-    right: 10px;
-  }
-  .controls .nextPrevious,
-  .controls .share {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0px;
-    top: 0;
+  #illustrationControls {
+    height: 58px;
     width: 100%;
+    bottom: 10px;
+    left: 10px;
+    right: auto;
+    top: auto;
   }
-  .controls a.button,
-  .controls .button.sharethis-menu-toggle,
-  .controls .sprite.overview,
-  .controls .zoomimage.fullsize-link {
-    top: 0;
-    height: 55px;
-    width: 55px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    z-index: 999999 !important;
+  #illustrationControls .zoomout,
+  #illustrationControls .zoomin,
+  #illustrationControls .next,
+  #illustrationControls .overview,
+  #illustrationControls .previous {
+    display: inline-block;
+    margin: 0 0 0 0;
   }
-  .controls a.button.previous {
-    position: absolute;
-    left: 0px;
+  #illustrationControls .overview {
+    background-position: -114px -2px;
+    opacity: 0.145;
   }
-  .controls a.button.next {
-    position: absolute;
-    right: 2px;
+  #illustrationControls .next {
+    position: relative;
+    left: 124px;
   }
-  .controls .button.sharethis-menu-toggle {
-    float: none;
-    left: 180px;
-    margin-top: 0;
-    position: absolute;
-  }
-  .controls .share .sharethis-item {
-    display: block;
-    width: 55px;
-    height: 55px;
-    margin: 5px 5px 0 0;
-    float: left;
-    background-size: 100% 100% !important;
-  }
-  .controls .sprite.overview {
-    background-position: -112px -2px;
-    float: none;
-    left: 120px;
-    margin-top: 0;
-    position: absolute;
-  }
-  .controls .zoomimage.fullsize-link {
-    position: absolute;
-    left: 60px;
-    top: 0;
-    margin: 0;
-  }
-  .zoomoutlink {
-    display: none !important;
-  }
-  .controls .previous,
-  .controls .next,
-  .controls .sharethis-menu-toggle,
-  .controls .zoomimage {
-    background-size: 55px 55px !important;
-  }
-  .controls .sharethis-buttons-container {
-    top: -65px;
-  }
-  .controls .share {
-    overflow: visible;
+  #illustrationControls .previous {
+    position: relative;
+    left: -124px;
   }
 }
 .context-bar {
@@ -1970,9 +1826,6 @@ body {
   display: block;
 }
 #app.contentView .share {
-  display: none;
-}
-#app.contentView .nextPrevious {
   display: none;
 }
 #app.contentView footer {
