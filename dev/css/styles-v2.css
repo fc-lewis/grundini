@@ -264,9 +264,6 @@ a {
 .fullsize-image .loading-container .zoomoutlink:hover {
   opacity: 1;
 }
-#shareThis span {
-  cursor: pointer;
-}
 html {
   height: 100%;
 }
@@ -1080,6 +1077,7 @@ footer .tags li a:hover {
   right: 10px;
   top: 110px;
   width: 58px;
+  z-index: 20;
 }
 #illustrationControls .zoomout,
 #illustrationControls .zoomin,
@@ -1092,6 +1090,7 @@ footer .tags li a:hover {
   overflow: hidden;
   padding: 0;
   width: 58px;
+  transition: opacity 0.4s ease-in-out;
 }
 #illustrationControls .zoomout > span,
 #illustrationControls .zoomin > span,
@@ -1119,9 +1118,14 @@ footer .tags li a:hover {
   background: url('img/next.png');
   opacity: 0.145;
 }
+#illustrationControls.at-start .previous,
 #illustrationControls.at-end .next {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+#illustrationControls.at-start .previous:hover,
+#illustrationControls.at-end .next:hover {
+  opacity: 0;
 }
 #illustrationControls .overview {
   background-position: -114px 0;
@@ -1130,10 +1134,6 @@ footer .tags li a:hover {
 #illustrationControls .previous {
   background: url('img/previous.png');
   opacity: 0.145;
-}
-#illustrationControls.at-start .previous {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 #app.browserView #illustrationControls {
   display: block;
@@ -1160,8 +1160,8 @@ footer .tags li a:hover {
   #illustrationControls {
     height: 58px;
     width: 100%;
-    bottom: 10px;
-    left: 10px;
+    bottom: 5px;
+    left: 5px;
     right: auto;
     top: auto;
   }
@@ -1179,11 +1179,119 @@ footer .tags li a:hover {
   }
   #illustrationControls .next {
     position: relative;
-    left: 124px;
+    left: 125px;
   }
   #illustrationControls .previous {
     position: relative;
-    left: -124px;
+    left: -125px;
+  }
+}
+#shareControls {
+  bottom: 50px;
+  display: none;
+  height: 58px;
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+  width: 354px;
+  transition: width ease-in-out 0.3s;
+  z-index: 30;
+}
+#shareControls .sharethis-buttons-container {
+  display: inline-block;
+  position: absolute;
+  font-size: 0;
+  transition: right ease-in-out 0.3s;
+}
+#shareControls .sharethis-buttons-container .sharethis-toggle,
+#shareControls .sharethis-buttons-container .sharethis-item {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 58px;
+  margin: 0 10px 0 0;
+  opacity: 0.145;
+  overflow: hidden;
+  padding: 0;
+  width: 58px;
+  transition: opacity 0.4s ease-in-out;
+}
+#shareControls .sharethis-buttons-container .sharethis > span:last-child .sharethis-item {
+  margin-right: 0;
+}
+#shareControls .sharethis-buttons-container .sharethis-toggle > span,
+#shareControls .sharethis-buttons-container .sharethis-item > span {
+  display: none;
+}
+#shareControls .sharethis-buttons-container .sharethis-toggle {
+  background: transparent url('img/share.png');
+}
+#shareControls .sharethis-buttons-container .sharethis-item.facebook {
+  background: transparent url('img/share-fb.png') 0 0;
+}
+#shareControls .sharethis-buttons-container .sharethis-item.twitter {
+  background: transparent url('img/share-twitter.png') 0 0;
+}
+#shareControls .sharethis-buttons-container .sharethis-item.email {
+  background: transparent url('img/share-email.png') 0 0;
+}
+#shareControls .sharethis-buttons-container .sharethis-item.sharethis {
+  background: transparent url('img/share-more.png') 0 0;
+}
+#shareControls {
+  width: 58px;
+}
+#shareControls .sharethis-buttons-container {
+  right: -240px;
+}
+#shareControls.open {
+  width: 354px;
+}
+#shareControls.open .sharethis-buttons-container {
+  right: 0px;
+}
+#app.browserView #shareControls {
+  display: block;
+}
+@media (min-width: 1200px) {
+  #shareControls .sharethis-buttons-container .sharethis-toggle:hover,
+  #shareControls .sharethis-buttons-container .sharethis-item:hover {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #shareControls .sharethis-buttons-container .sharethis-toggle:hover,
+  #shareControls .sharethis-buttons-container .sharethis-item:hover {
+    opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  #shareControls {
+    bottom: 5px;
+    display: none;
+    height: 58px;
+    overflow: hidden;
+    position: absolute;
+    right: 5px;
+    width: 58px;
+    transition: height ease-in-out 0.3s;
+  }
+  #shareControls .sharethis-toggle,
+  #shareControls .sharethis-item {
+    display: block;
+    margin: 0 0 0 0 !important;
+  }
+  #shareControls .sharethis-buttons-container {
+    bottom: -270px;
+    right: -10px;
+    transition: bottom ease-in-out 0.3s;
+  }
+  #shareControls.open {
+    height: 354px;
+    width: 58px;
+    right: 5px;
+  }
+  #shareControls.open .sharethis-buttons-container {
+    bottom: -8px;
   }
 }
 .context-bar {
@@ -1551,7 +1659,7 @@ header .illustration-nav {
   display: none;
   vertical-align: middle;
   text-align: left;
-  z-index: 16;
+  z-index: 22;
 }
 .fullsize-image img {
   max-height: 92%;
@@ -1824,9 +1932,6 @@ body {
 }
 #app.contentView .context-bar {
   display: block;
-}
-#app.contentView .share {
-  display: none;
 }
 #app.contentView footer {
   display: none;

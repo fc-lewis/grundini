@@ -5,6 +5,7 @@
 	right:10px;
 	top:110px;
 	width:58px;
+	z-index: 20;
 
 	.zoomout,
 	.zoomin,
@@ -18,6 +19,7 @@
 		padding:0;
 		width:58px;
 
+		.button;
 
 		& > span{
 			display:none;
@@ -43,8 +45,12 @@
 		opacity: 0.145;
 	}
 
+	&.at-start .previous,
 	&.at-end .next{
 		.off;
+		&:hover{
+			opacity:0;
+		}
 	}
 
 	.overview{
@@ -58,9 +64,7 @@
 	  opacity: 0.145;
 	}
 
-	&.at-start .previous{
-		.off;
-	}
+	
 
 }
 
@@ -102,8 +106,8 @@
 	#illustrationControls{
 		height:58px;
 		width:100%;
-		bottom:10px;
-		left:10px;
+		bottom:5px;
+		left:5px;
 		right:auto;
 		top:auto;
 
@@ -123,12 +127,12 @@
 
 		.next{
 			position: relative;
-			left: 124px;
+			left: 125px;
 		}		
 
 		.previous{
 			position: relative;
-			left: -124px;
+			left: -125px;
 		}
 	}
 }

@@ -1,0 +1,143 @@
+
+#shareControls{
+	bottom:50px;
+	display:none;
+	height:58px;
+	overflow:hidden;
+	position:absolute;
+	right:10px;
+	width:354px;
+	transition: width ease-in-out 0.3s;
+	z-index: 30;
+
+	.sharethis-buttons-container{
+		display:inline-block;
+		position:absolute;
+		font-size:0;
+
+
+		transition: right ease-in-out 0.3s;
+
+		.sharethis-toggle,
+		.sharethis-item{
+			box-sizing:border-box;
+			display:inline-block;
+			height:58px;
+			margin:0 10px 0 0;
+			opacity: 0.145;
+			overflow: hidden;
+			padding:0;
+			width:58px;
+			.button;
+		}
+
+		& .sharethis > span:last-child .sharethis-item{
+			margin-right:0;
+		};
+
+		.sharethis-toggle > span,
+		.sharethis-item > span{
+			display:none;
+		}
+
+		.sharethis-toggle {
+			background: transparent url('img/share.png');
+		}
+
+		.sharethis-item.facebook {
+		  background: transparent url('img/share-fb.png') 0 0;
+		}
+
+		.sharethis-item.twitter {
+		  background: transparent url('img/share-twitter.png') 0 0;
+		}
+
+		.sharethis-item.email {
+		  background: transparent url('img/share-email.png') 0 0;
+		}
+
+		.sharethis-item.sharethis {
+		  background: transparent url('img/share-more.png') 0 0;
+		}
+	}
+}
+
+#shareControls{
+	width:58px;
+	.sharethis-buttons-container{
+		right:-240px;
+	}
+}
+
+#shareControls.open{
+	width:354px;
+	.sharethis-buttons-container{
+		right:0px;
+	}
+}
+
+#app.browserView #shareControls{
+	display:block;
+}
+
+@media @media-large{
+	#shareControls{
+		.sharethis-buttons-container{
+			.sharethis-toggle,
+			.sharethis-item{
+				&:hover{
+					opacity:1;
+				}
+			}	
+		}
+	}	
+}
+
+@media @media-desktop{
+	#shareControls{
+		.sharethis-buttons-container{
+			.sharethis-toggle,
+			.sharethis-item{
+				&:hover{
+					opacity:1;
+				}
+			}	
+		}
+	}	
+}
+
+@media @media-phone{
+	#shareControls{
+		bottom:5px;
+		display:none;
+		height:58px;
+		overflow:hidden;
+		position:absolute;
+		right:5px;
+		width:58px;
+		transition: height ease-in-out 0.3s;
+
+		.sharethis-toggle,
+		.sharethis-item{
+			display:block;
+			margin:0 0 0 0 !important;
+			//margin-right:2px;
+		}
+
+		.sharethis-buttons-container{
+			bottom:-270px;
+			right:-10px;
+			transition: bottom ease-in-out 0.3s;
+		}
+	}
+
+	#shareControls.open{
+		height:354px;
+		width:58px;
+		right:5px;
+		.sharethis-buttons-container{
+			bottom:-8px;
+		}
+	}
+
+}
