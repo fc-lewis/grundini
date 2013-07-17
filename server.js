@@ -2,7 +2,7 @@ var urlParser = require('url'),
   doCache = false,
   static = require('node-static'),
   httpsrv = require('http'),
-  file = new (static.Server)('./build'),
+  file = new (static.Server)('./dev'),
   ports = {
     flickrApi: 8111,
     web: 8081
