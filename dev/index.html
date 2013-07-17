@@ -328,15 +328,15 @@
                 <a href="#!/previous" class="button previous"><span>previous</span></a>
         </div>
 
-        <div class="share-controls">
+        <div id="shareControls">
             <div class="sharethis-buttons-container">
-                <div class="sharethis" id="shareThis">
-                </div>
+                <a href="#sharethis" class="sharethis-toggle button" title="Open / close the share menu">
+                    <span>open / close share menu</span>
+                </a>
+                <span class="sharethis" id="shareThis">
+                </span>
             </div>
-            <a href="#shareThis" class="sharethis-menu-toggle button" title="open or close the share this menu">
-                <span>open / close share this menu</span>
-            </a>
-        </div>
+        </div>    
 
         <div class="click-plate">
         </div>
@@ -365,7 +365,7 @@
         <ul class="sub-categories projects">
             {{#projects}}
             <li>
-            <a href="#!/thumbs/project/{{slug}}"><img src="{{imageUrl.small}}"/><span>{{title}}</span></a></li>
+            <a href="#!/project/{{slug}}"><img src="{{imageUrl.small}}"/><span>{{title}}</span></a></li>
             {{/projects}}
         </ul>
     </script>

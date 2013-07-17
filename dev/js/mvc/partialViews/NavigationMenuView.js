@@ -11,7 +11,6 @@ define(['core/core',
     this.elCache = {};
     this.viewModel = null;
     this.visible = false;
-    this.shareThisMenuState = 'CLOSED';
     this.root = $('.illustration-nav');
 
     this.getDateSortFn = function () {
@@ -61,11 +60,6 @@ define(['core/core',
 
     $('.click-plate').on('click', function () {
       that.toggleIllustrationNav();
-    });
-
-    $('.sharethis-menu-toggle').on('click', function (e) {
-      e.preventDefault();
-      that.toggleShareThisMenu();
     });
 
     if (window.grundini.isMobile) {
@@ -144,32 +138,6 @@ define(['core/core',
     $('header .sorting-controls').slideDown(100);
   };
 
-  NavigationMenuView.prototype.hideShareControls = function () {
-    $('.controls .share').fadeOut(250);
-  };
-
-  NavigationMenuView.prototype.showShareControls = function () {
-    $('.controls .share').fadeIn(100);
-  };
-
-  NavigationMenuView.prototype.openShareThisMenu = function () {
-    $('.share .sharethis-buttons-container').animate({left: '0px'});
-    this.shareThisMenuState = 'OPEN';
-  };
-
-  NavigationMenuView.prototype.closeShareThisMenu = function () {
-    $('.share .sharethis-buttons-container').animate({left: '500px'}, 250);
-    this.shareThisMenuState = 'CLOSED';
-  };
-
-  NavigationMenuView.prototype.toggleShareThisMenu = function () {
-    if (this.shareThisMenuState === 'OPEN') {
-      this.closeShareThisMenu();
-    } else {
-      this.openShareThisMenu();
-    }
-  };
-
   NavigationMenuView.prototype.hideFooter = function () {
     $('footer').fadeOut(250);
   };
@@ -179,9 +147,6 @@ define(['core/core',
   };
 
   //--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-
-
-
 
 
   NavigationMenuView.prototype.setActiveItem = function (elm) {
@@ -348,7 +313,6 @@ define(['core/core',
     this.setViewClass('stage-projectview');
     this.hideTitleBar();
     this.hideSortBar();
-    this.hideShareControls();
     this.hideFooter();
     this.clearMainSelection();
     this.setMainSelection('.work');
@@ -385,8 +349,6 @@ define(['core/core',
     //this.setStageTopPos('96px');
     this.setViewClass('stage-clientview');
     this.hideTitleBar();
-    this.hideShareControls();
-    //this.showShareControls();
 
     this.hideFooter();
     this.clearMainSelection();
@@ -421,7 +383,6 @@ define(['core/core',
 
     //this.setStageTopPos('96px');
     this.setViewClass('stage-browserview');
-    this.showShareControls();
     this.showFooter();
     this.clearMainSelection();
     this.setMainSelection('.work');
@@ -457,8 +418,6 @@ define(['core/core',
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');
     this.setViewClass('stage-thumbsview');
-    //this.showShareControls();
-    this.hideShareControls();
     this.hideFooter();
     this.clearMainSelection();
     this.setMainSelection('.work');
@@ -494,7 +453,6 @@ define(['core/core',
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');
     this.setViewClass('stage-taggroupsview');
-    this.hideShareControls();
     this.hideFooter();
     this.clearMainSelection();
     this.setMainSelection('.work');

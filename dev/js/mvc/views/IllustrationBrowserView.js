@@ -1,6 +1,7 @@
 define(['core/core',
-  'mvc/views/mvc.View'
-], function(core, mvcView) {
+  'mvc/views/mvc.View',
+  'mvc/mixins/sharing'
+], function(core, mvcView, sharing) {
 
   var loadDelayMs = 400;
   var maxIllWidth = 1000;
@@ -64,7 +65,7 @@ define(['core/core',
     this.$prev.on('click', previousClickHandler);
 
     this.setTouchEvents = function() {
-      this.getNavView().addTouchEventHandler(flickHandler)
+      this.getNavView().addTouchEventHandler(flickHandler);
     };
 
     $(document).off('keydown');
@@ -165,12 +166,11 @@ define(['core/core',
 
   ibvP.moveToItem = function(pos) {
     var that, tagsHtml, navView, ills, illLen, fullsizeSrc;
-    that = this
+    that = this;
     navView = this.getNavView();
     ills = this.getViewModel().getModelData().illustrations;
     illLen = ills.length;
     fullsizeSrc = $('.illustrationBrowser .illustrations li:eq(' + pos + ') a').attr('data-fullsize');
-    
     //set the image src for this image and each one either side
 
     if (pos > 0) {
@@ -372,6 +372,14 @@ define(['core/core',
       $('#illustrationControls').addClass('at-end');
     }
   };
+
+  $.extend(IllustrationBrowserView, sharing);
+
+  IllustrationBrowserView.bindSharing({
+    toggleSelector : '#shareControls .sharethis-toggle',
+    menuSelector: '#shareControls',
+    toggleClass : 'open'
+  });
 
   return IllustrationBrowserView;
 

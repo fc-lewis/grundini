@@ -72,7 +72,6 @@ define(['core/core',
   cvP.arrangeForDisplay = function(context){
     this.navView.hideTitleBar();
     this.navView.hideSortBar();
-    this.navView.hideShareControls();
     this.navView.hideIllustrationNav($.noop);
 
     if (context) {
