@@ -73,6 +73,7 @@ define(['core/core',
     this.navView.hideTitleBar();
     this.navView.hideSortBar();
     this.navView.hideShareControls();
+    this.navView.hideNextPreviousButtons();
     this.navView.hideIllustrationNav($.noop);
 
     if (context) {

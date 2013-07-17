@@ -1,6 +1,5 @@
 define(['core/core',
-  'mvc/views/mvc.View'
-], function(core, mvcView) {
+  'mvc/views/mvc.View'], function(core, mvcView) {
 
   var loadDelayMs = 400;
   var maxIllWidth = 1000;
@@ -8,8 +7,7 @@ define(['core/core',
   var preloadedFsImage;
 
   function IllustrationBrowserView(viewModel) {
-    var that = this,
-      partialViews;
+    var that = this, partialViews;
 
     console.log(viewModel);
 
@@ -25,13 +23,12 @@ define(['core/core',
       partialViews = val;
     };
 
-    this.$next = $('#illustrationControls .next');
-    this.$prev = $('#illustrationControls .previous');
+    this.$next = $('#app>div.controls .button.next');
+    this.$prev = $('#app>div.controls .button.previous');
 
     this.$illustrations = $('.illustrationBrowser .illustrations');
 
     //hooks
-
     function nextClickHandler(e) {
       e.preventDefault();
       that.onNextClick($(this).attr('href'), $(this));
@@ -73,13 +70,13 @@ define(['core/core',
       //TODO: override if we are in a text box, or somewhere that requires text entry 
 
       switch (e.keyCode) {
-        case 37: //previous
+        case 37://previous
           if (vmdl.getPos() > 0) {
             e.preventDefault();
             that.$prev.trigger('click');
           }
           break;
-        case 39: //next
+        case 39://next
           if (vmdl.getPos() < vmdl.getModelData().illustrations.length - 1) {
             e.preventDefault();
             that.$next.trigger('click');
@@ -112,13 +109,15 @@ define(['core/core',
       console.log($(window).width());
       $('.stage').show('fast');
 
-      setTimeout(function() {
+      setTimeout(function(){
         // Hide the address bar!
         window.scrollTo(0, 1);
       }, 1000);
 
     });
   }
+
+
 
 
 
@@ -132,11 +131,11 @@ define(['core/core',
     pos = this.getViewModel().getPos();
 
     if (pos > 0) {
-      prevLink = ['!/', vmd.viewSlug, '/', vmd.sectionSlug, '/', vmd.illustrations[pos - 1].slug].join('');
+      prevLink = ['!/',vmd.viewSlug,'/',vmd.sectionSlug,'/',vmd.illustrations[pos - 1].slug].join('');
     }
 
     if (pos < vmd.illustrations.length - 1) {
-      nextLink = ['!/', vmd.viewSlug, '/', vmd.sectionSlug, '/', vmd.illustrations[pos + 1].slug].join('');
+      nextLink = ['!/',vmd.viewSlug,'/',vmd.sectionSlug,'/',vmd.illustrations[pos + 1].slug].join('');
     }
 
     this.$next.attr('href', nextLink);
@@ -153,24 +152,26 @@ define(['core/core',
 
   ibvP.moveToPos = function(xpos, cb) {
     if (cb) {
-      $('.illustrationBrowser .illustrations').animate({
-        left: xpos
-      }, 250, 'swing', cb);
-    } else {
-      $('.illustrationBrowser .illustrations').animate({
-        left: xpos
-      }, 250, 'swing');
+      $('.illustrationBrowser .illustrations').animate({left : xpos}, 250, 'swing', cb);
+      //css transitions>
+//      $('.illustrationBrowser .illustrations').css('left', xpos + 'px');
+//      clearTimeout(loadTO);
+//      loadTO = setTimeout(cb, 260);
     }
+    else {
+      $('.illustrationBrowser .illustrations').animate({left : xpos}, 250, 'swing');
+      //css transitions>
+//      $('.illustrationBrowser .illustrations').css('left', xpos + 'px');
+    }
+
   };
 
   ibvP.moveToItem = function(pos) {
-    var that, tagsHtml, navView, ills, illLen, fullsizeSrc;
-    that = this
-    navView = this.getNavView();
-    ills = this.getViewModel().getModelData().illustrations;
-    illLen = ills.length;
-    fullsizeSrc = $('.illustrationBrowser .illustrations li:eq(' + pos + ') a').attr('data-fullsize');
-    
+    var that = this, tagsHtml;
+    var navView = this.getNavView();
+    var ills = this.getViewModel().getModelData().illustrations;
+    var illLen = ills.length;
+    var fullsizeSrc = $('.illustrationBrowser .illustrations li:eq(' + pos + ') a').attr('data-fullsize');
     //set the image src for this image and each one either side
 
     if (pos > 0) {
@@ -180,17 +181,20 @@ define(['core/core',
     $('.illustrationBrowser .illustrations li:eq(' + pos + ') img').attr('src', ills[pos].toFit);
     $('.controls a.zoomimage').attr('href', $('.illustrationBrowser .illustrations li:eq(' + pos + ') img').attr('data-fullsize'));
 
+
     if (pos < illLen - 1 && ills[pos + 1]) {
       $('.illustrationBrowser .illustrations li:eq(' + (pos + 1) + ') img').attr('src', ills[pos + 1].toFit);
     }
 
+    //TODO: SHOW SOME LOADING INFO
     $('.position .current').text(pos + 1);
 
+    //$('.title-bar').slideDown('fast').text('loading...');
+//    navView.showTitleBar();
     navView.setTitle('...');
 
-    //TODO: FIX THIS!
     //HACK: not sure why there is a need for an extra 4 pixels.
-    this.moveToPos((pos * (vpWidth + 4)) * -1, function() {
+    this.moveToPos((pos * (vpWidth + 4) ) * -1, function() {
 
       if (that.loadIllTO) {
         clearTimeout(that.loadIllTO);
@@ -198,11 +202,12 @@ define(['core/core',
 
       that.loadIllTO = setTimeout(function() {
         that.getViewModel().getCurrentIllustration(function(ill) {
-
           tagsHtml = Mustache.to_html(that.getTemplate('tags'), ill);
           $('.footer-bar .tags').html(tagsHtml);
+
           document.title = 'Grundini :' + ill.title;
           navView.setTitle(ill.title);
+
           updateShareButtons(window.location.href, ill.title, ill.imageUrl.small);
 
         });
@@ -231,28 +236,25 @@ define(['core/core',
         $('.loading-container').addClass('loaded');
         return;
       };
-    } else {
+    }
+    else {
       $('.loading-container').addClass('loaded');
     }
   };
 
   ibvP.render = function() {
     //TODO: a lot of this should be in the view model :(
-    var stageX = Math.round($(window).width() * 0.8),
-      stageY = Math.round($(window).height() * 0.8);
-    //    var stageX = Math.round($('.stage').width()), stageY = Math.round($('.stage').height());
+    var stageX = Math.round($(window).width() * 0.8), stageY = Math.round($(window).height() * 0.8);
+//    var stageX = Math.round($('.stage').width()), stageY = Math.round($('.stage').height());
 
     var stageMin;
     var navView = this.getNavView();
     var hb = this.getHashbang();
-    var context = {
-      contextItem: []
-    };
+    var context = {contextItem:[]};
 
     stageMin = stageX < stageY ? stageX : stageY;
 
-    var viewModel, vmData, browserHtml, that = this,
-      illBrwsrWidth, xMargin, pos;
+    var viewModel, vmData, browserHtml, that = this, illBrwsrWidth, xMargin, pos;
 
     viewModel = this.getViewModel();
 
@@ -263,15 +265,15 @@ define(['core/core',
     if (vmData.viewType === 'TAG') {
       if (vmData.tag.group) {
         context.contextItem.push({
-          title: vmData.tag.group.pluralize(),
-          value: ['#!/grouped-by/', vmData.tag.group].join(''),
-          seperator: '&nbsp;/'
+          title : vmData.tag.group.pluralize(),
+          value : ['#!/grouped-by/', vmData.tag.group].join(''),
+           seperator : '&nbsp;/'
         });
       }
 
       context.contextItem.push({
-        title: vmData.tag.value,
-        value: ['#!/thumbs/tagged/', vmData.tag.slug].join('')
+        title : vmData.tag.value,
+        value : ['#!/thumbs/tagged/', vmData.tag.slug].join('')
       });
     }
 
@@ -280,34 +282,35 @@ define(['core/core',
       if (vmData.client) {
 
         context.contextItem.push({
-          title: 'Clients',
-          value: '#!/client',
-          seperator: '&nbsp;/'
+          title : 'Clients',
+          value : '#!/client',
+          seperator : '&nbsp;/'
         });
 
         context.contextItem.push({
-          title: vmData.client.title,
-          value: '#!/client/' + vmData.client.slug,
-          seperator: '&nbsp;/'
+          title : vmData.client.title,
+          value : '#!/client/' + vmData.client.slug,
+          seperator : '&nbsp;/'
         });
       } else {
         context.contextItem.push({
-          title: 'Projects',
-          value: '#!/projects',
-          seperator: '&nbsp;/'
+          title : 'Projects',
+          value : '#!/projects',
+          seperator : '&nbsp;/'
         });
       }
 
       if (vmData.project) {
         if (vmData.client) {
           context.contextItem.push({
-            title: vmData.project.title,
-            value: ['#!/thumbs/client-project/', vmData.client.slug, '/', vmData.project.slug].join('')
+            title : vmData.project.title,
+            value : ['#!/thumbs/client-project/', vmData.client.slug,'/', vmData.project.slug].join('')
           });
-        } else {
+        }
+        else {
           context.contextItem.push({
-            title: vmData.project.title,
-            value: ['#!/thumbs/project/', vmData.project.slug].join('')
+            title : vmData.project.title,
+            value : ['#!/thumbs/project/', vmData.project.slug].join('')
           });
         }
       }
@@ -321,9 +324,9 @@ define(['core/core',
 
     navView.setBrowserView(hb, context, viewModel.getPos() + 1, vmData.illustrations.length);
 
-    $('.sprite.overview').attr('href', context.contextItem[context.contextItem.length - 1].value);
+    $('.sprite.overview').attr('href', context.contextItem[context.contextItem.length -1].value);
 
-    //    imagePreLoader(vmData.srcs, function() {
+//    imagePreLoader(vmData.srcs, function() {
     browserHtml = Mustache.to_html(that.getTemplate('illustration-browser'), vmData);
 
     $('.stage').html(browserHtml);
@@ -351,42 +354,45 @@ define(['core/core',
 
     navView.showStage();
 
-    setTimeout(function() {
+    setTimeout(function () {
       window.scrollTo(0, 1);
     }, 1000);
 
     $('.stage').css('height', '100%');
-    //    }, 3);
+//    }, 3);
   };
 
-
   ibvP.toggleNextPrevious = function($nxt, $prev, pos, illsLen) {
-    $('#illustrationControls').removeClass('at-start');
-    $('#illustrationControls').removeClass('at-end');
 
-    if(pos === 0){
-      $('#illustrationControls').addClass('at-start');
+    if (pos < illsLen - 1) {
+      $nxt.removeClass('off');
+    }
+    else {
+      $nxt.addClass('off');
     }
 
-    if(pos === illsLen-1){
-      $('#illustrationControls').addClass('at-end');
+    if (pos > 0) {
+      $prev.removeClass('off');
+    }
+    else {
+      $prev.addClass('off');
     }
   };
 
   return IllustrationBrowserView;
 
-  // ****************************************************** private functions
-
+// ****************************************************** private functions
   function imagePreLoader(srcArray, onLoadedCb, threshold) {
     var images = [],
-      img,
-      loaded = 0,
-      loadThreshold,
-      loadEventFired = false;
+            img,
+            loaded = 0,
+            loadThreshold,
+            loadEventFired = false;
 
     if (!threshold || threshold > srcArray.length - 1) {
       loadThreshold = srcArray.length - 1;
-    } else {
+    }
+    else {
       loadThreshold = threshold;
     }
 
@@ -420,24 +426,21 @@ define(['core/core',
     $('.share').hide();
     $('.sharethis').html('');
 
-    var services = [{
-      type: 'facebook',
-      image: './css/img/social-facebook.png'
-    }, {
-      type: 'twitter',
-      image: './css/img/social-twitter.png'
-    }, {
-      type: 'email',
-      image: './css/img/social-email.png'
-    }, {
-      type: 'sharethis',
-      image: './css/img/social-more.png'
-    }];
+    var services = [
+      {type : 'facebook',
+        image : './css/img/social-facebook.png'},
+      {type : 'twitter',
+        image : './css/img/social-twitter.png'},
+      {type : 'email',
+        image : './css/img/social-email.png'},
+      {type : 'sharethis',
+        image : './css/img/social-more.png'}
+    ];
     var svc, elm;
 
     for (var i = 0; i < services.length; i++) {
       svc = services[i];
-      elm = $(['<span class="st_', svc.type, '_custom" st_url="', location, '" st_title="Grundini : ', title, ': " st_image="', imgsrc, '"><span class="sharethis-item ', services[i].type, '"></span></span>'].join(''));
+      elm = $(['<span class="st_',svc.type,'_custom" st_url="',location,'" st_title="Grundini : ',title,': " st_image="',imgsrc,'"><span class="sharethis-item ',services[i].type,'"></span></span>'].join(''));
 
       $('.sharethis').append(elm);
     }

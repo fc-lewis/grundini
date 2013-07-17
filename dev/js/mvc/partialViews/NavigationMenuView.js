@@ -124,16 +124,12 @@ define(['core/core',
   }
 
   NavigationMenuView.prototype.hideIllustrationNav = function (fn) {
-    if (!window.grundini.isMobile){
-      $('.illustration-nav').slideUp(250, fn);
-    }
+    $('.illustration-nav').slideUp(250, fn);
  };
 
   NavigationMenuView.prototype.showIllustrationNav = function (fn) {
-    if (!window.grundini.isMobile){ 
-      $('.illustration-nav').slideDown(100, fn);
-      //$('.illustration-nav').removeClass('up').one($.support.transition.end, fn);
-    }
+    $('.illustration-nav').slideDown(100, fn);
+    //$('.illustration-nav').removeClass('up').one($.support.transition.end, fn);
   };
 
   NavigationMenuView.prototype.hideSortBar = function () {
@@ -142,6 +138,17 @@ define(['core/core',
 
   NavigationMenuView.prototype.showSortBar = function () {
     $('header .sorting-controls').slideDown(100);
+  };
+
+  NavigationMenuView.prototype.hideNextPreviousButtons = function () {
+    //$('.controls .nextPrevious').fadeOut(250);
+    $('.controls .position').fadeOut(250);
+  };
+
+  NavigationMenuView.prototype.showNextPreviousButtons = function () {
+    //$('.controls .nextPrevious').fadeIn(250);
+    $('.controls .position').fadeIn(250);
+
   };
 
   NavigationMenuView.prototype.hideShareControls = function () {
@@ -348,6 +355,7 @@ define(['core/core',
     this.setViewClass('stage-projectview');
     this.hideTitleBar();
     this.hideSortBar();
+    this.hideNextPreviousButtons();
     this.hideShareControls();
     this.hideFooter();
     this.clearMainSelection();
@@ -385,6 +393,7 @@ define(['core/core',
     //this.setStageTopPos('96px');
     this.setViewClass('stage-clientview');
     this.hideTitleBar();
+    this.hideNextPreviousButtons();
     this.hideShareControls();
     //this.showShareControls();
 
@@ -421,6 +430,7 @@ define(['core/core',
 
     //this.setStageTopPos('96px');
     this.setViewClass('stage-browserview');
+    this.showNextPreviousButtons();
     this.showShareControls();
     this.showFooter();
     this.clearMainSelection();
@@ -457,6 +467,7 @@ define(['core/core',
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');
     this.setViewClass('stage-thumbsview');
+    this.hideNextPreviousButtons();
     //this.showShareControls();
     this.hideShareControls();
     this.hideFooter();
@@ -494,6 +505,7 @@ define(['core/core',
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');
     this.setViewClass('stage-taggroupsview');
+    this.hideNextPreviousButtons();
     this.hideShareControls();
     this.hideFooter();
     this.clearMainSelection();
