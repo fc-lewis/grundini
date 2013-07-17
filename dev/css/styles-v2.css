@@ -1107,10 +1107,31 @@ footer .tags li a:hover {
     display: none !important;
   }
 }
+<<<<<<< HEAD
 .controls a.button {
   width: 60px;
   height: 60px;
   display: block;
+=======
+#illustrationControls {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 110px;
+  width: 58px;
+}
+#illustrationControls .zoomout,
+#illustrationControls .zoomin,
+#illustrationControls .next,
+#illustrationControls .overview,
+#illustrationControls .previous {
+  display: block;
+  height: 58px;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  padding: 0;
+  width: 58px;
+>>>>>>> parent of 89e1a2e... incorrect commit!
 }
 .controls a.button.off {
   display: none;
@@ -1122,6 +1143,7 @@ footer .tags li a:hover {
   /*background: transparent url('img/arrow.png') no-repeat 500px 26px;*/
 
 }
+<<<<<<< HEAD
 .controls .share .sharethis {
   background: rgba(0, 0, 0, 0.145);
 }
@@ -1130,13 +1152,30 @@ footer .tags li a:hover {
 }
 .controls .share .sharethis-menu-toggle {
   background: transparent url('img/share.png');
+=======
+#illustrationControls.at-end .next {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#illustrationControls .overview {
+  background-position: -114px 0;
+>>>>>>> parent of 89e1a2e... incorrect commit!
   opacity: 0.145;
 }
 .controls .share .sharethis-menu-toggle:hover {
   opacity: 0.145;
 }
+<<<<<<< HEAD
 .controls .share .sharethis-item {
   opacity: 0.8;
+=======
+#illustrationControls.at-start .previous {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#app.browserView #illustrationControls {
+  display: block;
+>>>>>>> parent of 89e1a2e... incorrect commit!
 }
 .controls .share .sharethis-item.facebook {
   background: transparent url('img/share-fb.png') 0 0;
@@ -1144,6 +1183,7 @@ footer .tags li a:hover {
 .controls .share .sharethis-item.twitter {
   background: transparent url('img/share-twitter.png') 0 0;
 }
+<<<<<<< HEAD
 .controls .share .sharethis-item.email {
   background: transparent url('img/share-email.png') 0 0;
 }
@@ -1328,6 +1368,36 @@ a.zoomimage:hover {
   }
   .controls .share {
     overflow: visible;
+=======
+@media (max-width: 480px) {
+  #illustrationControls {
+    height: 58px;
+    width: 100%;
+    bottom: 10px;
+    left: 10px;
+    right: auto;
+    top: auto;
+  }
+  #illustrationControls .zoomout,
+  #illustrationControls .zoomin,
+  #illustrationControls .next,
+  #illustrationControls .overview,
+  #illustrationControls .previous {
+    display: inline-block;
+    margin: 0 0 0 0;
+  }
+  #illustrationControls .overview {
+    background-position: -114px -2px;
+    opacity: 0.145;
+  }
+  #illustrationControls .next {
+    position: relative;
+    left: 124px;
+  }
+  #illustrationControls .previous {
+    position: relative;
+    left: -124px;
+>>>>>>> parent of 89e1a2e... incorrect commit!
   }
 }
 .context-bar {
@@ -1972,9 +2042,12 @@ body {
 #app.contentView .share {
   display: none;
 }
+<<<<<<< HEAD
 #app.contentView .nextPrevious {
   display: none;
 }
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
 #app.contentView footer {
   display: none;
 }

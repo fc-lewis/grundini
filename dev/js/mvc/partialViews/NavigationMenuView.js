@@ -140,6 +140,7 @@ define(['core/core',
     $('header .sorting-controls').slideDown(100);
   };
 
+<<<<<<< HEAD
   NavigationMenuView.prototype.hideNextPreviousButtons = function () {
     //$('.controls .nextPrevious').fadeOut(250);
     $('.controls .position').fadeOut(250);
@@ -151,6 +152,8 @@ define(['core/core',
 
   };
 
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
   NavigationMenuView.prototype.hideShareControls = function () {
     $('.controls .share').fadeOut(250);
   };
@@ -355,7 +358,10 @@ define(['core/core',
     this.setViewClass('stage-projectview');
     this.hideTitleBar();
     this.hideSortBar();
+<<<<<<< HEAD
     this.hideNextPreviousButtons();
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
     this.hideShareControls();
     this.hideFooter();
     this.clearMainSelection();
@@ -393,7 +399,10 @@ define(['core/core',
     //this.setStageTopPos('96px');
     this.setViewClass('stage-clientview');
     this.hideTitleBar();
+<<<<<<< HEAD
     this.hideNextPreviousButtons();
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
     this.hideShareControls();
     //this.showShareControls();
 
@@ -430,7 +439,10 @@ define(['core/core',
 
     //this.setStageTopPos('96px');
     this.setViewClass('stage-browserview');
+<<<<<<< HEAD
     this.showNextPreviousButtons();
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
     this.showShareControls();
     this.showFooter();
     this.clearMainSelection();
@@ -467,7 +479,10 @@ define(['core/core',
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');
     this.setViewClass('stage-thumbsview');
+<<<<<<< HEAD
     this.hideNextPreviousButtons();
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
     //this.showShareControls();
     this.hideShareControls();
     this.hideFooter();
@@ -505,7 +520,10 @@ define(['core/core',
     this.reloadOnResize = false;
     //this.setStageTopPos('64px');
     this.setViewClass('stage-taggroupsview');
+<<<<<<< HEAD
     this.hideNextPreviousButtons();
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
     this.hideShareControls();
     this.hideFooter();
     this.clearMainSelection();

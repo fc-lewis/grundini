@@ -1,5 +1,10 @@
 define(['core/core',
+<<<<<<< HEAD
   'mvc/views/mvc.View'], function(core, mvcView) {
+=======
+  'mvc/views/mvc.View'
+], function(core, mvcView) {
+>>>>>>> parent of 89e1a2e... incorrect commit!
 
   var loadDelayMs = 400;
   var maxIllWidth = 1000;
@@ -167,11 +172,21 @@ define(['core/core',
   };
 
   ibvP.moveToItem = function(pos) {
+<<<<<<< HEAD
     var that = this, tagsHtml;
     var navView = this.getNavView();
     var ills = this.getViewModel().getModelData().illustrations;
     var illLen = ills.length;
     var fullsizeSrc = $('.illustrationBrowser .illustrations li:eq(' + pos + ') a').attr('data-fullsize');
+=======
+    var that, tagsHtml, navView, ills, illLen, fullsizeSrc;
+    that = this
+    navView = this.getNavView();
+    ills = this.getViewModel().getModelData().illustrations;
+    illLen = ills.length;
+    fullsizeSrc = $('.illustrationBrowser .illustrations li:eq(' + pos + ') a').attr('data-fullsize');
+    
+>>>>>>> parent of 89e1a2e... incorrect commit!
     //set the image src for this image and each one either side
 
     if (pos > 0) {

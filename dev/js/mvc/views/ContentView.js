@@ -73,7 +73,10 @@ define(['core/core',
     this.navView.hideTitleBar();
     this.navView.hideSortBar();
     this.navView.hideShareControls();
+<<<<<<< HEAD
     this.navView.hideNextPreviousButtons();
+=======
+>>>>>>> parent of 89e1a2e... incorrect commit!
     this.navView.hideIllustrationNav($.noop);
 
     if (context) {
