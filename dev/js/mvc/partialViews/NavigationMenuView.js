@@ -250,7 +250,7 @@ define(['core/core',
     }
 
     if (hb.indexOf('grouped-by') > -1) {
-      var parts = hb.split('/');
+      parts = hb.split('/');
       var tagGroup = parts[2];
 
       this.findByHref('#!/grouped-by/' + tagGroup, $('.illustration-nav')).parent().addClass('active');
