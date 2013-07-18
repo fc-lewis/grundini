@@ -18,6 +18,7 @@ define([], function(){
 			this.$toggle = $(this.toggleSelector);
 			this.$menu = $(this.menuSelector);
 
+			//TODO: need to fix this - the container is handling the clicke event
 			this.$toggle.parent().on('click', this.$toggle, function(e){
 				e.preventDefault();
 
