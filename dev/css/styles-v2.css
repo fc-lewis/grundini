@@ -1193,6 +1193,7 @@ footer .tags li a:hover {
 }
 #shareControls {
   bottom: 50px;
+  display: none;
   height: 58px;
   overflow: hidden;
   position: absolute;
@@ -1275,6 +1276,7 @@ footer .tags li a:hover {
 @media (max-width: 480px) {
   #shareControls {
     bottom: 5px;
+    display: none;
     display: block;
     height: 58px;
     overflow: hidden;
