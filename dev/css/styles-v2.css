@@ -1182,7 +1182,7 @@ footer .tags li a:hover {
   }
   #illustrationControls .overview {
     background-position: -114px -2px;
-    left: 2px;
+    left: -60px;
     opacity: 0.145;
     position: relative;
   }
@@ -1192,7 +1192,7 @@ footer .tags li a:hover {
   }
   #illustrationControls .previous {
     position: relative;
-    left: -123px;
+    left: -61px;
   }
 }
 #shareControls {
@@ -1264,6 +1264,9 @@ footer .tags li a:hover {
 #app.thumbsView #shareControls,
 #app.browserView #shareControls {
   display: block;
+}
+#app.contentView #shareControls {
+  display: none;
 }
 @media (min-width: 1200px) {
   #shareControls .sharethis-toggle:hover,
@@ -1581,6 +1584,7 @@ header .illustration-nav {
   .main-nav .illustration-nav li:first-child {
     padding-left: 0;
   }
+  .main-nav ul li:last-child,
   .main-nav .illustration-nav li:last-child {
     border-bottom: none 0px transparent;
   }
