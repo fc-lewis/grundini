@@ -1266,7 +1266,7 @@ footer .tags li a:hover {
 @media (max-width: 480px) {
   #shareControls {
     bottom: 5px;
-    display: none;
+    display: block;
     height: 58px;
     overflow: hidden;
     position: absolute;
@@ -1281,8 +1281,9 @@ footer .tags li a:hover {
   }
   #shareControls .sharethis-buttons-container {
     bottom: -270px;
-    right: -10px;
+    right: 0;
     transition: bottom ease-in-out 0.3s;
+    width: 58px;
   }
   #shareControls.open {
     height: 354px;
@@ -1290,7 +1291,7 @@ footer .tags li a:hover {
     right: 5px;
   }
   #shareControls.open .sharethis-buttons-container {
-    bottom: -8px;
+    bottom: 0px;
   }
 }
 .context-bar {
@@ -1446,10 +1447,11 @@ header .sorting-controls {
   }
   .main-nav > .home {
     float: none;
-    padding-left: 10px;
+    padding: 15px 0 0 10px !important;
   }
   .main-nav {
     line-height: 0;
+    min-height: 42px !important;
     padding-left: 0;
   }
   .home .main-nav > ul,
@@ -1470,6 +1472,7 @@ header .sorting-controls {
   }
   .main-nav > ul {
     background-color: #434446;
+    margin-top: 15px;
     padding: 0 10px;
   }
   .main-nav ul > li {
