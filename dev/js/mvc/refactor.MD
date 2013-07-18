@@ -33,8 +33,8 @@ Considerations:
 ## What
 
 + display / hide share controls purely through CSS [DONE]
-+ use view class to control when the controls should be displayed or hidden
-+ handle state through css with : open / closed
++ use view class to control when the controls should be displayed or hidden [DONE]
++ handle state through css with : open / closed [DONE]
 + slide : 
 	* opening/left, closing/right on tablet / desktop [DONE]
 	* opening/up, closing/down on mobile

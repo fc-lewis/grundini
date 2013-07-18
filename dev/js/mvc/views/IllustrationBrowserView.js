@@ -188,9 +188,7 @@ define(['core/core',
 
     navView.setTitle('...');
 
-    //TODO: FIX THIS!
-    //HACK: not sure why there is a need for an extra 4 pixels.
-    this.moveToPos((pos * (vpWidth + 4)) * -1, function() {
+    this.moveToPos((pos * vpWidth) * -1, function() {
 
       if (that.loadIllTO) {
         clearTimeout(that.loadIllTO);
@@ -240,7 +238,6 @@ define(['core/core',
     //TODO: a lot of this should be in the view model :(
     var stageX = Math.round($(window).width() * 0.8),
       stageY = Math.round($(window).height() * 0.8);
-    //    var stageX = Math.round($('.stage').width()), stageY = Math.round($('.stage').height());
 
     var stageMin;
     var navView = this.getNavView();
@@ -314,7 +311,7 @@ define(['core/core',
     }
 
     vpWidth = $(window).width();
-    xMargin = vpWidth - maxIllWidth;
+    xMargin = 10;//vpWidth - maxIllWidth;
     pos = viewModel.getPos();
 
     this.setTheme('theme-light');
@@ -323,7 +320,6 @@ define(['core/core',
 
     $('.sprite.overview').attr('href', context.contextItem[context.contextItem.length - 1].value);
 
-    //    imagePreLoader(vmData.srcs, function() {
     browserHtml = Mustache.to_html(that.getTemplate('illustration-browser'), vmData);
 
     $('.stage').html(browserHtml);
@@ -337,7 +333,7 @@ define(['core/core',
     $('.illustration.off').removeClass('off');
 
     that.updateLinks();
-    that.toggleNextPrevious(that.$next, that.$prev, pos, vmData.illustrations.length);
+    //that.toggleNextPrevious(that.$next, that.$prev, pos, vmData.illustrations.length);
 
     that.moveToItem(pos);
 
@@ -421,7 +417,7 @@ define(['core/core',
 
   function getIllustrationsWidth(vmData, vpWidth) {
     //HACK - not sure why I need to add on the 500 - thinking its box model stuff extra padding etc
-    return (vmData.illustrations.length * vpWidth) + 500;
+    return (vmData.illustrations.length * vpWidth);// + 500
   }
 
   function updateShareButtons(location, title, imgsrc) {

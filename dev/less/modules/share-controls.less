@@ -40,7 +40,7 @@
 		display:inline-block;
 		position:absolute;
 		font-size:0;
-		left:0;
+		left:58px;
 		transition: right ease-in-out 0.3s;
 
 		& .sharethis > span:last-child .sharethis-item{
@@ -68,7 +68,8 @@
 #shareControls.open{
 	width:330px;
 	.sharethis-buttons-container{
-		right:68px;
+		left:0;
+		right:0px;
 	}
 }
 
@@ -107,7 +108,7 @@
 		display:block;
 		height:58px;
 		overflow:hidden;
-		position:absolute;
+		position:fixed;
 		right:5px;
 		width:58px;
 		transition: height ease-in-out 0.3s;
@@ -127,7 +128,9 @@
 
 		.sharethis-buttons-container{
 			top:58px;
+			left:auto;
 			position:absolute;
+			right:auto;
 			width:58px;
 		}
 	}

@@ -23,7 +23,10 @@
   vertical-align: top;
   letter-spacing: -4px
 }
-.illustrationBrowser ul.illustrations li *{
+.illustrationBrowser ul.illustrations,
+.illustrationBrowser ul.illustrationsli{
+  font-size: 0;
+  line-height:0;
   letter-spacing: 0;
 }
 
@@ -71,7 +74,13 @@ and (orientation : portrait){
 
 @media @media-phone{
   .illustrationBrowser {
-    margin-top:40px;
+    margin-top:39px;
   }
+
+  .illustrationBrowser ul.illustrations li img {
+    margin: 5px;
+    vertical-align: top;
+  }
+
 }
 

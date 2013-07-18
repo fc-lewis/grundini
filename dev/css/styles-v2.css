@@ -1164,6 +1164,7 @@ footer .tags li a:hover {
     width: 100%;
     bottom: 5px;
     left: 5px;
+    position: fixed;
     right: auto;
     top: auto;
   }
@@ -1230,7 +1231,7 @@ footer .tags li a:hover {
   display: inline-block;
   position: absolute;
   font-size: 0;
-  left: 0;
+  left: 58px;
   transition: right ease-in-out 0.3s;
 }
 #shareControls .sharethis-buttons-container .sharethis > span:last-child .sharethis-item {
@@ -1252,7 +1253,8 @@ footer .tags li a:hover {
   width: 330px;
 }
 #shareControls.open .sharethis-buttons-container {
-  right: 68px;
+  left: 0;
+  right: 0px;
 }
 #app.thumbsView #shareControls,
 #app.browserView #shareControls {
@@ -1276,7 +1278,7 @@ footer .tags li a:hover {
     display: block;
     height: 58px;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     right: 5px;
     width: 58px;
     transition: height ease-in-out 0.3s;
@@ -1294,7 +1296,9 @@ footer .tags li a:hover {
   }
   #shareControls .sharethis-buttons-container {
     top: 58px;
+    left: auto;
     position: absolute;
+    right: auto;
     width: 58px;
   }
   #shareControls.open {
@@ -1603,7 +1607,10 @@ header .illustration-nav {
   vertical-align: top;
   letter-spacing: -4px;
 }
-.illustrationBrowser ul.illustrations li * {
+.illustrationBrowser ul.illustrations,
+.illustrationBrowser ul.illustrationsli {
+  font-size: 0;
+  line-height: 0;
   letter-spacing: 0;
 }
 .illustrationBrowser ul.illustrations li img {
@@ -1639,7 +1646,11 @@ header .illustration-nav {
 }
 @media (max-width: 480px) {
   .illustrationBrowser {
-    margin-top: 40px;
+    margin-top: 39px;
+  }
+  .illustrationBrowser ul.illustrations li img {
+    margin: 5px;
+    vertical-align: top;
   }
 }
 .zoomimage {
