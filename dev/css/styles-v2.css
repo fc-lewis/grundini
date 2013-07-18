@@ -214,15 +214,15 @@ a,
 h1,
 h2,
 h3 {
-  font: bold 12px  /  14px FuturaBold, "Arial Black", Helvetica, serif;
+  font: bold 13px  /  16px FuturaBold, "Arial Black", Helvetica, serif;
   text-decoration: none;
 }
 .large-text {
-  font: bold 12px  /  14px FuturaBold, "Arial Black", Helvetica, serif;
+  font: bold 13px  /  16px FuturaBold, "Arial Black", Helvetica, serif;
 }
 .file-info,
 .about .editorial-comment blockquote {
-  font: normal 12px  /  14px FuturaBook, Arial, Helvetica, serif;
+  font: normal 13px  /  16px FuturaBook, Arial, Helvetica, serif;
   text-decoration: none;
 }
 .home .homepage-quote {
@@ -288,7 +288,7 @@ header ul li {
 }
 header {
   width: 100%;
-  z-index: 2;
+  z-index: 25;
 }
 header li a {
   transition: color 0.3s ease-in-out;
@@ -322,6 +322,9 @@ header li a {
 #mainNavSwitch {
   display: none;
 }
+.common-nav {
+  z-index: 25;
+}
 /* common-nav */
 .common-nav li {
   display: inline-block;
@@ -337,6 +340,7 @@ header .common-nav li:first-child {
   padding: 0;
   margin: 0;
   list-style: none inside none;
+  z-index: 25;
 }
 header .common-nav li:first-child {
   padding-left: 10px;
