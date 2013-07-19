@@ -330,7 +330,7 @@ define(['core/core',
     $('.illustration.off').removeClass('off');
 
     that.updateLinks();
-    //that.toggleNextPrevious(that.$next, that.$prev, pos, vmData.illustrations.length);
+    that.toggleNextPrevious(that.$next, that.$prev, pos, vmData.illustrations.length);
 
     that.moveToItem(pos);
 
