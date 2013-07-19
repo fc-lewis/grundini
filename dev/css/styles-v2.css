@@ -495,6 +495,10 @@ section.about .editorial-comment div:first-child {
     padding-top: 0;
     margin-top: 0;
   }
+  .editorial-content .editorial-comment p,
+  .editorial-content .editorial-comment blockquote {
+    padding: 0 10px;
+  }
 }
 /* page specific */
 /* home page */
@@ -771,9 +775,12 @@ section.about .editorial-comment div:first-child {
   display: block;
 }
 @media (max-width: 480px) {
+  #app .downloads-page.editorial-content {
+    margin-left: 10px;
+  }
   #app .editorial-content.downloads-page div {
     float: left;
-    width: 150px;
+    width: 145px;
     padding: 0;
     margin: 0;
   }
