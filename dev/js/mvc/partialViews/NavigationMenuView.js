@@ -276,11 +276,7 @@ define(['core/core',
 
 
   NavigationMenuView.prototype.showStage = function () {
-    //if (parseInt($('.stage').css('opacity')) !== 0) {
-      this.hidePageLoading();
-      $('.stage').animate({opacity: 1}, 500)
-      $('.stage').css('min-height', '100%');
-    //}
+    this.hidePageLoading();
   };
 
   NavigationMenuView.prototype.addTouchEventHandler = function (fn) {

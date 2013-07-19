@@ -37,17 +37,17 @@ Considerations:
 + handle state through css with : open / closed [DONE]
 + slide : 
 	* opening/left, closing/right on tablet / desktop [DONE]
-	* opening/up, closing/down on mobile
-+ make sure controls appear above everything else
+	* opening/up, closing/down on mobile [DONE]
++ make sure controls appear above everything else [DONE]
 
 ## How  
 1. disable existing javascript to show hide etc [DONE]
 2. reorganise html [DONE]
-3. remove existing css references
-4. setup display / hide via the view clasee
-5. reintroduce functions to open / close share controls
-6. make it work on desktop / tablet
-7. make it work on mobile
+3. remove existing css references [DONE]
+4. setup display / hide via the view class [DONE]
+5. reintroduce functions to open / close share controls [DONE]
+6. make it work on desktop / tablet [DONE]
+7. make it work on mobile [DONE]
 
 
 

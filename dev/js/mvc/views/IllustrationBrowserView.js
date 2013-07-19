@@ -12,8 +12,6 @@ define(['core/core',
     var that = this,
       partialViews;
 
-    console.log(viewModel);
-
     this.loadingIll = false;
 
     this.getViewModel = function() {
@@ -110,7 +108,6 @@ define(['core/core',
 
     $(window).on('resizeEnd', function() {
       that.render();
-      console.log($(window).width());
       $('.stage').show('fast');
 
       setTimeout(function() {
