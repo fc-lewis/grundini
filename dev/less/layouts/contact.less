@@ -28,10 +28,18 @@
   .contact-page .column.x2{
     width:240px;
     margin-right: 10px;
+
+    & > a > img{
+      margin-left:1px;
+    }
   }
 
   .contact-page .column.x1{
     width:115px;
+
+    & > a:nth-child(2) > img{
+      margin-top:2px;
+    }
   }
 
   .contact-page .column.x1 img:first-child{
@@ -55,6 +63,17 @@
     display: block;
   }
 
+  @media @media-tablet-p{
+    .contact-page .column.x1{
+      width:100%;
+    }
+
+    .contact-page .column.x1 > a:nth-child(2) > img {
+      margin-top: 0px;
+      position: absolute;
+    }
+  }
+
   @media @media-phone{
     
     .contact-page .column.x1,
@@ -64,7 +83,7 @@
     {
       box-sizing:border-box; 
       margin:0;
-      padding:10px;
+      padding:5px;
       width: 50%;
     }
 
@@ -72,7 +91,7 @@
     .contact-page .hcard
     {
       font-size: 12px;
-      padding-top:0;
+      padding: 0 10px;
       width: 100%;
     }    
     
@@ -81,11 +100,27 @@
         right:0;
         top:0px;
 
-      & > a:nth-child(2){
-        position:relative;
-        top:10px;
+      @s : 70px;
+
+      & > a:nth-child(2) img{
+        margin-right:6px;
       }
 
+      & > a:nth-child(2) img,
+      & > a:nth-child(3) img{
+        margin-top:10px;
+        min-height:  @s;
+        min-width:  @s;
+        max-height:  @s;
+        max-width:  @s;
+        height:  @s;
+        width:  @s;
+      }
+
+    }
+
+    .contact-page .column.x1 img:first-child {
+      margin-bottom:0;
     }
     
     .contact-page .column.x2{

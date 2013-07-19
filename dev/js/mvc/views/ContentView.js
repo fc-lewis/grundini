@@ -84,7 +84,7 @@ define(['core/core',
       this.navView.setViewClass('stage-defaultview');
       this.navView.hideContext();
     }
-  }
+  };
 
 
   return ContentView;

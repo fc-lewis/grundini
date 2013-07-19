@@ -708,8 +708,14 @@ section.about .editorial-comment div:first-child {
   width: 240px;
   margin-right: 10px;
 }
+.contact-page .column.x2 > a > img {
+  margin-left: 1px;
+}
 .contact-page .column.x1 {
   width: 115px;
+}
+.contact-page .column.x1 > a:nth-child(2) > img {
+  margin-top: 2px;
 }
 .contact-page .column.x1 img:first-child {
   margin-bottom: 5px;
@@ -730,6 +736,15 @@ section.about .editorial-comment div:first-child {
 .contact-page .hcard span {
   display: block;
 }
+@media (min-width:481px) and (max-width: 768px) {
+  .contact-page .column.x1 {
+    width: 100%;
+  }
+  .contact-page .column.x1 > a:nth-child(2) > img {
+    margin-top: 0px;
+    position: absolute;
+  }
+}
 @media (max-width: 480px) {
   .contact-page .column.x1,
   .contact-page .column.x2,
@@ -737,12 +752,12 @@ section.about .editorial-comment div:first-child {
   .contact-page .hcard {
     box-sizing: border-box;
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     width: 50%;
   }
   .contact-page .hcard {
     font-size: 12px;
-    padding-top: 0;
+    padding: 0 10px;
     width: 100%;
   }
   .contact-page .column.x1 {
@@ -750,9 +765,21 @@ section.about .editorial-comment div:first-child {
     right: 0;
     top: 0px;
   }
-  .contact-page .column.x1 > a:nth-child(2) {
-    position: relative;
-    top: 10px;
+  .contact-page .column.x1 > a:nth-child(2) img {
+    margin-right: 6px;
+  }
+  .contact-page .column.x1 > a:nth-child(2) img,
+  .contact-page .column.x1 > a:nth-child(3) img {
+    margin-top: 10px;
+    min-height: 70px;
+    min-width: 70px;
+    max-height: 70px;
+    max-width: 70px;
+    height: 70px;
+    width: 70px;
+  }
+  .contact-page .column.x1 img:first-child {
+    margin-bottom: 0;
   }
   .contact-page .column.x2 > a {
     display: none;
@@ -969,7 +996,7 @@ section.about .editorial-comment div:first-child {
     top: 98px;
   }
   .stage.stage-contentview {
-    top: 98px;
+    top: 68px;
   }
   .stage.stage-defaultview {
     top: 34px;
