@@ -293,7 +293,7 @@ header {
 header li a {
   transition: color 0.3s ease-in-out;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   #app {
     max-width: 100%;
   }
@@ -353,7 +353,7 @@ header .common-nav li:first-child {
 .common-info li a {
   text-transform: capitalize;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   #app header {
     top: 0;
     z-index: 15;
@@ -456,7 +456,7 @@ section.about .editorial-comment div {
 section.about .editorial-comment div:first-child {
   margin-right: 10px;
 }
-@media (min-width:481px) and (max-width: 768px) {
+@media (min-width:641px) and (max-width: 768px) {
   section.about .icons {
     width: 33%;
   }
@@ -469,7 +469,7 @@ section.about .editorial-comment div:first-child {
     margin-right: 7px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   #app section.about.editorial-content a {
     background: url("/img/all-icon-about.png") !important;
     background-size: 145px 145px !important;
@@ -621,7 +621,7 @@ section.about .editorial-comment div:first-child {
 .grid .square .text-container.inverted {
   color: black;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .grid {
     margin: 10px 0 0 10px;
     padding: 0;
@@ -736,7 +736,7 @@ section.about .editorial-comment div:first-child {
 .contact-page .hcard span {
   display: block;
 }
-@media (min-width:481px) and (max-width: 768px) {
+@media (min-width:641px) and (max-width: 768px) {
   .contact-page .column.x1 {
     width: 100%;
   }
@@ -745,15 +745,15 @@ section.about .editorial-comment div:first-child {
     position: absolute;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .contact-page .column.x1,
   .contact-page .column.x2,
   .contact-page .column.x3,
   .contact-page .hcard {
     box-sizing: border-box;
     margin: 0;
-    padding: 5px;
     width: 50%;
+    max-height: 100% !important;
   }
   .contact-page .hcard {
     font-size: 12px;
@@ -771,18 +771,28 @@ section.about .editorial-comment div:first-child {
   .contact-page .column.x1 > a:nth-child(2) img,
   .contact-page .column.x1 > a:nth-child(3) img {
     margin-top: 10px;
-    min-height: 70px;
-    min-width: 70px;
-    max-height: 70px;
-    max-width: 70px;
-    height: 70px;
-    width: 70px;
+    min-height: 67.5px;
+    min-width: 67.5px;
+    max-height: 67.5px;
+    max-width: 67.5px;
+    height: 67.5px;
+    width: 67.5px;
   }
   .contact-page .column.x1 img:first-child {
     margin-bottom: 0;
   }
+  .contact-page .column.x2 {
+    padding: 0 10px;
+  }
   .contact-page .column.x2 > a {
     display: none;
+  }
+  .contact-page .column.x3 img,
+  .contact-page .column.x1 img {
+    max-height: 145px;
+    min-height: 145px;
+    max-width: 145px;
+    min-width: 145px;
   }
 }
 /* downloads-page*/
@@ -801,7 +811,7 @@ section.about .editorial-comment div:first-child {
 .downloads-page div .file-info {
   display: block;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   #app .downloads-page.editorial-content {
     margin-left: 10px;
   }
@@ -1002,7 +1012,7 @@ section.about .editorial-comment div:first-child {
     top: 34px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .stage {
     position: relative;
     top: -6px;
@@ -1105,7 +1115,7 @@ footer .tags li a {
 footer .tags li a:hover {
   color: #ee4035;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   footer .footer-bar {
     display: none !important;
   }
@@ -1196,7 +1206,7 @@ footer .tags li a:hover {
     opacity: 1;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   #illustrationControls {
     height: 58px;
     width: 100%;
@@ -1314,7 +1324,7 @@ footer .tags li a:hover {
     opacity: 1;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   #shareControls {
     bottom: 5px;
     display: none;
@@ -1375,7 +1385,7 @@ footer .tags li a:hover {
 .context-bar li .position {
   margin-right: 20px;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .context-bar {
     display: none !important;
     -webkit-box-sizing: border-box;
@@ -1422,7 +1432,7 @@ header .sorting-controls {
   vertical-align: middle;
   line-height: 32px;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .title-bar {
     padding-left: 10px;
   }
@@ -1492,7 +1502,7 @@ header .sorting-controls {
     display: none;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .main-nav,
   .main-nav > .home,
   .main-nav > ul,
@@ -1592,7 +1602,7 @@ header .illustration-nav {
 #workSubMenuMobile > .illustration-nav > ul {
   height: auto;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .illustration-nav {
     height: auto !important;
     padding: 0 !important;
@@ -1688,7 +1698,7 @@ header .illustration-nav {
     max-height: 800px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .illustrationBrowser {
     margin-top: 39px;
   }
@@ -1800,18 +1810,18 @@ section.downloads-page,
 .pageLoading span {
   display: none;
 }
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .contact-page {
     padding: 10px 0 0 10px;
   }
 }
-@media (min-width:481px) and (max-width: 768px) {
+@media (min-width:641px) and (max-width: 768px) {
   .contact-page .column.x1 img {
     margin: 0;
     padding: 10px 10px 0 0;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   header {
     position: relative;
   }
@@ -1852,7 +1862,8 @@ body {
   color: #000;
 }
 /* --- THEME DARK --- */
-.theme-dark {
+.theme-dark,
+.theme-dark .stage {
   background-color: #000;
   color: #fff;
 }
@@ -1896,7 +1907,7 @@ body {
 .theme-standard .page-loading {
   background: transparent url('img/loading-eee.gif') no-repeat;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   body,
   app {
     max-width: 100%;
@@ -1982,10 +1993,10 @@ body {
 #app.browserView .zoomimage {
   display: block;
 }
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   #app.contentView .zoomimage,
   #app.projectsView .zoomimage,
   #app.clientsView .zoomimage,

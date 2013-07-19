@@ -5,7 +5,7 @@ define(['jquery'], function($){
     isMobile : function(){
       var w = $(window).width();
 
-      return (w < 481);
+      return (w < 681);
     }
   };
 
