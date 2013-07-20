@@ -24,7 +24,7 @@ define([
 
   GrundiniApp.setLoadingState = function(){
     $('#app').addClass('loading');
-    $('.stage').removeClass('stage-taggroupsview stage-thumbsview stage-projectview stage-browserview stage-clientview stage-defaultview stage-loading');
+    $('.stage').removeClass('stage-contentview stage-taggroupsview stage-thumbsview stage-projectview stage-browserview stage-clientview stage-defaultview stage-loading');
   }
 
   GrundiniApp.routeHandler = {

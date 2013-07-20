@@ -270,7 +270,7 @@ define(['core/core',
 
   NavigationMenuView.prototype.setViewClass = function (stageClass) {
     $('#app').removeClass('loading');
-    $('.stage').removeClass('stage-taggroupsview stage-thumbsview stage-projectview stage-browserview stage-clientview stage-defaultview');
+    $('.stage').removeClass('stage-contentview stage-taggroupsview stage-thumbsview stage-projectview stage-browserview stage-clientview stage-defaultview');
     $('.stage').addClass(stageClass);
   };
 
