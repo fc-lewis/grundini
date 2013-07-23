@@ -2,53 +2,67 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <title>Grundini:About</title>
 
-    <link href="./css/reset.css" rel="stylesheet"/>
-    <link href="./css/fonts/fonts.css" rel="stylesheet"/>
-    <link href="./css/base.css" rel="stylesheet"/>
-    <link href="./css/layout.css" rel="stylesheet"/>
-    <link href="./css/module.css" rel="stylesheet"/>
-    <link href="./css/state.css" rel="stylesheet"/>
-    <link href="./css/themes.css" rel="stylesheet"/>
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="/img/grundini-icon32.png"/>
+    <link rel="apple-touch-icon" type="image/png" href="/img/grundini-icon64.png"/>
+    <title>Grundini</title>
+
+    <script src="./js/libs/jquery-1.10.0.min.js"></script>
+    <script src="./js/libs/jquery.animate-enhanced.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://raw.github.com/kriskowal/es5-shim/master/es5-shim.js"></script>
+    <![endif]-->
+    <script src="./js/libs/css/prefixfree.min1.0.4.js"></script>
+    <!-- replace-script -->
+    <script src="./js/libs/require.js" data-main="js/main"></script>
+    <script src="./js/config.js"></script>
+    <!-- end-replace -->
+    <link href="./css/styles-v2.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div id="app">
+    <div id="app">
+        <section id="about" class="about editorial-content">
+            <div class="graphics">
+                <img src="./img/large-grundini-logo.png">
+                <a href="/#!/projects" class="box">
+                    <img src="img/all-icon-about.png">
+                    <span class="box-title">View all work</span>
+                </a>
+            </div>
 
-    <section class="about editorial-content">
-
-        <div class="icons">
-            <img src="./img/large-grundini-logo.png">
-            <a href="/#!/projects" class="all-work"><span>View all work</span></a>
-        </div>
-
-        <div class="editorial-comment">
-            <div>
-                <p>Peter Grundy and Tilly Northedge met at the Royal College of Art in the late 70s where they became
+            <div class="editorial">
+                <p>
+                    Peter Grundy and Tilly Northedge met at the Royal College of Art in the late 70s where they became
                     interested in
                     a visual communication that explained rather than sold things. In 1980 they started a studio to do
                     information
-                    design in a new and creative way which they called Grundy & Northedge</p>
-
-                <p>Hugh Aldersey-Williams writing in Graphis in 1995 said of them;</p>
-                <blockquote>The humble basic communication of information has never had the glamour of other areas of
+                    design in a new and creative way which they called Grundy &amp; Northedge
+                </p>
+                <p>
+                    Hugh Aldersey-Williams writing in Graphis in 1995 said of them;
+                </p>
+                <blockquote>
+                    &quot;The humble basic communication of information has never had the glamour of other areas of
                     design. The creation
                     of a poster casts the designer as an artist. Bringing into being corporate identity for some giant
                     multinational
                     company showcase the designer as a business strategist. But the design of a map for a housing
                     project or
                     a set
-                    of instructions for how to tie a bow tie - what sort of designer does jobs like these?
+                    of instructions for how to tie a bow tie - what sort of designer does jobs like these?&quot;
                 </blockquote>
-            </div>
-
-
-            <div>
                 <p>
-                    Peter Grundy and Tilly Northedge worked together for twenty-five years.</p>
+                    Peter Grundy and Tilly Northedge worked together for twenty-five years.
+                </p>
                 <p>
-
-                    In 2006 Peter Grundy started Grundini, taking the Grundy & Northedge experience into new territory.
+                    In 2006 Peter Grundy started Grundini, taking the Grundy &amp; Northedge experience into new territory.
                     A
                     year later
                     his book Grundini set out the terms, a series of five themes explored with uncompromised
@@ -59,10 +73,7 @@
                     complex and perplex needed explaining by simple, elegant, visual messages and ideas.
                 </p>
             </div>
-        </div>
-
-
-    </section>
-</div>
+        </section>
+    </div>
 </body>
 </html>

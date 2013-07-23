@@ -1,48 +1,55 @@
 <!DOCTYPE HTML>
 <html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <title>Grundini:Contact</title>
+    <head>
+        <meta charset="UTF-8">    
 
-    <link href="./css/reset.css" rel="stylesheet"/>
-    <link href="./css/fonts/fonts.css" rel="stylesheet"/>
-    <link href="./css/base.css" rel="stylesheet"/>
-    <link href="./css/layout.css" rel="stylesheet"/>
-    <link href="./css/module.css" rel="stylesheet"/>
-    <link href="./css/state.css" rel="stylesheet"/>
-    <link href="./css/themes.css" rel="stylesheet"/>
-</head>
+        <meta http-equiv="cache-control" content="no-cache">    
+        <meta http-equiv="pragma" content="no-cache">    
+        <meta http-equiv="Expires" content="-1">    
+        <meta name="apple-mobile-web-app-capable" content="yes" />    
+        <meta name="apple-mobile-web-app-status-bar-style" content="white"/>    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    
+        <link rel="icon" type="image/png" href="/img/grundini-icon32.png"/>
+        <link rel="apple-touch-icon" type="image/png" href="/img/grundini-icon64.png"/>
+        <title>Grundini</title>
+
+        <script src="./js/libs/jquery-1.10.0.min.js"></script>
+        <script src="./js/libs/jquery.animate-enhanced.min.js"></script>
+        <!--[if lt IE 9]>    
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://raw.github.com/kriskowal/es5-shim/master/es5-shim.js"></script>
+        <![endif]-->    
+        <script src="./js/libs/css/prefixfree.min1.0.4.js"></script>
+        <!-- replace-script -->    
+        <script src="./js/libs/require.js" data-main="js/main"></script>
+        <script src="./js/config.js"></script>
+        <!-- end-replace -->    
+        <link href="./css/styles-v2.css" rel="stylesheet" type="text/css"/>    
+    </head>
 <body>
 <div id="app">
 
-    <section class="contact-page editorial-content">
-        <div class="column x3">
-            <img src="./img/contact-main.png">
-        </div>
-        <div class="column x2">
-            <div class="hcard">
-                <div class="adr">
-                    <span>Peter Grundy</span>
-                    <span>Grundini Ltd</span>
-                    <span class="extended-address">Studio 69</span>
-                    <span class="street-address">1 Town Meadow</span>
-                    <span class="locality">Brentford</span>
-                    <span class="region" style="display:none">Middlesex</span>
-                    <span class="postal-code">TW8 0BQ</span>
-                </div>
+    <section id="contact" class="contact-page editorial-content">
+        <img src="./img/contact-main.png" class="large">
+        <a href="http://bit.ly/svRVkJ" target="new" class="medium"><img src="./img/contact-compass.png"></a>
+        <a href="mailto:peter@grundini.com" target="new" title="Email Grundini" class="medium"><img src="./img/email_2.jpg"></a>
+        <a href="http://twitter.com/grundini" target="new" title="Grundini on Twitter" class="small"><img src="./img/contact-twitter.png"></a>
+        <a href="http://www.facebook.com/pages/Grundini/263141597085969" target="new" title="Grundini on Facebook" class="small"><img src="./img/contact-facebook.png"></a>
 
-                <span class="tel"><span class="type">work</span><span class="value">+44 20 8384 1076</span></span>
-                <a class="email" href="mailto:peter@grundini.com">peter@grundini.com</a>
+        <div class="hcard">
+            <div class="adr">
+                <span>Peter Grundy</span>
+                <span>Grundini Ltd</span>
+                <span class="extended-address">Studio 69</span>
+                <span class="street-address">1 Town Meadow</span>
+                <span class="locality">Brentford</span>
+                <span class="region" style="display:none">Middlesex</span>
+                <span class="postal-code">TW8 0BQ</span>
             </div>
-            <a href="http://bit.ly/svRVkJ" target="new"><img src="./img/contact-compass.png"></a>
-        </div>
-        <div class="column x1">
-            <a href="mailto:peter@grundini.com" target="new" title="Email Grundini"><img src="./img/email_2.jpg"></a>
-            <a href="http://twitter.com/grundini" target="new" title="Grundini on Twitter"><img src="./img/contact-twitter.png"></a>
-            <a href="http://www.facebook.com/pages/Grundini/263141597085969" target="new" title="Grundini on Facebook"><img src="./img/contact-facebook.png"></a>
-        </div>
 
-
+            <span class="tel"><span class="type">work</span><span class="value">+44 20 8384 1076</span></span>
+            <a class="email" href="mailto:peter@grundini.com">peter@grundini.com</a>
+        </div>
     </section>
 </div>
 </body>

@@ -400,106 +400,6 @@ header .common-nav li:first-child {
   }
 }
 /* layouts */
-section.about {
-  text-align: left;
-  padding: 10px;
-}
-section.about .editorial-comment p,
-section.about .editorial-comment blockquote {
-  line-height: 1.75;
-  margin-bottom: 10px;
-}
-section.about .editorial-comment blockquote {
-  /*padding: 10px;*/
-
-  /*color: #aaa;*/
-
-}
-section.about .icons a {
-  background: url('../img/all-icon-about.png');
-  display: block;
-  float: right;
-  width: 240px;
-  height: 240px;
-  margin-right: 10px;
-  transition: opacity 0.3s ease-in-out;
-}
-section.about .icons a:hover {
-  opacity: 0.8;
-}
-section.about .icons a span {
-  display: block;
-  padding: 10px;
-  color: #fff;
-}
-section.about img {
-  float: left;
-  margin: 0 10px 10px 0;
-}
-section.about .icons {
-  width: 500px;
-  display: inline-block;
-}
-section.about .editorial-comment {
-  display: inline-block;
-  width: 465px;
-  margin-top: 0px;
-  padding-bottom: 40px;
-  margin-right: 0px;
-  vertical-align: top;
-}
-section.about .editorial-comment div {
-  display: inline-block;
-  width: 220px;
-  vertical-align: top;
-}
-section.about .editorial-comment div:first-child {
-  margin-right: 10px;
-}
-@media (min-width:641px) and (max-width: 768px) {
-  section.about .icons {
-    width: 33%;
-  }
-  section.about .icons a,
-  section.about .icons img {
-    box-sizing: border-box;
-    max-width: 240px;
-  }
-  section.about .icons a {
-    margin-right: 7px;
-  }
-}
-@media (max-width: 640px) {
-  #app section.about.editorial-content a {
-    background: url("/img/all-icon-about.png") !important;
-    background-size: 145px 145px !important;
-    display: block !important;
-    float: right;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  #app section.about.editorial-content .icons {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  #app section.about.editorial-content a,
-  #app section.about.editorial-content img {
-    width: 145px;
-    height: 145px;
-    max-width: 145px;
-    max-height: 145px;
-    min-width: 145px;
-    min-height: 145px;
-  }
-  #app section.about.editorial-content .editorial-comment {
-    padding-top: 0;
-    margin-top: 0;
-  }
-  .editorial-content .editorial-comment p,
-  .editorial-content .editorial-comment blockquote {
-    padding: 0 10px;
-  }
-}
 /* page specific */
 /* home page */
 /* ---- GRID ---- */
@@ -683,156 +583,175 @@ section.about .editorial-comment div:first-child {
     width: 460px;
   }
 }
-/* -- contact -- */
-.contact-page .hcard a {
-  color: #ddd;
-  line-height: 1.75;
-}
-.contact-page .hcard a:hover {
-  color: #ee4035;
-  transition: color 0.3s ease-in-out;
-}
-.contact-page .hcard .adr {
-  line-height: 1.75;
-}
-.contact-page .column {
+.box {
   display: inline-block;
-  height: 100%;
+  position: relative;
+}
+.box img {
+  position: relative;
+}
+.box:hover > img {
+  opacity: 0.4;
+}
+.box-title {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 10px;
+  line-height: 100%;
+  top: 10px;
+}
+#about,
+#contact,
+#downloads {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  white-space-collapse: discard;
+}
+#about img,
+#contact img,
+#downloads img,
+#about a,
+#contact a,
+#downloads a {
+  display: inline-block;
+  line-height: 0;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+#about .graphics {
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  width: 502px;
+  white-space-collapse: discard;
+}
+#about .graphics > * {
+  font-size: 0;
+  line-height: 0;
+  margin: 10px 0 0 10px;
+  padding: 0;
+}
+#about .box {
+  float: right;
+}
+#about .editorial {
+  column-count: 2;
+  column-gap: 10px;
+  padding: 10px 0 0 10px;
+  max-width: 500px;
+}
+#about .editorial > p,
+#about .editorial > blockquote {
+  font: bold 13px / 16px FuturaBold, "Arial Black", Helvetica, serif;
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+#about .editorial > blockquote {
+  column-break-inside: avoid;
+  font: normal 13px / 16px FuturaBook, Arial, Helvetica, serif;
+  font-weight: normal;
+  line-height: 150%;
+}
+#about .editorial > blockquote + p {
+  column-break-inside: avoid;
+}
+#downloads > div {
+  display: inline-block;
+  margin: 10px 0 0 10px;
+  max-width: 240px;
+  padding: 0;
   vertical-align: top;
 }
-.contact-page .column.x3 {
-  width: 490px;
-  margin-right: 10px;
+#downloads > div > p {
+  margin-top: 10px;
 }
-.contact-page .column.x2 {
-  width: 240px;
-  margin-right: 10px;
+#contact > a:hover {
+  opacity: 0.4;
 }
-.contact-page .column.x2 > a > img {
-  margin-left: 1px;
+#contact > img,
+#contact > a {
+  margin: 0px 10px 0 0 !important;
 }
-.contact-page .column.x1 {
-  width: 115px;
+#contact .large {
+  display: block;
 }
-.contact-page .column.x1 > a:nth-child(2) > img {
-  margin-top: 2px;
-}
-.contact-page .column.x1 img:first-child {
-  margin-bottom: 5px;
-}
-.contact-page .hcard {
-  height: 240px;
+#contact .medium,
+#contact .small {
   vertical-align: top;
-  padding-top: 10px;
-  padding-left: 10px;
-  width: 225px;
+  margin: 10px 10px 0 0 !important;
 }
-.contact-page .hcard .type {
+#contact .hcard {
+  position: absolute;
+  top: 10px;
+  left: 510px;
+}
+#contact .hcard > * {
+  color: #fff;
+  font: bold 13px / 16px FuturaBold, "Arial Black", Helvetica, serif;
+}
+#contact .hcard > a:hover {
+  color: #ef4135;
+}
+#contact .hcard .adr span {
+  display: block;
+  line-height: 150%;
+}
+#contact .hcard .tel {
+  display: block;
+  margin-top: 20px;
+}
+#contact .hcard .tel .type {
   display: none;
 }
-.contact-page .hcard div {
-  margin-bottom: 20px;
-}
-.contact-page .hcard span {
-  display: block;
-}
-@media (min-width:641px) and (max-width: 768px) {
-  .contact-page .column.x1 {
-    width: 100%;
-  }
-  .contact-page .column.x1 > a:nth-child(2) > img {
-    margin-top: 0px;
-    position: absolute;
-  }
-}
 @media (max-width: 640px) {
-  .contact-page .column.x1,
-  .contact-page .column.x2,
-  .contact-page .column.x3,
-  .contact-page .hcard {
+  #about .graphics {
     box-sizing: border-box;
-    margin: 0;
-    width: 50%;
-    max-height: 100% !important;
-  }
-  .contact-page .hcard {
-    font-size: 12px;
-    padding: 0 10px;
     width: 100%;
   }
-  .contact-page .column.x1 {
-    position: absolute;
-    right: 0;
-    top: 0px;
-  }
-  .contact-page .column.x1 > a:nth-child(2) img {
-    margin-right: 6px;
-  }
-  .contact-page .column.x1 > a:nth-child(2) img,
-  .contact-page .column.x1 > a:nth-child(3) img {
-    margin-top: 10px;
-    min-height: 67.5px;
-    min-width: 67.5px;
-    max-height: 67.5px;
-    max-width: 67.5px;
-    height: 67.5px;
-    width: 67.5px;
-  }
-  .contact-page .column.x1 img:first-child {
-    margin-bottom: 0;
-  }
-  .contact-page .column.x2 {
-    padding: 0 10px;
-  }
-  .contact-page .column.x2 > a {
-    display: none;
-  }
-  .contact-page .column.x3 img,
-  .contact-page .column.x1 img {
-    max-height: 145px;
-    min-height: 145px;
-    max-width: 145px;
-    min-width: 145px;
-  }
-}
-/* downloads-page*/
-.downloads-page div {
-  float: left;
-  width: 240px;
-  padding: 10px 0px 10px 10px;
-}
-.downloads-page div a:hover {
-  opacity: 0.8;
-}
-.downloads-page div p {
-  padding: 5px;
-  line-height: 1.75em;
-}
-.downloads-page div .file-info {
-  display: block;
-}
-@media (max-width: 640px) {
-  #app .downloads-page.editorial-content {
-    margin-left: 10px;
-  }
-  #app .editorial-content.downloads-page div {
-    float: left;
-    width: 145px;
-    padding: 0;
+  #about .graphics > img,
+  #about .graphics > a {
+    height: 145px;
     margin: 0;
+    max-height: 145px;
+    max-width: 145px;
+    min-height: 145px;
+    min-width: 145px;
+    width: 145px;
   }
-  #app .editorial-content.downloads-page div > span,
-  #app .editorial-content.downloads-page div > p {
-    display: none;
+  #about .editorial {
+    column-count: 1;
+    column-gap: 0px;
+    padding: 0 10px 0 10px;
   }
-  #app .editorial-content.downloads-page div:nth-child(odd) {
-    margin: 0 10px 0 0;
+  #downloads > div {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    max-width: 145px;
+    padding: 0;
+    vertical-align: top;
   }
-  #app .editorial-content.downloads-page div:nth-child(even) {
-    margin-right: 10px;
+  #contact {
+    padding: 10px 0px 0 10px;
   }
-  #app .editorial-content.downloads-page div:nth-child(3) {
-    margin-top: 7px;
+  #contact .large {
+    height: 300px !important;
+    max-height: 300px !important;
+    min-height: 300px !important;
+    max-width: 300px !important;
+    min-width: 300px !important;
+    width: 300px !important;
+  }
+  #contact .medium,
+  #contact .small img {
+    width: 145px !important;
+  }
+  #contact .hcard {
+    display: block;
+    position: relative;
+    left: 0;
   }
 }
 /* modules */
