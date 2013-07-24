@@ -737,21 +737,29 @@ header .common-nav li:first-child {
     padding: 10px 0px 0 10px;
   }
   #contact .large {
-    height: 300px !important;
-    max-height: 300px !important;
-    min-height: 300px !important;
-    max-width: 300px !important;
-    min-width: 300px !important;
-    width: 300px !important;
+    display: none;
+  }
+  #contact .medium {
+    margin-top: 0 !important;
+    padding-top: 0;
   }
   #contact .medium,
   #contact .small img {
     width: 145px !important;
   }
   #contact .hcard {
+    column-count: 2;
+    column-gap: 10px;
     display: block;
     position: relative;
     left: 0;
+    padding: 0 10px;
+  }
+  #contact .hcard .adr {
+    column-break-inside: avoid;
+  }
+  #contact .hcard .tel {
+    margin: 0;
   }
 }
 /* modules */
