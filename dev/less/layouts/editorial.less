@@ -1,0 +1,233 @@
+.box{
+  display: inline-block;
+  position: relative;
+
+  img{
+    position: relative;    
+  }
+}
+
+.box:hover > img{
+  opacity:0.4;
+}
+
+.box-title{
+  color:#fff;
+  font-size: 14px;
+  position: absolute;
+  left:10px;
+  line-height: 100%; 
+  top:10px;
+}
+
+#about, #contact, #downloads,{
+ display:block;
+ font-size:0;
+ line-height: 0;
+ white-space-collapse: discard; 
+
+ img, a{
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#about{
+  .graphics{
+    float:left;
+    font-size:0;
+    line-height: 0;
+    width:502px;
+    white-space-collapse: discard; 
+    
+
+    & > *{
+      font-size: 0;
+      line-height: 0;
+      margin: 10px 0 0 10px;
+      padding: 0;
+      
+    }
+  }
+
+  .box{
+    float:right;
+  }
+
+  .editorial{
+    column-count:2;
+    column-gap:10px;
+    padding: 10px 0 0 10px;
+    max-width:500px;
+
+    & > p,
+    & > blockquote{
+      font: bold 13px / 16px FuturaBold, "Arial Black", Helvetica, serif;
+      line-height: 150%; 
+      margin-bottom: 10px; 
+    }
+    
+    & > blockquote{
+      column-break-inside: avoid;
+      font: normal 13px / 16px FuturaBook, Arial, Helvetica, serif;
+      // font-style: italic;
+      font-weight: normal;
+      line-height: 150%;
+    }
+
+    & > blockquote + p{
+      column-break-inside: avoid;
+    }
+  }
+}
+
+
+#downloads{
+  & > div{
+    display: inline-block;
+    margin:10px 0 0 10px;
+    max-width: 240px;
+    padding:0;
+    vertical-align: top;
+
+    & > p{
+      margin-top:10px;
+    }
+  }
+}
+
+#contact{
+  
+  & > a:hover{
+    opacity:0.4;
+  }
+
+  & > img,
+  & > a{
+    margin: 0px 10px 0 0 !important;
+  }
+
+  .large{
+    display:block;
+  }
+
+  .medium,
+  .small{
+    vertical-align: top;
+    margin: 10px 10px 0 0 !important;
+  }
+
+  .hcard{
+    position: absolute;
+    top:10px;
+    left:510px;
+
+    & > *{
+      color: #fff;
+      font: bold 13px / 16px FuturaBold, "Arial Black", Helvetica, serif;  
+    }
+
+    & > a:hover{
+      color:rgb(239, 65, 53);
+    }
+
+    .adr span{
+      display:block;
+      line-height: 150%;
+    }
+
+    .tel{
+      display: block;
+      margin-top:20px;
+
+      .type{
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media @media-phone{
+  
+  #about{
+    .graphics{
+      box-sizing:border-box;
+      width:100%;
+
+      & > img,
+      & > a{
+        height: 145px;
+        margin:0;        
+        max-height: 145px;
+        max-width: 145px;        
+        min-height: 145px;
+        min-width: 145px;
+        width: 145px;
+      }
+    }
+
+    .editorial{
+      column-count:1;
+      column-gap:0px;
+      padding: 0 10px 0 10px;
+    }
+  }
+
+  #downloads{
+    & > div{
+      display: inline-block;
+      margin:10px 0 0 10px;
+      max-width: 145px;
+      padding:0;
+      vertical-align: top;
+    }
+  }
+
+  #contact{
+    padding: 10px 0px 0 10px;
+
+    .large{
+      // height:300px !important;
+      // max-height:300px !important;
+      // min-height:300px !important;
+      // max-width:300px !important;
+      // min-width:300px !important;
+      // width:300px !important;
+      display:none;
+    }
+    
+    .medium{
+      margin-top:0 !important;
+      padding-top:0;
+    }
+
+    .medium,
+    .small img{
+      width:145px !important;
+    }
+
+    .hcard{
+      column-count:2;
+      column-gap:10px;
+      display: block;
+      position: relative;
+      left:0;
+      padding:0 10px;
+
+      .adr{
+        column-break-inside: avoid;
+      }
+      
+      .tel{
+        margin:0;
+      }
+    }
+  }
+
+
+}
+
