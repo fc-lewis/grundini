@@ -73,6 +73,8 @@ define(['core/core',
         e.preventDefault();
         $('#workSubMenuMobile').toggleClass('closed');
         $('#workNavSwitch .left-arrow').toggleClass('open');
+        $('.main-nav .work').toggleClass('open');
+
       });
 
       if (document.body.addEventListener) {

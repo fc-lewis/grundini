@@ -1472,6 +1472,9 @@ header .sorting-controls {
     line-height: 40px !important;
     min-height: 40px;
   }
+  .main-nav .work.open {
+    border-bottom: solid 0px #5d5e5f;
+  }
   .main-nav > ul > li > a {
     display: block;
     width: 100%;
