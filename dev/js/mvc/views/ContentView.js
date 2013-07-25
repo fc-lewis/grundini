@@ -86,6 +86,5 @@ define(['core/core',
     }
   };
 
-
   return ContentView;
 });

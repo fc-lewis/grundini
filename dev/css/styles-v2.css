@@ -716,7 +716,6 @@ header .common-nav li:first-child {
 }
 #contact .hcard .tel {
   display: block;
-  margin-top: 20px;
 }
 #contact .hcard .tel .type {
   display: none;
@@ -775,7 +774,7 @@ header .common-nav li:first-child {
     width: 145px !important;
   }
   #contact .hcard {
-    column-count: 2;
+    column-count: 1;
     column-gap: 10px;
     display: block;
     position: relative;

@@ -113,11 +113,11 @@ define(['core/core',
 
   NavigationMenuView.prototype.hidePosition = function () {
     $('.context-bar .position').hide();
-  }
+  };
 
   NavigationMenuView.prototype.showPosition = function () {
     $('.context-bar .position').show();
-  }
+  };
 
   NavigationMenuView.prototype.hideIllustrationNav = function (fn) {
     if (!window.grundini.isMobile){
@@ -228,6 +228,10 @@ define(['core/core',
     //HACK: written rather quickly, for user-testing
     var re = /\//gi;
     var matches = hb.match(re);
+    var parts;
+    var tagparts;
+    var grouptag;
+
 
     if (hb.indexOf('all-work') > -1) {
       this.findByHref('#!/all-work', $('.illustration-nav')).parent().addClass('active');
@@ -245,9 +249,9 @@ define(['core/core',
     }
 
     if (hb.indexOf('tagged') > -1) {
-      var parts = hb.split('/');
-      var tagparts = parts[2];
-      var grouptag = tagparts.split('-');
+      parts = hb.split('/');
+      tagparts = parts[2];
+      grouptag = tagparts.split('-');
 
 
       this.findByHref('#!/grouped-by/' + grouptag[0], $('.illustration-nav')).parent().addClass('active');
@@ -302,7 +306,7 @@ define(['core/core',
 //-------- VIEW SETTINGS
   NavigationMenuView.prototype.clearViewClasses = function(){
     $('#app').removeClass('contentView projectsView clientsView browserView thumbsView tagsGroupView');
-  }
+  };
 
   NavigationMenuView.prototype.setProjectView = function (hashbang, context, showContext) {
     var that = this;
@@ -331,13 +335,15 @@ define(['core/core',
       }
     } else {
       this.showIllustrationNav(function() {
-        that.hideContext()
+        that.hideContext();
       });
     }
 
     this.setFilterByHashbang(hashbang);
     this.setDisableYScroll(false);
     this.clearTouchEventHandlers();
+
+    this.setActiveItemByHash(hashbang);
   };
 
   NavigationMenuView.prototype.setClientView = function (hashbang, title, alphaSortFn, dateSortFn) {
@@ -365,6 +371,8 @@ define(['core/core',
       that.setFilterByHashbang(hashbang);
       that.setDisableYScroll(false);
       that.clearTouchEventHandlers();
+
+      that.setActiveItemByHash(hashbang);
     });
 
 
@@ -400,6 +408,8 @@ define(['core/core',
 
       that.setFilterByHashbang(hashbang);
       that.setDisableYScroll(true);
+
+      that.setActiveItemByHash(hashbang);
     };
 
     if (window.grundini.isMobile) {
@@ -433,6 +443,8 @@ define(['core/core',
       that.setFilterByHashbang(hashbang);
       that.setDisableYScroll(false);
       that.clearTouchEventHandlers();
+
+      that.setActiveItemByHash(hashbang);
     };
 
     if (window.grundini.isMobile) {
@@ -466,6 +478,8 @@ define(['core/core',
       that.setFilterByHashbang(hashbang);
       that.setDisableYScroll(false);
       that.clearTouchEventHandlers();
+
+      that.setActiveItemByHash(hashbang);
     });
 
   };
@@ -484,7 +498,7 @@ define(['core/core',
     }
     else {
       var clientCrumbHtml = Mustache.to_html(vw.getTemplate('client-crumb'), client);
-      container.append(clientCrumbHtml)
+      container.append(clientCrumbHtml);
     }
 
 
