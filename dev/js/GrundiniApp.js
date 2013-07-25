@@ -155,6 +155,7 @@ define([
 
       //close the nav if it's open
       $('.main-nav> ul').addClass('closed');
+      $('.main-nav> ul .work').removeClass('open');
     }
 
     setTimeout(function () {

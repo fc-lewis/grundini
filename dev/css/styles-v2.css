@@ -1232,8 +1232,9 @@ footer .tags li a:hover {
   left: 0;
   right: 0px;
 }
-#app.thumbsView #shareControls,
-#app.browserView #shareControls {
+#app.browserView #shareControls,
+#app.projectsView #shareControls,
+#app.thumbsView #shareControls {
   display: block;
 }
 #app.contentView #shareControls {
@@ -1255,7 +1256,6 @@ footer .tags li a:hover {
   #shareControls {
     bottom: 5px;
     display: none;
-    display: block;
     height: 58px;
     overflow: hidden;
     position: fixed;

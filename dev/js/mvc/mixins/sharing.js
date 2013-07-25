@@ -9,6 +9,10 @@ define([], function(){
 		bindSharing : function(opts){
 			var that = this;
 
+			if(this.sharingBound === true){
+				return;
+			}
+
 			if(opts){
 				this.toggleSelector = opts.toggleSelector || this.toggleSelector;
 				this.menuSelector = opts.menuSelector || this.menuSelector;
@@ -18,7 +22,6 @@ define([], function(){
 			this.$toggle = $(this.toggleSelector);
 			this.$menu = $(this.menuSelector);
 
-			//TODO: need to fix this - the container is handling the clicke event
 			this.$toggle.parent().on('click', this.$toggle, function(e){
 				e.preventDefault();
 
@@ -26,6 +29,8 @@ define([], function(){
 
 				return false;
 			});
+
+			this.sharingBound = true;
 		},
 
 		toggleState : function(){

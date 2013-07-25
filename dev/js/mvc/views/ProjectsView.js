@@ -1,5 +1,7 @@
 define(['core/core',
-  'mvc/views/mvc.View'], function(core, mvcView) {
+  'mvc/views/mvc.View',
+  'mvc/mixins/sharing'
+  ], function(core, mvcView, sharing) {
 
   function ProjectsView(viewModel) {
     var partialViews;
@@ -59,10 +61,15 @@ define(['core/core',
         window.scrollTo(0, 1);
       }, 10);
     }
-
-
-
   };
+
+  $.extend(ProjectsView, sharing);
+
+  ProjectsView.bindSharing({
+    toggleSelector : '#shareControls .sharethis-toggle',
+    menuSelector: '#shareControls',
+    toggleClass : 'open'
+  });
 
   return ProjectsView;
 }); 

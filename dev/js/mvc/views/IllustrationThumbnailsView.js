@@ -1,5 +1,6 @@
 define(['core/core',
-  'mvc/views/mvc.View'], function(core, mvcView) {
+  'mvc/views/mvc.View',
+  'mvc/mixins/sharing'], function(core, mvcView, sharing) {
 
   function IllustrationThumbnailsView(viewModel) {
     var partialViews;
@@ -89,6 +90,14 @@ define(['core/core',
     navView.showStage();
 
   };
+
+  $.extend(IllustrationThumbnailsView, sharing);
+
+  IllustrationThumbnailsView.bindSharing({
+    toggleSelector : '#shareControls .sharethis-toggle',
+    menuSelector: '#shareControls',
+    toggleClass : 'open'
+  });
 
   return IllustrationThumbnailsView;
 
