@@ -130,6 +130,9 @@ define(['core/core',
       $('.illustration-nav').slideDown(100, fn);
       //$('.illustration-nav').removeClass('up').one($.support.transition.end, fn);
     }
+    else{
+      fn();
+    }
   };
 
   NavigationMenuView.prototype.hideSortBar = function () {

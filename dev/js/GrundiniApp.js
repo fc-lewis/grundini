@@ -156,6 +156,7 @@ define([
       //close the nav if it's open
       $('.main-nav> ul').addClass('closed');
       $('.main-nav> ul .work').removeClass('open');
+      $('.main-nav .left-arrow').removeClass('open');
     }
 
     setTimeout(function () {

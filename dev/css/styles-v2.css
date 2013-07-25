@@ -480,7 +480,7 @@ header .common-nav li:first-child {
   background: #ee4035 url('../img/all-work-square.png') no-repeat bottom right;
 }
 .grid .downloads-square {
-  background: url('img/download3.png');
+  background: url('img/download3.jpg');
 }
 .grid .oc-years-square {
   background: url('../img/oc-years-icon.png');
@@ -634,6 +634,10 @@ header .common-nav li:first-child {
   margin: 10px 0 0 10px;
   padding: 0;
 }
+#about .graphics img {
+  max-height: 240px;
+  max-width: 240px;
+}
 #about .box {
   float: right;
 }
@@ -665,8 +669,19 @@ header .common-nav li:first-child {
   padding: 0;
   vertical-align: top;
 }
+#downloads > div > a:hover {
+  opacity: 0.4;
+}
+#downloads > div img {
+  max-height: 240px;
+  max-width: 240px;
+}
 #downloads > div > p {
   margin-top: 10px;
+}
+#contact img {
+  max-height: 240px;
+  max-width: 240px;
 }
 #contact > a:hover {
   opacity: 0.4;
@@ -686,7 +701,7 @@ header .common-nav li:first-child {
 #contact .hcard {
   position: absolute;
   top: 10px;
-  left: 510px;
+  left: 270px;
 }
 #contact .hcard > * {
   color: #fff;
@@ -711,6 +726,10 @@ header .common-nav li:first-child {
     box-sizing: border-box;
     width: 100%;
   }
+  #about .graphics img {
+    max-height: 145px;
+    max-width: 145px;
+  }
   #about .graphics > img,
   #about .graphics > a {
     height: 145px;
@@ -733,8 +752,16 @@ header .common-nav li:first-child {
     padding: 0;
     vertical-align: top;
   }
+  #downloads > div img {
+    max-height: 145px;
+    max-width: 145px;
+  }
   #contact {
     padding: 10px 0px 0 10px;
+  }
+  #contact img {
+    max-height: 145px;
+    max-width: 145px;
   }
   #contact .large {
     display: none;
