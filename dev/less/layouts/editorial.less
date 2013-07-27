@@ -124,24 +124,25 @@
   }
 
   & > img,
+  & > a, 
+  .hcard{
+    margin: 0px 10px 10px 0 !important;
+  }
+
   & > a{
-    margin: 0px 10px 0 0 !important;
-  }
-
-  .large{
-    display:block;
-  }
-
-  .medium,
-  .small{
     vertical-align: top;
-    margin: 10px 10px 0 0 !important;
   }
 
   .hcard{
-    position: absolute;
-    top:10px;
-    left:270px;
+    //position: absolute;
+    //top:10px;
+    //left:270px;
+    display:inline-block;
+    height:240px;
+    max-height:240px;
+    max-width:240px;
+    width:240px;
+    vertical-align: top;
 
     & > *{
       color: #fff;
