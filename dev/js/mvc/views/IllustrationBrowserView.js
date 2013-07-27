@@ -175,7 +175,7 @@ define(['core/core',
     }
 
     $('.illustrationBrowser .illustrations li:eq(' + pos + ') img').attr('src', ills[pos].toFit);
-    $('.controls a.zoomimage').attr('href', $('.illustrationBrowser .illustrations li:eq(' + pos + ') img').attr('data-fullsize'));
+    $('#illustrationControls a.zoomin').attr('href', $('.illustrationBrowser .illustrations li:eq(' + pos + ') img').attr('data-fullsize'));
 
     if (pos < illLen - 1 && ills[pos + 1]) {
       $('.illustrationBrowser .illustrations li:eq(' + (pos + 1) + ') img').attr('src', ills[pos + 1].toFit);
