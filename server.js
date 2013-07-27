@@ -2,12 +2,15 @@ var urlParser = require('url'),
   doCache = false,
   static = require('node-static'),
   httpsrv = require('http'),
-  file = new (static.Server)('./dev'),
+  file = new (static.Server)('./build'),
   ports = {
     flickrApi: 8111,
     web: 8081
   };
 
+var grunFlickr = require('grundini-flickr');
+var memCache = require('simpleMemCache.js');
+var doCache = false;
 
 httpsrv.createServer(
   function (request, response) {
@@ -76,7 +79,7 @@ function writeSuccess(result, response, callback) {
   response.end(resultStr);
 }
 
-console.log('api.grundini.com listening on port 8111');
+console.log('api.grundini.com listening on port ' + ports.flickrApi);
 
 
 //---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
@@ -103,5 +106,5 @@ httpsrv.createServer(
   }).listen(ports.web);
 
 
-console.log('dev.grundini.com listening on port 8081');
+console.log('grundini.com listening on port ' + ports.web);
 
