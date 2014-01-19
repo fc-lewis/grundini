@@ -4,11 +4,17 @@
 	display:none;
 	height:58px;
 	overflow:hidden;
-	position:absolute;
+	position:fixed;
 	right:10px;
+	bottom:61px;
 	width:58px;
 	transition: width ease-in-out 0.3s;
 	z-index: 30;
+
+	.thumbsView & {
+		bottom:10px;
+	}
+
 
 	.sharethis-toggle,
 	.sharethis-item{
@@ -92,8 +98,8 @@
 			&:hover{
 				opacity:1;
 			}
-		}	
-	}	
+		}
+	}
 }
 
 @media @media-desktop{
@@ -103,8 +109,8 @@
 			&:hover{
 				opacity:1;
 			}
-		}	
-	}	
+		}
+	}
 }
 
 @media @media-phone{

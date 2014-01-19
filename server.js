@@ -18,7 +18,6 @@ httpsrv.createServer(
       bytesLen, url;
 
     request.addListener('end', function () {
-      //request.socket.setTimeout(1000);
 
       url = request.url;
       parsedUrl = urlParser.parse(request.url, true);
@@ -30,10 +29,9 @@ httpsrv.createServer(
         if (cachedResult) {
           cachedResult.cached = true;
           writeSuccess(cachedResult, response, parsedUrl.query.callback);
-          //console.log('cached result');
+
           return;
         }
-
       }
 
       grunFlickr.handleRequest(request.url, function (result) {

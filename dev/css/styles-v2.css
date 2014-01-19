@@ -687,21 +687,20 @@ header .common-nav li:first-child {
   opacity: 0.4;
 }
 #contact > img,
+#contact > a,
+#contact .hcard {
+  margin: 0px 10px 10px 0 !important;
+}
 #contact > a {
-  margin: 0px 10px 0 0 !important;
-}
-#contact .large {
-  display: block;
-}
-#contact .medium,
-#contact .small {
   vertical-align: top;
-  margin: 10px 10px 0 0 !important;
 }
 #contact .hcard {
-  position: absolute;
-  top: 10px;
-  left: 270px;
+  display: inline-block;
+  height: 240px;
+  max-height: 240px;
+  max-width: 240px;
+  width: 240px;
+  vertical-align: top;
 }
 #contact .hcard > * {
   color: #fff;
@@ -1197,11 +1196,15 @@ footer .tags li a:hover {
   display: none;
   height: 58px;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   right: 10px;
+  bottom: 61px;
   width: 58px;
   transition: width ease-in-out 0.3s;
   z-index: 30;
+}
+.thumbsView #shareControls {
+  bottom: 10px;
 }
 #shareControls .sharethis-toggle,
 #shareControls .sharethis-item {
