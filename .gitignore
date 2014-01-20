@@ -12,3 +12,7 @@ projectFilesBackup/
 projectFilesBackup/*
 
 build/**
+
+.DS_Store
+
+**/.DS_Store
