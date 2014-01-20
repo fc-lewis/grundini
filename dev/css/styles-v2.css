@@ -555,7 +555,7 @@ header .common-nav li:first-child {
     width: 300px;
   }
 }
-@media (min-width: 321px) and (max-width: 480px) {
+@media (min-width: 321px) {
   .grid .square {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
