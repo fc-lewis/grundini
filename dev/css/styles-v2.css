@@ -583,6 +583,19 @@ header .common-nav li:first-child {
     width: 460px;
   }
 }
+@media (device-height: 667px) {
+  #app .grid .homepage-quote,
+  #app .grid .big-square {
+    width: 355px;
+  }
+  #app .grid .big-square {
+    height: 355px;
+  }
+  .grid .square {
+    height: 172px;
+    width: 172px;
+  }
+}
 .box {
   display: inline-block;
   position: relative;
@@ -1041,6 +1054,12 @@ header .common-nav li:first-child {
   position: absolute;
   left: 10px;
   top: 10px;
+}
+@media (device-height: 667px) {
+  .stage .clients li {
+    width: 152px;
+    height: 152px;
+  }
 }
 footer {
   background: #eee;
